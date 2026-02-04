@@ -236,7 +236,7 @@ p {
 }
 
 .logo img {
-    height: 50px;
+    height: 70px;
     width: auto;
 }
 
@@ -1526,6 +1526,10 @@ p {
 @media (max-width: 768px) {
     :root {
         --section-padding: 60px;
+    }
+
+    .logo img {
+        height: 55px;
     }
 
     h1 { font-size: 2.25rem; }
