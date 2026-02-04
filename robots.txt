@@ -1,0 +1,11 @@
+# Robots.txt for Atlas Excavation & Demolition
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.deployatlas.com/sitemap.xml
+
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
