@@ -115,9 +115,31 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             if (isValid) {
-                // In production, this would submit to a server
-                // For Netlify, the form will be handled automatically
-                this.submit();
+                const form = this;
+                const formData = new FormData(form);
+                const submitBtn = form.querySelector('button[type="submit"]');
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+
+                fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(formData).toString()
+                })
+                .then(function(response) {
+                    if (response.ok) {
+                        window.location.href = '/thank-you.html';
+                    } else {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Request';
+                        alert('Something went wrong. Please try again or call us at (573) 200-6499.');
+                    }
+                })
+                .catch(function() {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Request';
+                    alert('Something went wrong. Please try again or call us at (573) 200-6499.');
+                });
             }
         });
     }
