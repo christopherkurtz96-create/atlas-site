@@ -41,7 +41,7 @@ Your topic recommendations should reflect the full spectrum of Atlas services an
 ### Company Information
 - **Name**: Atlas Excavation & Demolition
 - **Location**: Columbia, MO
-- **Phone**: (573) 200-6499
+- **Phone**: (573) 530-3872
 - **Service Radius**: 45-50 miles from Columbia (Mid-Missouri)
 - **Years in Business**: 2-5 years
 - **Customer Base**: 50% residential, 50% commercial
@@ -575,7 +575,7 @@ Each location page should include:
 ### Local SEO Specifics
 - **Always include location**: Every piece of content should mention Columbia, MO and/or specific service areas
 - **Use natural location mentions**: "Columbia homeowners" not just "Columbia" stuffed in
-- **Include phone number**: (573) 200-6499 should appear prominently
+- **Include phone number**: (573) 530-3872 should appear prominently
 - **NAP consistency**: Name, Address, Phone must match GBP exactly everywhere
 - **Local landmarks**: Reference well-known local areas when relevant
 
@@ -616,7 +616,7 @@ Each location page should include:
 ✅ **Natural integration**: "As Columbia's trusted excavation contractor..."
 
 ❌ **No CTAs**: Educational content without next steps
-✅ **Clear CTAs**: "Call (573) 200-6499 for a free estimate"
+✅ **Clear CTAs**: "Call (573) 530-3872 for a free estimate"
 
 ## Success Metrics
 
