@@ -202,6 +202,7 @@
                     <h3>Request a Free Estimate</h3>
                     <form id="contact-form" name="contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
                         <input type="hidden" name="form-name" value="contact">
+                        <input type="hidden" name="source" id="source-field" value="Organic" />
                         <p class="hidden" style="display: none;">
                             <label>Don't fill this out if you're human: <input name="bot-field"></label>
                         </p>
@@ -226,20 +227,18 @@
                             <label for="service">Service Needed</label>
                             <select id="service" name="service">
                                 <option value="">Select a service...</option>
-                                <option value="excavation">Excavation</option>
                                 <option value="demolition">Demolition</option>
-                                <option value="site-preparation">Site Preparation</option>
+                                <option value="excavation">Excavation / Dirt Work</option>
                                 <option value="land-clearing">Land Clearing</option>
-                                <option value="grading-drainage">Grading & Drainage</option>
-                                <option value="mobile-home-removal">Mobile Home Removal</option>
                                 <option value="concrete-removal">Concrete Removal</option>
+                                <option value="mobile-home-removal">Mobile Home Removal</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="location">Project Location (City)</label>
-                            <input type="text" id="location" name="location" placeholder="e.g., Columbia, Ashland, Fulton">
+                            <label for="location">Project Location (City, State)</label>
+                            <input type="text" id="location" name="location" placeholder="Columbia, MO">
                         </div>
 
                         <div class="form-group">
@@ -359,5 +358,16 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const utm = params.get('utm_source');
+      const sourceField = document.getElementById('source-field');
+      if (!sourceField) return;
+      if (utm === 'google_ad') sourceField.value = 'Google Ad';
+      else if (utm === 'meta_ad') sourceField.value = 'Meta Ad';
+      else sourceField.value = 'Organic';
+    })();
+    </script>
 </body>
 </html>
