@@ -1,0 +1,723 @@
+/* ============================================
+   Instant Bid Calculator — Styles
+   ============================================ */
+
+/* --- Banner --- */
+.bid-banner {
+    background: var(--deep-navy);
+    color: var(--white);
+    padding: 12px 0;
+}
+
+.bid-banner-items {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.bid-banner-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Open Sans', var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.bid-banner-item svg {
+    color: var(--construction-orange);
+    flex-shrink: 0;
+}
+
+/* --- Section --- */
+.bid-section {
+    padding: 48px 0 80px;
+    background: var(--dust-white);
+    min-height: 70vh;
+}
+
+.bid-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.bid-header h1 {
+    font-family: 'Bebas Neue', var(--font-heading);
+    font-size: 2.75rem;
+    letter-spacing: 0.02em;
+    color: var(--deep-navy);
+    margin-bottom: 8px;
+}
+
+.bid-header p {
+    font-family: 'Open Sans', var(--font-primary);
+    font-size: 1.1rem;
+    color: var(--gray-light);
+}
+
+/* --- Progress Bar --- */
+.bid-progress {
+    max-width: 640px;
+    margin: 0 auto 40px;
+}
+
+.bid-progress-text {
+    font-family: 'Montserrat', var(--font-primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--deep-navy);
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.bid-progress-track {
+    height: 8px;
+    background: var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bid-progress-fill {
+    height: 100%;
+    background: var(--construction-orange);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+/* --- Wizard --- */
+.bid-wizard {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bid-step {
+    display: none;
+    animation: bidFadeIn 0.35s ease;
+}
+
+.bid-step.active {
+    display: block;
+}
+
+@keyframes bidFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.bid-step-title {
+    font-family: 'Montserrat', var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--deep-navy);
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.bid-step-helper {
+    font-family: 'Open Sans', var(--font-primary);
+    font-size: 0.95rem;
+    color: var(--gray-light);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* --- Tabs --- */
+.bid-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 28px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 2px solid var(--deep-navy);
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bid-tab {
+    flex: 1;
+    padding: 12px 24px;
+    font-family: 'Montserrat', var(--font-primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    background: var(--white);
+    color: var(--deep-navy);
+}
+
+.bid-tab.active {
+    background: var(--deep-navy);
+    color: var(--white);
+}
+
+.bid-tab:hover:not(.active) {
+    background: var(--dust-white);
+}
+
+/* --- Job Type Cards --- */
+.bid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.bid-cards.hidden {
+    display: none;
+}
+
+.bid-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 28px 16px;
+    background: var(--white);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: center;
+    font-family: 'Open Sans', var(--font-primary);
+}
+
+.bid-card:hover {
+    border-color: var(--construction-orange);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.bid-card:focus {
+    outline: 2px solid var(--construction-orange);
+    outline-offset: 2px;
+}
+
+.bid-card.selected {
+    border-color: var(--construction-orange);
+    background: #FFF7F2;
+    box-shadow: 0 4px 16px rgba(247, 69, 0, 0.12);
+}
+
+.bid-card-icon {
+    color: var(--deep-navy);
+}
+
+.bid-card.selected .bid-card-icon {
+    color: var(--construction-orange);
+}
+
+.bid-card-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--deep-navy);
+    line-height: 1.3;
+}
+
+.bid-card-check {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--construction-orange);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.bid-card.selected .bid-card-check {
+    opacity: 1;
+}
+
+/* --- Questions (Step 2) --- */
+.bid-question {
+    margin-bottom: 24px;
+}
+
+.bid-question-label {
+    font-family: 'Montserrat', var(--font-primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--deep-navy);
+    margin-bottom: 12px;
+}
+
+.bid-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bid-option {
+    padding: 10px 20px;
+    background: var(--white);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: 'Open Sans', var(--font-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--charcoal-gray);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.bid-option:hover {
+    border-color: var(--construction-orange);
+}
+
+.bid-option:focus {
+    outline: 2px solid var(--construction-orange);
+    outline-offset: 2px;
+}
+
+.bid-option.selected {
+    background: var(--construction-orange);
+    border-color: var(--construction-orange);
+    color: var(--white);
+}
+
+/* Preset buttons with custom entry */
+.bid-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.bid-custom-entry {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bid-custom-input {
+    width: 90px;
+    padding: 10px 12px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: 'Open Sans', var(--font-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--charcoal-gray);
+    text-align: center;
+    transition: border-color var(--transition-fast);
+}
+
+.bid-custom-input:focus {
+    border-color: var(--construction-orange);
+    outline: none;
+}
+
+.bid-custom-label {
+    font-family: 'Open Sans', var(--font-primary);
+    font-size: 0.85rem;
+    color: var(--gray-light);
+}
+
+/* --- Zip Code (Step 3) --- */
+.bid-zip-wrap {
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bid-input--zip {
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    padding: 16px;
+}
+
+.bid-zip-message {
+    margin-top: 12px;
+    font-family: 'Open Sans', var(--font-primary);
+    font-size: 0.85rem;
+    min-height: 20px;
+}
+
+.bid-zip-message.success {
+    color: #2e7d32;
+}
+
+.bid-zip-message.warning {
+    color: var(--construction-orange);
+}
+
+.bid-zip-message.error {
+    color: #c62828;
+}
+
+/* --- Lead Form (Step 4) --- */
+.bid-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.bid-form-group {
+    margin-bottom: 16px;
+}
+
+.bid-form-group label {
+    display: block;
+    font-family: 'Montserrat', var(--font-primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--deep-navy);
+    margin-bottom: 6px;
+}
+
+.bid-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-family: 'Open Sans', var(--font-primary);
+    font-size: 1rem;
+    color: var(--charcoal-gray);
+    background: var(--white);
+    transition: border-color var(--transition-fast);
+}
+
+.bid-input:focus {
+    border-color: var(--construction-orange);
+    outline: none;
+}
+
+.bid-input.error {
+    border-color: #c62828;
+}
+
+.bid-input-error {
+    font-family: 'Open Sans', var(--font-primary);
+    font-size: 0.8rem;
+    color: #c62828;
+    margin-top: 4px;
+}
+
+.bid-form-followup {
+    font-family: 'Open Sans', var(--font-primary);
+    font-size: 0.85rem;
+    color: var(--gray-light);
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* --- Estimate (Step 5) --- */
+.bid-estimate {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.bid-estimate-label {
+    font-family: 'Montserrat', var(--font-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gray-light);
+    margin-bottom: 8px;
+}
+
+.bid-estimate-range {
+    font-family: 'Bebas Neue', var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--deep-navy);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.bid-estimate-dollar {
+    color: var(--construction-orange);
+}
+
+.bid-estimate-dash {
+    color: var(--gray-light);
+}
+
+.bid-estimate-subtitle {
+    font-family: 'Open Sans', var(--font-primary);
+    font-size: 1rem;
+    color: var(--gray-light);
+    margin-bottom: 24px;
+}
+
+.bid-service-message {
+    background: #FFF3E0;
+    border: 1px solid #FFB74D;
+    border-radius: var(--border-radius);
+    padding: 12px 16px;
+    font-family: 'Open Sans', var(--font-primary);
+    font-size: 0.9rem;
+    color: #E65100;
+    margin-bottom: 24px;
+}
+
+.bid-service-message.hidden {
+    display: none;
+}
+
+.bid-disclaimer {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    padding: 24px;
+    margin-bottom: 32px;
+    text-align: left;
+}
+
+.bid-disclaimer p {
+    font-family: 'Open Sans', var(--font-primary);
+    font-size: 0.9rem;
+    color: var(--charcoal-gray);
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.bid-disclaimer p:last-child {
+    margin-bottom: 0;
+}
+
+.bid-trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.bid-trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Montserrat', var(--font-primary);
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--deep-navy);
+}
+
+.bid-trust-badge svg {
+    color: var(--construction-orange);
+    flex-shrink: 0;
+}
+
+.bid-cta-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.bid-cta-btn {
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.bid-cta-subtext {
+    font-family: 'Open Sans', var(--font-primary);
+    font-size: 0.85rem;
+    color: var(--gray-light);
+}
+
+/* --- Navigation Buttons --- */
+.bid-nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 32px auto 0;
+}
+
+.bid-nav-back,
+.bid-nav-next {
+    padding: 14px 36px;
+    font-family: 'Montserrat', var(--font-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.bid-nav-back.hidden {
+    visibility: hidden;
+}
+
+.bid-nav-next {
+    margin-left: auto;
+}
+
+.bid-nav-next:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+/* btn-secondary for the wizard (back button / call CTA) */
+.btn-secondary {
+    background: var(--white);
+    color: var(--deep-navy);
+    border: 2px solid var(--deep-navy);
+}
+
+.btn-secondary:hover {
+    background: var(--deep-navy);
+    color: var(--white);
+}
+
+/* --- Homepage Embed CTA --- */
+.bid-embed-cta {
+    background: var(--deep-navy);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.bid-embed-cta h2 {
+    font-family: 'Bebas Neue', var(--font-heading);
+    font-size: 2.25rem;
+    color: var(--white);
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+}
+
+.bid-embed-cta p {
+    font-family: 'Open Sans', var(--font-primary);
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 24px;
+}
+
+.bid-embed-cta .btn {
+    font-size: 1.1rem;
+    padding: 16px 40px;
+}
+
+/* ============================================
+   Responsive — Mobile First
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Banner */
+    .bid-banner-items {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .bid-banner-item {
+        font-size: 0.8rem;
+    }
+
+    /* Header */
+    .bid-header h1 {
+        font-size: 2rem;
+    }
+
+    .bid-header p {
+        font-size: 0.95rem;
+    }
+
+    /* Cards */
+    .bid-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .bid-card {
+        flex-direction: row;
+        padding: 16px 20px;
+        gap: 16px;
+        justify-content: flex-start;
+    }
+
+    .bid-card-icon svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .bid-card-label {
+        text-align: left;
+    }
+
+    /* Questions */
+    .bid-options {
+        flex-direction: column;
+    }
+
+    .bid-option {
+        width: 100%;
+        text-align: center;
+    }
+
+    .bid-presets {
+        flex-direction: column;
+    }
+
+    .bid-custom-entry {
+        width: 100%;
+    }
+
+    .bid-custom-input {
+        width: 100%;
+    }
+
+    /* Form */
+    .bid-form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    /* Estimate */
+    .bid-estimate-range {
+        font-size: 2.5rem;
+    }
+
+    .bid-trust-badges {
+        gap: 16px;
+    }
+
+    .bid-trust-badge {
+        font-size: 0.75rem;
+        flex-basis: 45%;
+        justify-content: center;
+    }
+
+    .bid-cta-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bid-cta-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Nav */
+    .bid-nav-back,
+    .bid-nav-next {
+        padding: 14px 24px;
+    }
+
+    .bid-step-title {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bid-header h1 {
+        font-size: 1.65rem;
+    }
+
+    .bid-estimate-range {
+        font-size: 2rem;
+    }
+
+    .bid-trust-badge {
+        flex-basis: 100%;
+    }
+}
