@@ -323,34 +323,49 @@
                 <div class="bid-step" data-step="4">
                     <h2 class="bid-step-title">Almost there!</h2>
                     <p class="bid-step-helper">Enter your info to see your instant estimate.</p>
-                    <form id="bid-lead-form" novalidate>
+                    <form id="bid-lead-form" name="instant-bid" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+                        <input type="hidden" name="form-name" value="instant-bid">
+                        <p class="hidden" style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+                        <!-- Hidden fields for calculated data -->
+                        <input type="hidden" name="source" value="instant-bid">
+                        <input type="hidden" name="tab" id="bid-h-tab">
+                        <input type="hidden" name="jobType" id="bid-h-job">
+                        <input type="hidden" name="selections" id="bid-h-selections">
+                        <input type="hidden" name="estimateLow" id="bid-h-est-low">
+                        <input type="hidden" name="estimateHigh" id="bid-h-est-high">
+                        <input type="hidden" name="distanceMiles" id="bid-h-distance">
+                        <input type="hidden" name="zipCode" id="bid-h-zip">
+                        <input type="hidden" name="utmSource" id="bid-h-utm-source">
+                        <input type="hidden" name="utmMedium" id="bid-h-utm-medium">
+                        <input type="hidden" name="utmCampaign" id="bid-h-utm-campaign">
+                        <input type="hidden" name="utmContent" id="bid-h-utm-content">
                         <div class="bid-form-row">
                             <div class="bid-form-group">
                                 <label for="bid-first-name">First Name</label>
-                                <input type="text" id="bid-first-name" class="bid-input" required autocomplete="given-name">
+                                <input type="text" id="bid-first-name" name="firstName" class="bid-input" required autocomplete="given-name">
                             </div>
                             <div class="bid-form-group">
                                 <label for="bid-last-name">Last Name</label>
-                                <input type="text" id="bid-last-name" class="bid-input" required autocomplete="family-name">
+                                <input type="text" id="bid-last-name" name="lastName" class="bid-input" required autocomplete="family-name">
                             </div>
                         </div>
                         <div class="bid-form-row">
                             <div class="bid-form-group">
                                 <label for="bid-phone">Phone</label>
-                                <input type="tel" id="bid-phone" class="bid-input" required autocomplete="tel">
+                                <input type="tel" id="bid-phone" name="phone" class="bid-input" required autocomplete="tel">
                             </div>
                             <div class="bid-form-group">
                                 <label for="bid-email">Email</label>
-                                <input type="email" id="bid-email" class="bid-input" required autocomplete="email">
+                                <input type="email" id="bid-email" name="email" class="bid-input" required autocomplete="email">
                             </div>
                         </div>
                         <div class="bid-form-group">
                             <label for="bid-address">Property Address</label>
-                            <input type="text" id="bid-address" class="bid-input" required autocomplete="street-address">
+                            <input type="text" id="bid-address" name="propertyAddress" class="bid-input" required autocomplete="street-address">
                         </div>
                         <div class="bid-form-group">
                             <label for="bid-call-time">Best Time to Call</label>
-                            <select id="bid-call-time" class="bid-input" required>
+                            <select id="bid-call-time" name="bestTimeToCall" class="bid-input" required>
                                 <option value="">Select...</option>
                                 <option value="Morning">Morning</option>
                                 <option value="Afternoon">Afternoon</option>

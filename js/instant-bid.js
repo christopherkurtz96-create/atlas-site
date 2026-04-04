@@ -701,6 +701,32 @@
     // ==========================================
 
     function submitLead() {
+        // Populate hidden fields for Netlify Forms
+        document.getElementById('bid-h-tab').value        = state.tab;
+        document.getElementById('bid-h-job').value        = state.jobType;
+        document.getElementById('bid-h-selections').value = JSON.stringify(state.selections);
+        document.getElementById('bid-h-est-low').value    = state.estimate.low;
+        document.getElementById('bid-h-est-high').value   = state.estimate.high;
+        document.getElementById('bid-h-distance').value   = state.distanceMiles === -1 ? 'unknown' : state.distanceMiles;
+        document.getElementById('bid-h-zip').value        = state.zipCode;
+        document.getElementById('bid-h-utm-source').value   = state.utm.source;
+        document.getElementById('bid-h-utm-medium').value   = state.utm.medium;
+        document.getElementById('bid-h-utm-campaign').value = state.utm.campaign;
+        document.getElementById('bid-h-utm-content').value  = state.utm.content;
+
+        // Submit to Netlify Forms via AJAX (so the page doesn't redirect)
+        var form = document.getElementById('bid-lead-form');
+        var formData = new FormData(form);
+
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
+        }).catch(function (err) {
+            console.error('Netlify form submission failed:', err);
+        });
+
+        // Also POST to N8N webhook
         var payload = {
             source: 'instant-bid',
             firstName:      state.lead.firstName,
