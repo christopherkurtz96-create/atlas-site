@@ -132,13 +132,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     } else {
                         submitBtn.disabled = false;
                         submitBtn.textContent = 'Send Request';
-                        alert('Something went wrong. Please try again or call us at (573) 530-3872.');
+                        alert('Something went wrong. Please try again or call us at (573) 234-6641.');
                     }
                 })
                 .catch(function() {
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Send Request';
-                    alert('Something went wrong. Please try again or call us at (573) 530-3872.');
+                    alert('Something went wrong. Please try again or call us at (573) 234-6641.');
                 });
             }
         });
