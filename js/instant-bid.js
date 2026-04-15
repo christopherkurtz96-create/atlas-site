@@ -749,6 +749,18 @@
     // ==========================================
 
     function submitLead() {
+        // Google Ads conversion — fires only after validation has passed and
+        // we're actually submitting the bid. Replace AW-CONVERSION-ID and
+        // CONVERSION-LABEL with the real values from Google Ads (Tools >
+        // Conversions > click the action > "Tag setup" > "Use Google tag").
+        if (typeof gtag === 'function') {
+            gtag('event', 'conversion', {
+                'send_to': 'AW-CONVERSION-ID/CONVERSION-LABEL',
+                'value': 50.0,
+                'currency': 'USD'
+            });
+        }
+
         // Populate hidden fields for Netlify Forms
         document.getElementById('bid-h-tab').value        = state.tab;
         document.getElementById('bid-h-job').value        = state.jobType;
