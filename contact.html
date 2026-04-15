@@ -106,7 +106,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                         (573) 234-6641
                     </a>
-                    <a href="contact.html" class="btn btn-primary btn-sm">Free Estimate</a>
+                    <a href="instant-bid.html" class="btn btn-primary btn-sm">Instant Estimate</a>
                 </div>
 
                 <div class="mobile-toggle" id="mobile-toggle">
@@ -367,6 +367,38 @@
       if (utm === 'google_ad') sourceField.value = 'Google Ad';
       else if (utm === 'meta_ad') sourceField.value = 'Meta Ad';
       else sourceField.value = 'Organic';
+    })();
+    </script>
+    <script>
+    // Fire a sidecar POST to the n8n general lead webhook on submit.
+    // Native Netlify form submission continues in parallel as the backup.
+    (function() {
+      var form = document.getElementById('contact-form');
+      if (!form) return;
+      form.addEventListener('submit', function() {
+        try {
+          var fd = new FormData(form);
+          var payload = {
+            source: 'contact-form',
+            name: fd.get('name') || '',
+            phone: fd.get('phone') || '',
+            email: fd.get('email') || '',
+            service: fd.get('service') || '',
+            location: fd.get('location') || '',
+            message: fd.get('message') || '',
+            formSource: fd.get('source') || 'Organic',
+            page: window.location.pathname,
+            referrer: document.referrer || '',
+            timestamp: new Date().toISOString()
+          };
+          fetch('https://prexinvestments.app.n8n.cloud/webhook/atlas-general-lead', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+            keepalive: true
+          }).catch(function() {});
+        } catch (e) {}
+      });
     })();
     </script>
 </body>
