@@ -14,20 +14,22 @@
     var BASE_PRICES = {
         'shed-removal':        1500,
         'detached-garage-demo': 3500,
-        'mobile-home-removal': 5000,
-        'concrete-removal':    4.50,   // per sq ft
+        'mobile-home-removal': 7000,
+        'concrete-removal':    6.00,   // per sq ft
         'deck-porch-demo':     1800,
         'outbuilding-barn':    4000,
         'forestry-mulching':   2500,   // per acre
-        'lot-clearing':        3500,   // per acre
-        'fence-line-clearing': 3.00    // per linear ft
+        'brush-hogging':       250,    // per acre
+        'lot-clearing':        5500,   // per acre
+        'fence-line-clearing': 3.00,   // per linear ft
+        'trail-cutting':       4.00    // per linear ft
     };
 
     // Size multipliers
     var SIZE_MULT = {
         'shed-removal':        { 'Small (under 120 sq ft)': 0.70, 'Medium (120–200 sq ft)': 1.00, 'Large (200+ sq ft)': 1.40 },
         'detached-garage-demo': { 'Single car': 1.00, 'Two car': 1.45, 'Oversized / three car': 1.85 },
-        'mobile-home-removal': { 'Single-wide': 1.00, 'Double-wide': 1.70 },
+        'mobile-home-removal': { 'Single-wide': 1.00, 'Double-wide': 1.50 },
         'deck-porch-demo':     { 'Small (under 200 sq ft)': 0.75, 'Medium (200–400 sq ft)': 1.00, 'Large (400+ sq ft)': 1.50 },
         'outbuilding-barn':    { 'Small (under 500 sq ft)': 0.70, 'Medium (500–1000 sq ft)': 1.00, 'Large (1000+ sq ft)': 1.50 }
     };
@@ -35,9 +37,15 @@
     var CONSTRUCTION_MULT = { 'Wood frame': 1.00, 'Metal': 1.10, 'Block or brick': 1.25 };
     var FOUNDATION_MULT   = { 'On blocks / skids': 1.00, 'Slab stays': 1.00, 'Remove slab too': 1.30, 'None (dirt floor)': 1.00 };
     var ACCESS_MULT       = { 'Easy (open lot)': 1.00, 'Moderate (some obstacles)': 1.10, 'Tight (fenced, close to structures)': 1.20 };
+    var ROOFING_MULT      = { 'Metal': 1.00, 'Shingles': 1.30 };
+
+    // Shed-specific: bumped so "Remove slab too" actually covers slab disposal on larger sheds
+    var SHED_FOUNDATION_MULT = { 'On blocks / skids': 1.00, 'Slab stays': 1.00, 'Remove slab too': 1.50 };
+
+    // Barn-specific: slab removal is a bigger job on a barn than on a shed or garage
+    var BARN_FOUNDATION_MULT = { 'None (dirt floor)': 1.00, 'Slab stays': 1.00, 'Remove slab too': 1.60 };
 
     // Mobile home specifics
-    var CONDITION_MULT = { 'Intact (can be moved in sections)': 1.00, 'Deteriorated (demo in place)': 1.20 };
     var SKIRTING_MULT  = { 'No': 1.00, 'Yes': 1.10 };
 
     // Deck specifics
@@ -54,22 +62,30 @@
     var TERRAIN_MULT = { 'Flat': 1.00, 'Rolling': 1.10, 'Steep': 1.25 };
     var TREES_MULT   = { 'Few small trees': 1.00, 'Moderate trees': 1.20, 'Heavy timber': 1.50 };
 
+    // Brush hogging (pastures, fields, grasses — not woods)
+    var BRUSH_HOG_VEG = {
+        'Light (short grass, maintained)': 0.80,
+        'Moderate (knee-high grass, weeds)': 1.00,
+        'Heavy (tall grass, woody weeds, saplings)': 1.40
+    };
+
     // Questions per job type
     var JOB_QUESTIONS = {
         'shed-removal': [
             { key: 'size', label: 'What size is the shed?', options: Object.keys(SIZE_MULT['shed-removal']) },
+            { key: 'roofing', label: 'Roofing material?', options: Object.keys(ROOFING_MULT) },
             { key: 'foundation', label: 'What type of foundation?', options: ['On blocks / skids', 'Slab stays', 'Remove slab too'] }
         ],
         'detached-garage-demo': [
             { key: 'size', label: 'What size garage?', options: Object.keys(SIZE_MULT['detached-garage-demo']) },
             { key: 'construction', label: 'Construction type?', options: Object.keys(CONSTRUCTION_MULT) },
+            { key: 'roofing', label: 'Roofing material?', options: Object.keys(ROOFING_MULT) },
             { key: 'foundation', label: 'Foundation?', options: ['Slab stays', 'Remove slab too'] },
             { key: 'access', label: 'Site access?', options: Object.keys(ACCESS_MULT) }
         ],
         'mobile-home-removal': [
             { key: 'size', label: 'What type of mobile home?', options: Object.keys(SIZE_MULT['mobile-home-removal']) },
-            { key: 'condition', label: 'Condition?', options: Object.keys(CONDITION_MULT) },
-            { key: 'skirting', label: 'Include skirting/deck removal?', options: Object.keys(SKIRTING_MULT) },
+            { key: 'skirting', label: 'Include deck removal?', options: Object.keys(SKIRTING_MULT) },
             { key: 'access', label: 'Site access?', options: Object.keys(ACCESS_MULT) }
         ],
         'concrete-removal': [
@@ -87,12 +103,18 @@
         'outbuilding-barn': [
             { key: 'size', label: 'What size?', options: Object.keys(SIZE_MULT['outbuilding-barn']) },
             { key: 'construction', label: 'Construction type?', options: Object.keys(CONSTRUCTION_MULT) },
+            { key: 'roofing', label: 'Roofing material?', options: Object.keys(ROOFING_MULT) },
             { key: 'foundation', label: 'Foundation?', options: ['None (dirt floor)', 'Slab stays', 'Remove slab too'] },
             { key: 'access', label: 'Site access?', options: Object.keys(ACCESS_MULT) }
         ],
         'forestry-mulching': [
             { key: 'acreage', label: 'How many acres?', type: 'preset', presets: [0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4, 5], unit: 'acres', customLabel: 'acres' },
             { key: 'brushDensity', label: 'Brush density?', options: Object.keys(BRUSH_MULT) },
+            { key: 'terrain', label: 'Terrain?', options: Object.keys(TERRAIN_MULT) }
+        ],
+        'brush-hogging': [
+            { key: 'acreage', label: 'How many acres?', type: 'preset', presets: [0.5, 1, 2, 3, 5, 10, 15, 20], unit: 'acres', customLabel: 'acres' },
+            { key: 'vegetation', label: 'Vegetation density?', options: Object.keys(BRUSH_HOG_VEG) },
             { key: 'terrain', label: 'Terrain?', options: Object.keys(TERRAIN_MULT) }
         ],
         'lot-clearing': [
@@ -104,6 +126,11 @@
         'fence-line-clearing': [
             { key: 'linearFeet', label: 'How many linear feet?', type: 'preset', presets: [100, 200, 300, 500, 750, 1000], unit: 'ft', customLabel: 'ft' },
             { key: 'brushDensity', label: 'Brush density?', options: Object.keys(BRUSH_MULT) },
+            { key: 'terrain', label: 'Terrain?', options: Object.keys(TERRAIN_MULT) }
+        ],
+        'trail-cutting': [
+            { key: 'linearFeet', label: 'How many linear feet of trail?', type: 'preset', presets: [100, 200, 300, 500, 750, 1000, 1500, 2000], unit: 'ft', customLabel: 'ft' },
+            { key: 'brushDensity', label: 'Brush/tree density along trail?', options: Object.keys(BRUSH_MULT) },
             { key: 'terrain', label: 'Terrain?', options: Object.keys(TERRAIN_MULT) }
         ]
     };
@@ -573,13 +600,15 @@
             case 'shed-removal':
                 raw = BASE_PRICES[job]
                     * (SIZE_MULT[job][sel.size] || 1)
-                    * (FOUNDATION_MULT[sel.foundation] || 1);
+                    * (ROOFING_MULT[sel.roofing] || 1)
+                    * (SHED_FOUNDATION_MULT[sel.foundation] || 1);
                 break;
 
             case 'detached-garage-demo':
                 raw = BASE_PRICES[job]
                     * (SIZE_MULT[job][sel.size] || 1)
                     * (CONSTRUCTION_MULT[sel.construction] || 1)
+                    * (ROOFING_MULT[sel.roofing] || 1)
                     * (FOUNDATION_MULT[sel.foundation] || 1)
                     * (ACCESS_MULT[sel.access] || 1);
                 break;
@@ -587,7 +616,6 @@
             case 'mobile-home-removal':
                 raw = BASE_PRICES[job]
                     * (SIZE_MULT[job][sel.size] || 1)
-                    * (CONDITION_MULT[sel.condition] || 1)
                     * (SKIRTING_MULT[sel.skirting] || 1)
                     * (ACCESS_MULT[sel.access] || 1);
                 break;
@@ -598,6 +626,9 @@
                     * (THICKNESS_MULT[sel.thickness] || 1)
                     * (REBAR_MULT[sel.rebar] || 1)
                     * (CONCRETE_TYPE_MULT[sel.concreteType] || 1);
+                // Minimum job charge: disposal + dumpster alone puts a floor around $750
+                // raw is bumped so the ±10% low-end lands at ~$750
+                if (raw < 833) raw = 833;
                 break;
 
             case 'deck-porch-demo':
@@ -612,7 +643,8 @@
                 raw = BASE_PRICES[job]
                     * (SIZE_MULT[job][sel.size] || 1)
                     * (CONSTRUCTION_MULT[sel.construction] || 1)
-                    * (FOUNDATION_MULT[sel.foundation] || 1)
+                    * (ROOFING_MULT[sel.roofing] || 1)
+                    * (BARN_FOUNDATION_MULT[sel.foundation] || 1)
                     * (ACCESS_MULT[sel.access] || 1);
                 break;
 
@@ -636,6 +668,22 @@
                 raw = BASE_PRICES[job] * ft
                     * (BRUSH_MULT[sel.brushDensity] || 1)
                     * (TERRAIN_MULT[sel.terrain] || 1);
+                break;
+
+            case 'trail-cutting':
+                var trailFt = parseFloat(sel.linearFeet) || 0;
+                raw = BASE_PRICES[job] * trailFt
+                    * (BRUSH_MULT[sel.brushDensity] || 1)
+                    * (TERRAIN_MULT[sel.terrain] || 1);
+                break;
+
+            case 'brush-hogging':
+                var hogAcres = parseFloat(sel.acreage) || 0;
+                raw = BASE_PRICES[job] * hogAcres
+                    * (BRUSH_HOG_VEG[sel.vegetation] || 1)
+                    * (TERRAIN_MULT[sel.terrain] || 1);
+                // Minimum job charge: half-day / single-acre floor
+                if (raw < 389) raw = 389;  // ensures low-end displays ~$350
                 break;
         }
 
