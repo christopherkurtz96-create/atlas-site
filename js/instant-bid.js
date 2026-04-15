@@ -8,7 +8,7 @@
     // Configuration & Pricing Tables
     // ==========================================
 
-    var WEBHOOK_URL = 'https://prexinvestments.app.n8n.cloud/webhook/atlas-leads';
+    var WEBHOOK_URL = 'https://prexinvestments.app.n8n.cloud/webhook/atlas-instant-bid';
 
     // Base prices
     var BASE_PRICES = {
