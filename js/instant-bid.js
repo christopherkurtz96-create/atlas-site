@@ -749,13 +749,13 @@
     // ==========================================
 
     function submitLead() {
-        // Google Ads conversion — fires only after validation has passed and
-        // we're actually submitting the bid. Replace AW-CONVERSION-ID and
-        // CONVERSION-LABEL with the real values from Google Ads (Tools >
-        // Conversions > click the action > "Tag setup" > "Use Google tag").
+        // Google Ads "Instant Bid Submission" conversion — fires only after
+        // validateLeadForm() has passed and we're actually submitting the bid.
+        // Guarded with typeof gtag check so the n8n pipeline still runs if
+        // gtag fails to load (ad blocker, network hiccup, etc).
         if (typeof gtag === 'function') {
             gtag('event', 'conversion', {
-                'send_to': 'AW-CONVERSION-ID/CONVERSION-LABEL',
+                'send_to': 'AW-17754715518/oqqZCOqHtqEcEP7qjZJC',
                 'value': 50.0,
                 'currency': 'USD'
             });
