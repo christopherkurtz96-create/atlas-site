@@ -36,7 +36,7 @@ You are an **elite expert** combining three specialized domains:
 ### Company Information
 - **Name**: Atlas Excavation & Demolition
 - **Location**: Columbia, MO
-- **Phone**: (573) 530-3872
+- **Phone**: (573) 234-6641
 - **Service Radius**: 45-50 miles from Columbia (Mid-Missouri)
 - **Years in Business**: 2-5 years
 - **Customer Base**: 50% residential, 50% commercial
@@ -335,7 +335,7 @@ Link to location pages when mentioning:
 - Regional coverage
 
 **Contact/CTA Links**:
-- Include phone number: (573) 530-3872
+- Include phone number: (573) 234-6641
 - Link to contact page for estimates
 - Use tel: links for mobile users
 
@@ -450,11 +450,11 @@ Rationale: [why this is better]
 
 **Good meta description examples**:
 ```
-✅ "Learn house demolition costs in Columbia, MO. Local pricing factors, permit info & free estimates from Atlas Excavation. Call (573) 530-3872." (152 chars)
+✅ "Learn house demolition costs in Columbia, MO. Local pricing factors, permit info & free estimates from Atlas Excavation. Call (573) 234-6641." (152 chars)
 
 ✅ "Fix yard drainage problems in Mid-Missouri. Expert solutions from Atlas Excavation & Demolition. Serving Columbia & Boone County. Free estimates!" (155 chars)
 
-✅ "Need excavation in Columbia, MO? Foundation digging, trenching, pond excavation by local experts. Fast quotes from Atlas Excavation. (573) 530-3872" (157 chars)
+✅ "Need excavation in Columbia, MO? Foundation digging, trenching, pond excavation by local experts. Fast quotes from Atlas Excavation. (573) 234-6641" (157 chars)
 ```
 
 **Poor meta description examples**:
@@ -471,7 +471,7 @@ Rationale: [why this is better]
 [Action verb] + [primary keyword] + [location] + [benefit/CTA] + [phone or action]
 
 Example:
-"Discover house demolition costs in Columbia, MO. Local factors, permits & pricing from Atlas Excavation. Free estimate: (573) 530-3872."
+"Discover house demolition costs in Columbia, MO. Local factors, permits & pricing from Atlas Excavation. Free estimate: (573) 234-6641."
 ```
 
 **Recommendation format**:
@@ -656,7 +656,7 @@ Optimized: "[compelling excerpt]" (X chars)
 #### Phone Number & Contact Info
 
 **Check for**:
-- Phone number (573) 530-3872 appears at least 2x
+- Phone number (573) 234-6641 appears at least 2x
 - Phone number in introduction area
 - Phone number in conclusion/CTA
 - Phone number uses tel: link format
@@ -664,8 +664,8 @@ Optimized: "[compelling excerpt]" (X chars)
 
 **Phone number formats**:
 ```markdown
-✅ Call us today at [(573) 530-3872](tel:5735303872) for a free estimate.
-✅ Contact Atlas Excavation & Demolition at (573) 530-3872.
+✅ Call us today at [(573) 234-6641](tel:5732346641) for a free estimate.
+✅ Contact Atlas Excavation & Demolition at (573) 234-6641.
 ```
 
 ### Step 9: Local SEO Specific Checks
@@ -674,7 +674,7 @@ Optimized: "[compelling excerpt]" (X chars)
 
 **Check that content supports GBP**:
 - [ ] Business name exact match: "Atlas Excavation & Demolition"
-- [ ] Phone number matches GBP: (573) 530-3872
+- [ ] Phone number matches GBP: (573) 234-6641
 - [ ] Services mentioned align with GBP service list
 - [ ] Service area matches GBP (45-50 mile radius)
 
@@ -700,7 +700,7 @@ Optimized: "[compelling excerpt]" (X chars)
 **Verify Name, Address, Phone consistency**:
 - Business name: Atlas Excavation & Demolition (exact)
 - Location: Columbia, MO
-- Phone: (573) 530-3872
+- Phone: (573) 234-6641
 
 **All mentions must be consistent with GBP listing**
 
@@ -764,7 +764,7 @@ Compare draft to top-ranking competitors:
 - [ ] Location (Columbia) mentioned 5-8 times naturally
 - [ ] Missouri mentioned 3-5 times
 - [ ] Mid-Missouri/Boone County mentioned 1-2 times
-- [ ] Phone number (573) 530-3872 appears 2-3 times with CTA
+- [ ] Phone number (573) 234-6641 appears 2-3 times with CTA
 - [ ] 5-7 internal links with good anchor text
 - [ ] 2-3 external links to quality/authoritative sources
 - [ ] Meta title 50-60 characters with location
@@ -935,7 +935,7 @@ Compare draft to top-ranking competitors:
    - Assessment: [Status]
 
 **Contact/CTA Links**:
-1. Phone number: (573) 530-3872 - [X] mentions
+1. Phone number: (573) 234-6641 - [X] mentions
 2. Contact page link: [Present/Missing]
 
 **Link Distribution**:
@@ -1065,7 +1065,7 @@ Compare draft to top-ranking competitors:
 #### NAP Consistency
 
 **Name**: Atlas Excavation & Demolition - [✅ Consistent / ❌ Varies]
-**Phone**: (573) 530-3872 - [✅ Consistent / ❌ Varies]
+**Phone**: (573) 234-6641 - [✅ Consistent / ❌ Varies]
 
 ---
 
@@ -1219,7 +1219,7 @@ If only minor/low priority issues, can publish and monitor performance
 - **CTAs are essential**: Phone number and contact prompts throughout
 
 ### Atlas-Specific Priorities
-- **Phone number prominence**: (573) 530-3872 must appear multiple times
+- **Phone number prominence**: (573) 234-6641 must appear multiple times
 - **Service balance**: Don't just optimize for demolition - cover all services
 - **Location coverage**: Columbia primary, but mention secondary cities when relevant
 - **Local expertise**: Show Missouri-specific knowledge
@@ -1230,7 +1230,7 @@ If only minor/low priority issues, can publish and monitor performance
 ✅ **Natural integration**: "As Columbia's trusted excavation contractor, we serve homeowners throughout Mid-Missouri..."
 
 ❌ **Missing phone number**: No CTA or contact info
-✅ **Prominent phone**: "Call (573) 530-3872 for a free estimate" in intro and conclusion
+✅ **Prominent phone**: "Call (573) 234-6641 for a free estimate" in intro and conclusion
 
 ❌ **Generic content**: Could apply to any city
 ✅ **Local content**: Missouri soil conditions, Boone County permits, Columbia-specific examples

@@ -72,7 +72,7 @@ Write the full blog post as an HTML file matching the exact template used by exi
 - Columbia mentioned 5-8 times naturally
 - Missouri/Mid-Missouri mentioned 3-5 times
 - Boone County mentioned 1-2 times
-- Phone number (573) 530-3872 appears 2-3 times with tel: links
+- Phone number (573) 234-6641 appears 2-3 times with tel: links
 - 5-7 internal links to service pages and location pages
 - 1-2 external links to authoritative sources (Missouri DNR, EPA, city government, etc.)
 - FAQ schema with 3-4 questions
@@ -82,7 +82,7 @@ Write the full blog post as an HTML file matching the exact template used by exi
 **Atlas business context**:
 - Business name: Atlas Excavation & Demolition
 - Location: Columbia, MO
-- Phone: (573) 530-3872
+- Phone: (573) 234-6641
 - Email: hello@deployatlas.com
 - Website: deployatlas.com
 - Service radius: 45-50 miles from Columbia
@@ -121,7 +121,7 @@ Run the full optimization checklist against the post you just wrote:
 
 1. **Keyword density check**: Primary keyword 0.5-2.5%. If outside range, fix it.
 2. **Location mentions**: Columbia 5-8x, Missouri 3-5x, Mid-Missouri/Boone County 1-2x. If short, add natural mentions.
-3. **Phone number**: (573) 530-3872 appears 2-3x with tel: links. Fix if missing.
+3. **Phone number**: (573) 234-6641 appears 2-3x with tel: links. Fix if missing.
 4. **Internal links**: 5-7 total to service and location pages. Add if short.
 5. **External links**: 1-2 to authoritative sources. Add if missing.
 6. **Heading hierarchy**: One H1, H2s every 250-350 words, no skipped levels. Fix if needed.

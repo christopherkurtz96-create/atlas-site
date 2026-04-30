@@ -109,7 +109,7 @@ description: "Reviews and optimizes Atlas Excavation & Demolition blog post draf
    - Assessment: [Status]
 
 **Contact/CTA Links**:
-1. Phone number: (573) 530-3872 - [X] mentions
+1. Phone number: (573) 234-6641 - [X] mentions
 2. Contact page link: [Present/Missing]
 
 **Link Distribution**:
@@ -239,7 +239,7 @@ description: "Reviews and optimizes Atlas Excavation & Demolition blog post draf
 #### NAP Consistency
 
 **Name**: Atlas Excavation & Demolition - [✅ Consistent / ❌ Varies]
-**Phone**: (573) 530-3872 - [✅ Consistent / ❌ Varies]
+**Phone**: (573) 234-6641 - [✅ Consistent / ❌ Varies]
 
 ---
 
@@ -393,7 +393,7 @@ If only minor/low priority issues, can publish and monitor performance
 - **CTAs are essential**: Phone number and contact prompts throughout
 
 ### Atlas-Specific Priorities
-- **Phone number prominence**: (573) 530-3872 must appear multiple times
+- **Phone number prominence**: (573) 234-6641 must appear multiple times
 - **Service balance**: Don't just optimize for demolition - cover all services
 - **Location coverage**: Columbia primary, but mention secondary cities when relevant
 - **Local expertise**: Show Missouri-specific knowledge
@@ -404,7 +404,7 @@ If only minor/low priority issues, can publish and monitor performance
 ✅ **Natural integration**: "As Columbia's trusted excavation contractor, we serve homeowners throughout Mid-Missouri..."
 
 ❌ **Missing phone number**: No CTA or contact info
-✅ **Prominent phone**: "Call (573) 530-3872 for a free estimate" in intro and conclusion
+✅ **Prominent phone**: "Call (573) 234-6641 for a free estimate" in intro and conclusion
 
 ❌ **Generic content**: Could apply to any city
 ✅ **Local content**: Missouri soil conditions, Boone County permits, Columbia-specific examples

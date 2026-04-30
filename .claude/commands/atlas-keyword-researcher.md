@@ -43,7 +43,7 @@ Your keyword recommendations should reflect the full spectrum of Atlas services 
 ### Company Information
 - **Name**: Atlas Excavation & Demolition
 - **Location**: Columbia, MO
-- **Phone**: (573) 530-3872
+- **Phone**: (573) 234-6641
 - **Service Radius**: 45-50 miles from Columbia (Mid-Missouri)
 - **Years in Business**: 2-5 years
 - **Customer Base**: 50% residential, 50% commercial
@@ -457,7 +457,7 @@ Provide guidance on how to use keywords in local content:
 - Include county name (Boone County) at least once
 - Reference "Mid-Missouri" or "Central Missouri" for broader reach
 - Mention nearby cities if relevant to the topic
-- Include phone number (573) 530-3872 prominently
+- Include phone number (573) 234-6641 prominently
 
 **Secondary Keyword Placement**:
 - Use as H2 or H3 headings where relevant
@@ -469,7 +469,7 @@ Provide guidance on how to use keywords in local content:
 Ensure Name, Address, Phone appear exactly as on GBP:
 - Atlas Excavation & Demolition
 - Columbia, MO (or full address if used)
-- (573) 530-3872
+- (573) 234-6641
 
 **Example Integration Plan**:
 ```markdown
@@ -513,14 +513,14 @@ When mentioning specific cities, link to location pages:
 **Link to Contact/Quote Page**:
 Include CTAs throughout:
 - "Get a free estimate" → /contact.html
-- "Call (573) 530-3872" → tel link
+- "Call (573) 234-6641" → tel link
 
 **Anchor Text Patterns**:
 - "[service] in Columbia" → service page
 - "excavation services" → /services/excavation.html
 - "[city] excavation" → /locations/[city]-mo.html
 - "contact us for a free estimate" → /contact.html
-- "Call (573) 530-3872" → tel:5735303872
+- "Call (573) 234-6641" → tel:5732346641
 
 **Example Internal Linking**:
 ```markdown
@@ -622,7 +622,7 @@ Anchor text variety:
 
 **Local Trust Signals to Include**:
 - Service area mention (45-50 mile radius from Columbia)
-- Phone number: (573) 530-3872
+- Phone number: (573) 234-6641
 - Local project examples/testimonials
 - Missouri permit/regulation information
 - Boone County specific details if relevant
@@ -702,8 +702,8 @@ Anchor text variety:
    - URL: /locations/[city]-mo.html
 
 **Links to Contact/Quote**:
-- CTA anchor: "Get a free estimate" or "Call (573) 530-3872"
-- URL: /contact.html or tel:5735303872
+- CTA anchor: "Get a free estimate" or "Call (573) 234-6641"
+- URL: /contact.html or tel:5732346641
 - Placement: [After each major section + conclusion]
 
 **Anchor Text Recommendations**:
@@ -794,7 +794,7 @@ Anchor text variety:
 ### Atlas-Specific Best Practices
 - **Service balance**: Don't just focus on demolition - cover all 11 services
 - **Location coverage**: Create content for ALL 8 service area cities
-- **Phone prominence**: (573) 530-3872 should appear multiple times
+- **Phone prominence**: (573) 234-6641 should appear multiple times
 - **NAP consistency**: Name, Address, Phone must match GBP everywhere
 - **Local expertise**: Mention Missouri-specific factors (soil, weather, permits)
 - **GBP alignment**: Keywords should support GBP posts and Q&A
@@ -817,7 +817,7 @@ Anchor text variety:
 ✅ **Natural integration**: "As Columbia's trusted excavation contractor..."
 
 ❌ **No CTAs**: Educational content without next steps
-✅ **Clear CTAs**: "Call (573) 530-3872 for a free estimate"
+✅ **Clear CTAs**: "Call (573) 234-6641 for a free estimate"
 
 ❌ **One-time effort**: Publishing and forgetting
 ✅ **Ongoing updates**: Refresh content annually with new pricing/info

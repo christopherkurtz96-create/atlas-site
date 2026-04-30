@@ -70,7 +70,7 @@ description: "Deep local SEO keyword research for Atlas Excavation & Demolition 
 
 **Local Trust Signals to Include**:
 - Service area mention (45-50 mile radius from Columbia)
-- Phone number: (573) 530-3872
+- Phone number: (573) 234-6641
 - Local project examples/testimonials
 - Missouri permit/regulation information
 - Boone County specific details if relevant
@@ -150,8 +150,8 @@ description: "Deep local SEO keyword research for Atlas Excavation & Demolition 
    - URL: /locations/[city]-mo.html
 
 **Links to Contact/Quote**:
-- CTA anchor: "Get a free estimate" or "Call (573) 530-3872"
-- URL: /contact.html or tel:5735303872
+- CTA anchor: "Get a free estimate" or "Call (573) 234-6641"
+- URL: /contact.html or tel:5732346641
 - Placement: [After each major section + conclusion]
 
 **Anchor Text Recommendations**:
@@ -242,7 +242,7 @@ description: "Deep local SEO keyword research for Atlas Excavation & Demolition 
 ### Atlas-Specific Best Practices
 - **Service balance**: Don't just focus on demolition - cover all 11 services
 - **Location coverage**: Create content for ALL 8 service area cities
-- **Phone prominence**: (573) 530-3872 should appear multiple times
+- **Phone prominence**: (573) 234-6641 should appear multiple times
 - **NAP consistency**: Name, Address, Phone must match GBP everywhere
 - **Local expertise**: Mention Missouri-specific factors (soil, weather, permits)
 - **GBP alignment**: Keywords should support GBP posts and Q&A
@@ -265,7 +265,7 @@ description: "Deep local SEO keyword research for Atlas Excavation & Demolition 
 ✅ **Natural integration**: "As Columbia's trusted excavation contractor..."
 
 ❌ **No CTAs**: Educational content without next steps
-✅ **Clear CTAs**: "Call (573) 530-3872 for a free estimate"
+✅ **Clear CTAs**: "Call (573) 234-6641 for a free estimate"
 
 ❌ **One-time effort**: Publishing and forgetting
 ✅ **Ongoing updates**: Refresh content annually with new pricing/info

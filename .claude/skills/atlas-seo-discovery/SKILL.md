@@ -120,7 +120,7 @@ description: "Discovers high-potential blog topics, service area page opportunit
 ### Local SEO Specifics
 - **Always include location**: Every piece of content should mention Columbia, MO and/or specific service areas
 - **Use natural location mentions**: "Columbia homeowners" not just "Columbia" stuffed in
-- **Include phone number**: (573) 530-3872 should appear prominently
+- **Include phone number**: (573) 234-6641 should appear prominently
 - **NAP consistency**: Name, Address, Phone must match GBP exactly everywhere
 - **Local landmarks**: Reference well-known local areas when relevant
 
@@ -161,7 +161,7 @@ description: "Discovers high-potential blog topics, service area page opportunit
 ✅ **Natural integration**: "As Columbia's trusted excavation contractor..."
 
 ❌ **No CTAs**: Educational content without next steps
-✅ **Clear CTAs**: "Call (573) 530-3872 for a free estimate"
+✅ **Clear CTAs**: "Call (573) 234-6641 for a free estimate"
 
 ## Success Metrics
 
