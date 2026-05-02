@@ -749,18 +749,6 @@
     // ==========================================
 
     function submitLead() {
-        // Google Ads "Instant Bid Submission" conversion — fires only after
-        // validateLeadForm() has passed and we're actually submitting the bid.
-        // Guarded with typeof gtag check so the n8n pipeline still runs if
-        // gtag fails to load (ad blocker, network hiccup, etc).
-        if (typeof gtag === 'function') {
-            gtag('event', 'conversion', {
-                'send_to': 'AW-17754715518/oqqZCOqHtqEcEP7qjZJC',
-                'value': 50.0,
-                'currency': 'USD'
-            });
-        }
-
         // Populate hidden fields for Netlify Forms
         document.getElementById('bid-h-tab').value        = state.tab;
         document.getElementById('bid-h-job').value        = state.jobType;
@@ -782,6 +770,19 @@
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams(formData).toString()
+        }).then(function (response) {
+            // Google Ads "Instant Bid Submission" (Primary) conversion — fires
+            // only after a successful Netlify Forms POST so we don't count
+            // failed submits or duplicate clicks. Guarded with typeof check so
+            // the n8n pipeline still runs if gtag fails to load (ad blocker,
+            // network hiccup, etc).
+            if (response.ok && typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17754715518/TFLbCLOruaEcEP7qjZJC',
+                    'value': 50.0,
+                    'currency': 'USD'
+                });
+            }
         }).catch(function (err) {
             console.error('Netlify form submission failed:', err);
         });
