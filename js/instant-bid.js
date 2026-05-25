@@ -577,13 +577,15 @@
     }
 
     function captureLeadData() {
+        var smsConsentEl = document.getElementById('bid-sms-consent');
         state.lead = {
             firstName:      document.getElementById('bid-first-name').value.trim(),
             lastName:       document.getElementById('bid-last-name').value.trim(),
             phone:          document.getElementById('bid-phone').value.trim(),
             email:          document.getElementById('bid-email').value.trim(),
             propertyAddress: document.getElementById('bid-address').value.trim(),
-            bestTimeToCall: document.getElementById('bid-call-time').value
+            bestTimeToCall: document.getElementById('bid-call-time').value,
+            smsConsent:     smsConsentEl && smsConsentEl.checked ? 'yes' : 'no'
         };
     }
 
@@ -797,6 +799,7 @@
             propertyAddress: state.lead.propertyAddress,
             zipCode:        state.zipCode,
             bestTimeToCall: state.lead.bestTimeToCall,
+            sms_consent:    state.lead.smsConsent,
             tab:            state.tab,
             jobType:        state.jobType,
             selections:     state.selections,

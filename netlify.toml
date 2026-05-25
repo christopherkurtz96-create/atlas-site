@@ -3,6 +3,20 @@
 [build]
   publish = "."
 
+# Retire old privacy-policy URL — single canonical privacy page at /privacy
+# now that A2P 10DLC compliance language lives there.
+[[redirects]]
+  from = "/privacy-policy.html"
+  to = "/privacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy"
+  status = 301
+  force = true
+
 # Redirects for clean URLs (optional - removes .html extension)
 [[redirects]]
   from = "/*"
