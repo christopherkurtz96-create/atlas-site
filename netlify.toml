@@ -1,4 +1,4 @@
-# Netlify configuration for Atlas Excavation & Demolition
+# Netlify configuration for Atlas Demolition & Site Work
 
 [build]
   publish = "."
@@ -14,6 +14,19 @@
 [[redirects]]
   from = "/privacy-policy"
   to = "/privacy"
+  status = 301
+  force = true
+
+# Canonical host: force www so Google stops indexing the apex and www as two sites.
+[[redirects]]
+  from = "https://deployatlas.com/*"
+  to = "https://www.deployatlas.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://deployatlas.com/*"
+  to = "https://www.deployatlas.com/:splat"
   status = 301
   force = true
 

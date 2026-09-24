@@ -1,16 +1,16 @@
 ---
 name: atlas-engagement
-description: "Atlas Excavation & Demolition engagement and comment response strategy. Use when responding to Atlas social media comments, managing engagement, or writing replies for Atlas accounts."
+description: "Atlas Demolition & Site Work engagement and comment response strategy. Use when responding to Atlas social media comments, managing engagement, or writing replies for Atlas accounts."
 ---
 
-# Atlas Excavation & Demolition Engagement Response Skill
+# Atlas Demolition & Site Work Engagement Response Skill
 ## Comment Strategy for Algorithmic Boost and Lead Generation
 
 ---
 
 ## Brand Context
 
-**Atlas Excavation & Demolition** handles structural demolition, excavation, and site prep for property owners and GCs in Mid-Missouri (Columbia, MO — 45-60 minute radius).
+**Atlas Demolition & Site Work** handles structural demolition, excavation, and site prep for property owners and GCs in Mid-Missouri (Columbia, MO — 45-60 minute radius).
 
 **Voice in comments:** Friendly, direct, blue-collar professional. Sounds like a contractor you'd trust with your property. Not salesy, not corporate. Like Chris answering a question at a barbecue.
 

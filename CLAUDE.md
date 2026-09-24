@@ -1,8 +1,8 @@
-# Atlas Excavation & Demolition — Project Instructions
+# Atlas Demolition & Site Work — Project Instructions
 
 ## Business Context
 
-**Business:** Atlas Excavation & Demolition
+**Business:** Atlas Demolition & Site Work
 **Owner:** Chris Kurtz
 **Location:** Columbia, MO
 **Service area:** 45-60 minute radius (Boone, Callaway, Cole, Audrain, Howard, Cooper, Moniteau counties)

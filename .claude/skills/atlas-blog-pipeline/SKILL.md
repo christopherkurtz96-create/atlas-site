@@ -7,7 +7,7 @@ description: "End-to-end Atlas blog post creation pipeline. Takes a topic and ta
 
 ## Purpose
 
-This is an end-to-end blog post creation pipeline for Atlas Excavation & Demolition. When the user provides a blog topic and target audience, this skill automatically executes four phases in sequence without stopping for approval between steps.
+This is an end-to-end blog post creation pipeline for Atlas Demolition & Site Work. When the user provides a blog topic and target audience, this skill automatically executes four phases in sequence without stopping for approval between steps.
 
 ## Required Input
 
@@ -80,7 +80,7 @@ Write the full blog post as an HTML file matching the exact template used by exi
 **File naming**: `/blog/[keyword-slugified].html`
 
 **Atlas business context**:
-- Business name: Atlas Excavation & Demolition
+- Business name: Atlas Demolition & Site Work
 - Location: Columbia, MO
 - Phone: (573) 234-6641
 - Email: hello@deployatlas.com

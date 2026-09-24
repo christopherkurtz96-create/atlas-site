@@ -1,16 +1,16 @@
 ---
 name: atlas-seo
-description: "Atlas Excavation & Demolition SEO skill. Local + organic search strategy specific to Atlas in Columbia MO, 45-60 min radius. GBP optimization, review strategy, keyword targeting, blog clusters, service/location pages, backlinks. Use for any Atlas SEO work: blog posts, GBP posts, keyword research, content strategy, ranking analysis."
+description: "Atlas Demolition & Site Work SEO skill. Local + organic search strategy specific to Atlas in Columbia MO, 45-60 min radius. GBP optimization, review strategy, keyword targeting, blog clusters, service/location pages, backlinks. Use for any Atlas SEO work: blog posts, GBP posts, keyword research, content strategy, ranking analysis."
 ---
 
-# Atlas Excavation & Demolition SEO Skill
+# Atlas Demolition & Site Work SEO Skill
 ## Local + Organic Search Domination for Atlas
 
 ---
 
 ## Purpose
 
-This skill makes the AI an expert at SEO for **Atlas Excavation & Demolition** — a demolition, excavation, and site prep company in Columbia, MO serving a 45-60 minute radius. It covers:
+This skill makes the AI an expert at SEO for **Atlas Demolition & Site Work** — a demolition, excavation, and site prep company in Columbia, MO serving a 45-60 minute radius. It covers:
 
 1. **Google Maps / Local Pack ranking** (the 3-pack above organic results)
 2. **Organic search ranking** (blue link results)
@@ -22,7 +22,7 @@ This skill makes the AI an expert at SEO for **Atlas Excavation & Demolition** �
 
 ## Atlas Business Context
 
-**Business name (exact):** Atlas Excavation & Demolition
+**Business name (exact):** Atlas Demolition & Site Work
 **Owner:** Chris Kurtz
 **Address:** Columbia, MO (exact street address per GBP)
 **Phone:** [standardized format from GBP]
@@ -81,7 +81,7 @@ GBP signals account for ~32% of Map Pack ranking. This is Atlas's single highest
 
 ### Profile Completeness (One-Time Setup)
 
-- **Business Name:** "Atlas Excavation & Demolition" — exact. No keywords added.
+- **Business Name:** "Atlas Demolition & Site Work" — exact. No keywords added.
 - **Primary Category:** Demolition Contractor
 - **Additional Categories:** Excavating Contractor, Grading Contractor, Site Preparation
 - **Service Area:** All cities/zip codes within 45-60 min radius of Columbia
@@ -162,7 +162,7 @@ Example: "Thank you for letting us know, [Name]. That's not our standard and I'm
 ## PRIORITY 3: NAP Consistency and Citations
 
 **Standardized NAP (use everywhere, exactly):**
-- Name: Atlas Excavation & Demolition
+- Name: Atlas Demolition & Site Work
 - Address: [exact format from GBP]
 - Phone: [exact format]
 
