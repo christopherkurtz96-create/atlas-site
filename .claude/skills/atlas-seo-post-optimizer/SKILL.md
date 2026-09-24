@@ -1,6 +1,6 @@
 ---
 name: atlas-seo-post-optimizer
-description: "Reviews and optimizes Atlas Excavation & Demolition blog post drafts for local SEO, readability, and metadata. Auto-triggers when: optimizing a blog post, reviewing a draft for SEO, checking SEO on a post, improving metadata, or doing final review before publishing. Also triggers on: optimize post, review SEO, check SEO, improve SEO, post optimizer, finalize blog post, pre-publish review for Atlas."
+description: "Reviews and optimizes Atlas Demolition & Site Work blog post drafts for local SEO, readability, and metadata. Auto-triggers when: optimizing a blog post, reviewing a draft for SEO, checking SEO on a post, improving metadata, or doing final review before publishing. Also triggers on: optimize post, review SEO, check SEO, improve SEO, post optimizer, finalize blog post, pre-publish review for Atlas."
 ---
 
 
@@ -238,7 +238,7 @@ description: "Reviews and optimizes Atlas Excavation & Demolition blog post draf
 
 #### NAP Consistency
 
-**Name**: Atlas Excavation & Demolition - [✅ Consistent / ❌ Varies]
+**Name**: Atlas Demolition & Site Work - [✅ Consistent / ❌ Varies]
 **Phone**: (573) 234-6641 - [✅ Consistent / ❌ Varies]
 
 ---

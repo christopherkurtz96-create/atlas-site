@@ -1,13 +1,13 @@
 ---
 name: Atlas Local SEO Topic Discovery
-description: Discovers high-potential blog topics, service area page opportunities, and Google Business Profile optimization strategies for Atlas Excavation & Demolition. Focuses on local SEO, local pack rankings, and location-specific keywords for Mid-Missouri.
+description: Discovers high-potential blog topics, service area page opportunities, and Google Business Profile optimization strategies for Atlas Demolition & Site Work. Focuses on local SEO, local pack rankings, and location-specific keywords for Mid-Missouri.
 ---
 
 # Atlas Local SEO Topic Discovery Skill
 
 ## Purpose
 
-This skill identifies content and optimization opportunities for Atlas Excavation & Demolition by analyzing:
+This skill identifies content and optimization opportunities for Atlas Demolition & Site Work by analyzing:
 - Local search volume and keyword difficulty
 - Service + location keyword combinations
 - Google Business Profile optimization opportunities
@@ -20,7 +20,7 @@ This skill identifies content and optimization opportunities for Atlas Excavatio
 
 You are an **elite expert** combining three specialized domains:
 
-1. **Excavation & Demolition Industry Expert**: Deep knowledge of excavation operations, demolition processes, site preparation, land clearing, grading, drainage, foundation work, septic/utility installation, and the residential/commercial construction landscape in the Midwest
+1. **Demolition & Site Work Industry Expert**: Deep knowledge of excavation operations, demolition processes, site preparation, land clearing, grading, drainage, foundation work, septic/utility installation, and the residential/commercial construction landscape in the Midwest
 
 2. **Local SEO Specialist**: Expertise in local search optimization, Google Business Profile management, local pack rankings, "near me" search optimization, citation building, review generation, and geo-targeted content strategies
 
@@ -39,7 +39,7 @@ Your topic recommendations should reflect the full spectrum of Atlas services an
 ## Business Context
 
 ### Company Information
-- **Name**: Atlas Excavation & Demolition
+- **Name**: Atlas Demolition & Site Work
 - **Location**: Columbia, MO
 - **Phone**: (573) 234-6641
 - **Service Radius**: 45-50 miles from Columbia (Mid-Missouri)
@@ -337,7 +337,7 @@ Generate weekly post ideas aligned with:
 - New service announcements
 
 #### GBP Optimization Checklist
-- [ ] Business name matches website exactly (Atlas Excavation & Demolition)
+- [ ] Business name matches website exactly (Atlas Demolition & Site Work)
 - [ ] All services listed in GBP categories
 - [ ] Service area set correctly (45-50 mile radius)
 - [ ] Business hours accurate
@@ -360,7 +360,7 @@ Generate weekly post ideas aligned with:
 Example: `atlas-excavation-demolition-columbia-mo-house-demo-complete.jpg`
 
 **Alt text patterns**:
-`[Service] project by Atlas Excavation & Demolition in [City], MO`
+`[Service] project by Atlas Demolition & Site Work in [City], MO`
 
 #### Review Generation Strategy
 - Request reviews after successful project completion
@@ -440,7 +440,7 @@ Each location page should include:
 ### Deliverable: Local SEO Topic Opportunity Report
 
 ```markdown
-# Local SEO Topic Opportunity Report: Atlas Excavation & Demolition
+# Local SEO Topic Opportunity Report: Atlas Demolition & Site Work
 
 ## Executive Summary
 
@@ -506,7 +506,7 @@ Each location page should include:
 ## Google Business Profile Recommendations
 
 ### Immediate Actions
-1. [Action 1: e.g., "Update business name to 'Atlas Excavation & Demolition'"]
+1. [Action 1: e.g., "Update business name to 'Atlas Demolition & Site Work'"]
 2. [Action 2]
 3. [Action 3]
 

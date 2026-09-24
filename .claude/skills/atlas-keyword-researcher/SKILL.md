@@ -1,6 +1,6 @@
 ---
 name: atlas-keyword-researcher
-description: "Deep local SEO keyword research for Atlas Excavation & Demolition blog topics, service pages, and location pages. Auto-triggers when: doing keyword research, finding keywords for a blog post, asking what keywords to target, analyzing keyword difficulty, or starting any new Atlas content. Also triggers on: research keywords, find keywords, what keywords, blog keywords, keyword analysis, SEO keywords for Atlas."
+description: "Deep local SEO keyword research for Atlas Demolition & Site Work blog topics, service pages, and location pages. Auto-triggers when: doing keyword research, finding keywords for a blog post, asking what keywords to target, analyzing keyword difficulty, or starting any new Atlas content. Also triggers on: research keywords, find keywords, what keywords, blog keywords, keyword analysis, SEO keywords for Atlas."
 ---
 
 
@@ -115,7 +115,7 @@ description: "Deep local SEO keyword research for Atlas Excavation & Demolition 
 
 **Meta Description**:
 - **Recommended**: "[150-160 char description with keyword and location]"
-- **Example**: "Find out how much house demolition costs in Columbia, MO. Local pricing guide with Missouri-specific factors. Get a free estimate from Atlas Excavation."
+- **Example**: "Find out how much house demolition costs in Columbia, MO. Local pricing guide with Missouri-specific factors. Get a free estimate from Atlas Demolition & Site Work."
 - **Length**: [X characters]
 
 **H2 Sections** (with keywords):

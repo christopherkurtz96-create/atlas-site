@@ -1,16 +1,16 @@
 ---
 name: atlas-content-calendar
-description: "Atlas Excavation & Demolition content calendar. Atlas-specific social media planning, content mix, and scheduling. Use when planning Atlas social content or populating the calendar."
+description: "Atlas Demolition & Site Work content calendar. Atlas-specific social media planning, content mix, and scheduling. Use when planning Atlas social content or populating the calendar."
 ---
 
-# Atlas Excavation & Demolition Content Calendar Skill
+# Atlas Demolition & Site Work Content Calendar Skill
 ## Master Coordinator for Atlas Social Media Content Creation
 
 ---
 
 ## Purpose
 
-This skill tells the AI exactly how to populate a social media content calendar for **Atlas Excavation & Demolition** — a demolition, excavation, and site prep company serving Mid-Missouri (Columbia, MO — 45-60 minute radius). It defines the database structure, required fields, content type routing, and which skill files to load for each content type.
+This skill tells the AI exactly how to populate a social media content calendar for **Atlas Demolition & Site Work** — a demolition, excavation, and site prep company serving Mid-Missouri (Columbia, MO — 45-60 minute radius). It defines the database structure, required fields, content type routing, and which skill files to load for each content type.
 
 **When this skill is active**, the AI must:
 1. Read this file first
@@ -22,7 +22,7 @@ This skill tells the AI exactly how to populate a social media content calendar 
 
 ---
 
-## Brand Context — Atlas Excavation & Demolition
+## Brand Context — Atlas Demolition & Site Work
 
 **What we do:** Structural demolition, excavation, and site prep for property owners and general contractors in Mid-Missouri. We handle the entire process — permits, hazmat coordination, demo, debris hauling, and site grading — so the customer's only job is telling us when to start.
 
@@ -213,7 +213,7 @@ Voice: Friendly, professional, blue-collar honest. Like a contractor who's proud
 - **Property owners:** "You tell us what needs to go. We handle permits, hazmat, demo, hauling, and grading. You get a clean site and zero headaches."
 - **GCs:** "You need a demo and excavation sub who answers the phone, shows up when they say, and doesn't blow your timeline. That's us."
 - **Realtors:** "When your client has a property that needs something torn down or a site prepped, send them to us. We make you look good by making the problem disappear — fast and clean."
-- **Cold outreach:** "I run Atlas Excavation & Demolition out of Columbia. We do structural demo and site prep for property owners and GCs within 45 minutes of town. If you ever need reliable demo or dirt work, I'd like to be your first call."
+- **Cold outreach:** "I run Atlas Demolition & Site Work out of Columbia. We do structural demo and site prep for property owners and GCs within 45 minutes of town. If you ever need reliable demo or dirt work, I'd like to be your first call."
 
 ---
 
