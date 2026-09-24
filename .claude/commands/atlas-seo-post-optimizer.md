@@ -83,7 +83,7 @@ You are an **elite expert** combining three specialized domains:
 - `/concrete/parking-lot-removal/`
 - `/concrete/driveway-replacement/`
 - `/site-work/` (excavation, grading, backfill — only after demo or concrete)
-- `/instant-bid/`, `/services`, `/service-areas`, `/about`, `/contact`
+- `/consultation/`, `/services`, `/service-areas`, `/about`, `/contact`
 
 URL rules: canonical host is `https://deployatlas.com` (never `www.`), all URLs are root-absolute and extensionless, blog posts live at `/blog/<slug>` (file on disk is `blog/<slug>.html`). NEVER link to `/services/*.html` (301'd) or to any land clearing page.
 

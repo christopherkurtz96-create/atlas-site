@@ -54,7 +54,7 @@ def header():
                         {PHONE_SVG}
                         {PHONE}
                     </a>
-                    <a href="/instant-bid/" class="btn btn-primary btn-sm">Get a Bid</a>
+                    <a href="/consultation/" class="btn btn-primary btn-sm">Free Consultation</a>
                 </div>
 
                 <div class="mobile-toggle" id="mobile-toggle">
@@ -74,7 +74,7 @@ def header():
         <a href="/site-work/">Site Work</a>
         <a href="/service-areas">Service Areas</a>
         <a href="/about">About</a>
-        <a href="/instant-bid/">Get a Bid</a>
+        <a href="/consultation/">Request a Free Consultation</a>
         <a href="/contact">Contact</a>
         <a href="{PHONE_TEL}" class="btn btn-primary">Call {PHONE}</a>
     </nav>
@@ -184,7 +184,7 @@ def faq_html(faqs):
                     <div class="faq-list">{items}
                     </div>'''
 
-def page(*, path, title, meta, h1, subtitle, crumbs, body, faqs=(), sidebar=None, og_image="/images/og-image.jpg", service=None, cta_h2="Ready to get a number on it?", cta_p="Tell us what you need torn out or put back. We'll walk the site and send a written bid.", extra_head="", layout="service", keywords=""):
+def page(*, path, title, meta, h1, subtitle, crumbs, body, faqs=(), sidebar=None, og_image="/images/og-image.jpg", service=None, cta_h2="Ready to get a number on it?", cta_p="Tell us what you need torn out or put back. We'll walk the site with you and put a fixed price in writing.", extra_head="", layout="service", keywords=""):
     """path: canonical path like /concrete/concrete-removal/ . body: inner HTML of the content column (no FAQ; passed separately)."""
     canon = SITE + path
     crumb_html = "".join(f'<a href="{h}">{t}</a><span>/</span>\n                ' for h,t in crumbs[:-1]) + f'<span class="current">{crumbs[-1][1]}</span>'
@@ -221,7 +221,7 @@ def page(*, path, title, meta, h1, subtitle, crumbs, body, faqs=(), sidebar=None
         <div class="container">
             <h2>{cta_h2}</h2>
             <p>{cta_p}</p>
-            <a href="/instant-bid/" class="btn btn-outline btn-lg">Get a Written Bid</a>
+            <a href="/consultation/" class="btn btn-outline btn-lg">Request a Free Consultation</a>
             <div class="cta-phone">
                 {PHONE_SVG}
                 <a href="{PHONE_TEL}">{PHONE}</a>
@@ -295,9 +295,9 @@ def default_sidebar(path):
                         </ul>
                     </div>
                     <div class="sidebar-card sidebar-cta">
-                        <h4>Get a Written Bid</h4>
-                        <p>Owner-operated. We walk the site, then send a fixed-price proposal.</p>
-                        <a href="/instant-bid/" class="btn btn-primary">Start a Bid Request</a>
+                        <h4>Free On-Site Consultation</h4>
+                        <p>We walk the site with you, then put a fixed price in writing.</p>
+                        <a href="/consultation/" class="btn btn-primary">Request a Free Consultation</a>
                         <a href="{PHONE_TEL}" class="btn btn-outline-orange" style="margin-top:10px">{PHONE}</a>
                     </div>
                 </div>'''

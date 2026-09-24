@@ -51,9 +51,9 @@ hero = '''    <section class="hero">
                     Tear it out. Haul it off. Put it back.
                 </div>
                 <h1>Professional <span>Demolition</span> &amp; <span>Site Work</span> Services</h1>
-                <p class="hero-subtitle">Demolition is what we do. Houses, mobile homes, garages, barns, commercial strip-outs, slabs and parking lots come out, get hauled to a recycler, and the site gets put back: graded, backfilled, or poured new. One contractor, one contract, owner on the job. Columbia and Mid-Missouri.</p>
+                <p class="hero-subtitle">Demolition is what we do. Houses, mobile homes, garages, barns, commercial strip-outs, slabs and parking lots come out, get hauled to a recycler, and the site gets put back: graded, backfilled, or poured new. Free on-site consultation, fixed price in writing. Columbia and Mid-Missouri.</p>
                 <div class="hero-btns">
-                    <a href="/instant-bid/" class="btn btn-primary btn-lg">Get a Written Bid</a>
+                    <a href="/consultation/" class="btn btn-primary btn-lg">Request a Free Consultation</a>
                     <a href="/demolition/" class="btn btn-outline btn-lg">Demolition Services</a>
                 </div>
                 <div class="hero-stats">
@@ -118,12 +118,26 @@ services = f'''    <section class="section bg-white" id="services">
     </section>
 '''
 
-process = section("section process-section")
-process = process.replace("We make demolition and land clearing simple. Here's how we work with you from start to finish.", "Site visit, written price, permits and disconnects, the work, and a graded site when we leave.")
-process = process.replace("<h4>Contact Us</h4>", "<h4>Tell Us the Job</h4>").replace("Give us a call or fill out our form. Tell us about your project and we'll schedule a visit.", "Call or start a bid request. Address, what's coming out, a couple of photos. We schedule a site visit.")
-process = process.replace("<h4>Free Estimate</h4>", "<h4>Written Proposal</h4>").replace("We'll assess your site and provide a detailed, no-obligation estimate for your project.", "Fixed price for labor and equipment. Disposal billed at actual tonnage with the tickets attached.")
-process = re.sub(r'<h4>[^<]*</h4>\n\s*<p>[^<]*</p>\n(\s*</div>\n\s*<div class="process-step">\n\s*<div class="process-icon">\n\s*<span class="process-number">4</span>)', r'<h4>Permits and Disconnects</h4>\n                    <p>We pull the demolition permit, coordinate the asbestos inspection, and get the utilities disconnected and capped.</p>\n\1', process, count=1)
-process = re.sub(r'(<span class="process-number">4</span>.*?)<h4>[^<]*</h4>\n\s*<p>[^<]*</p>', r'\1<h4>Done and Graded</h4>\n                    <p>Torn out, hauled off, recycled. Basement filled, lot graded, or the new concrete poured. One invoice.</p>', process, count=1, flags=re.S)
+STEPS=[("Free Consultation","We walk the site with you and tell you what we'd do."),("Written Bid","A fixed price for labor and equipment in writing, with disposal billed at actual tonnage."),("Prep","Permitting, utility disconnects and the schedule are on us. You don't chase anybody."),("Tear Out and Put Back","The work, the haul, and the finish you chose, on one invoice.")]
+process = '''    <section class="section process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Four steps. You make one call.</p>
+            </div>
+            <div class="process-steps">
+''' + "".join(f'''                <div class="process-step">
+                    <div class="process-icon">
+                        <span class="process-number">{i+1}</span>
+                        {CHECK}
+                    </div>
+                    <h4>{h}</h4>
+                    <p>{p}</p>
+                </div>
+''' for i,(h,p) in enumerate(STEPS)) + '''            </div>
+        </div>
+    </section>
+'''
 
 areas = f'''    <section class="section areas-section">
         <div class="container">
@@ -146,7 +160,7 @@ cta = f'''    <section class="cta-section">
         <div class="container">
             <h2>Get a Number on It</h2>
             <p>Tell us what's coming out and what you want left behind. We walk the site and send a fixed price in writing.</p>
-            <a href="/instant-bid/" class="btn btn-outline btn-lg">Start a Bid Request</a>
+            <a href="/consultation/" class="btn btn-outline btn-lg">Request a Free Consultation</a>
             <div class="cta-phone">
                 {T.PHONE_SVG}
                 <a href="{T.PHONE_TEL}">{T.PHONE}</a>
@@ -198,10 +212,10 @@ bid_body = f'''    <section class="page-header">
         <div class="container">
             <div class="breadcrumb">
                 <a href="/">Home</a><span>/</span>
-                <span class="current">Get a Bid</span>
+                <span class="current">Free Consultation</span>
             </div>
-            <h1>Get a Written Bid</h1>
-            <p>Tell us what's coming out and what you want left behind. We'll walk the site and send a fixed price. Usually within one business day of the visit.</p>
+            <h1>Free On-Site Consultation</h1>
+            <p>Tell us what's coming out and what you want left behind. We walk the site with you, tell you what we'd do, and put a fixed price in writing.</p>
         </div>
     </section>
 
@@ -336,8 +350,8 @@ bid_body = f'''    <section class="page-header">
                                 <span>It's fine to text me about this bid at the number above. Message and data rates may apply. Reply STOP to opt out. See our <a href="/privacy">privacy policy</a>.</span>
                             </label>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Send Bid Request</button>
-                        <p class="bid-disclaimer" style="margin-top:14px">No obligation. We'll call to schedule a site visit, then send a written, fixed-price proposal. Disposal is billed at actual tonnage.</p>
+                        <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Request a Free Consultation</button>
+                        <p class="bid-disclaimer" style="margin-top:14px">No obligation. We'll call to set up the site visit, then send a fixed price in writing. Disposal is billed at actual tonnage.</p>
                     </form>
                 </div>
 
@@ -345,9 +359,9 @@ bid_body = f'''    <section class="page-header">
                     <div class="sidebar-card">
                         <h4>What happens next</h4>
                         <ul class="sidebar-services">
-                            <li><span style="display:block;padding:8px 0">1. We call within one business day.</span></li>
+                            <li><span style="display:block;padding:8px 0">1. We call you to set up the visit.</span></li>
                             <li><span style="display:block;padding:8px 0">2. Site visit. We measure, check access and the base or foundation.</span></li>
-                            <li><span style="display:block;padding:8px 0">3. Written proposal with a fixed price and the pour-back option if you want it.</span></li>
+                            <li><span style="display:block;padding:8px 0">3. Fixed price in writing, with the put-back option if you want it.</span></li>
                         </ul>
                     </div>
                     <div class="sidebar-card">
@@ -370,14 +384,14 @@ bid_body = f'''    <section class="page-header">
     </section>
 '''
 bid_html = T.page(
-    path="/instant-bid/", layout="custom",
+    path="/consultation/", layout="custom",
     title="Get a Written Demolition or Concrete Bid | ATLAS Columbia, MO",
-    meta="Request a fixed-price bid for demolition, concrete removal, parking lot or driveway replacement in Columbia and Mid-Missouri. Site visit, then a written proposal. (573) 234-6641.",
+    meta="Free on-site consultation for demolition, concrete removal, parking lot or driveway replacement in Columbia and Mid-Missouri. We walk the site, then put a fixed price in writing. (573) 234-6641.",
     keywords="demolition estimate Columbia MO, demolition bid, concrete removal quote, parking lot replacement quote, get a demolition quote Missouri",
-    h1="", subtitle="", crumbs=[["/","Home"],["/instant-bid/","Get a Bid"]], body=bid_body, faqs=[],
+    h1="", subtitle="", crumbs=[["/","Home"],["/consultation/","Free Consultation"]], body=bid_body, faqs=[],
     og_image="/images/house-demolition-teardown-excavator.jpg",
     extra_head='    <script>document.addEventListener("DOMContentLoaded",function(){var p=new URLSearchParams(location.search);[["utm_source","bid-h-utm-source"],["utm_medium","bid-h-utm-medium"],["utm_campaign","bid-h-utm-campaign"],["utm_content","bid-h-utm-content"]].forEach(function(x){var e=document.getElementById(x[1]);if(e&&p.get(x[0]))e.value=p.get(x[0]);});});</script>',
 )
 os.makedirs(f"{REPO}/instant-bid", exist_ok=True)
-open(f"{REPO}/instant-bid/index.html","w").write(bid_html)
+open(f"{REPO}/consultation/index.html","w").write(bid_html)
 print("instant-bid/index.html", len(bid_html), "divs", bid_html.count("<div"), bid_html.count("</div>"))

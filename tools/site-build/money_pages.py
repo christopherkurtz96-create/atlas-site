@@ -73,8 +73,8 @@ concrete_removal = dict(
                     <p>Most people who call about removing a driveway need a driveway when we leave. Our concrete crew pours it back under our contract, with our warranty and their certificate of insurance on file. Base rock, compaction, forms, reinforcement, a proper pour and control joints, broom finish, and seven days of cure before you park on it. See <a href="/concrete/driveway-replacement/">driveway removal and replacement</a> for how that works and what it costs.</p>
 
                     <div class="callout">
-                        <h3>Get a written bid</h3>
-                        <p>Square footage, thickness if you know it, and two photos. That's enough for us to schedule a look and send a fixed price. <a href="/instant-bid/">Start a bid request</a> or call <a href="tel:5732346641">(573) 234-6641</a>.</p>
+                        <h3>Request a free consultation</h3>
+                        <p>Square footage, thickness if you know it, and two photos. That's enough for us to schedule a look and send a fixed price. <a href="/consultation/">Request a free consultation</a> or call <a href="tel:5732346641">(573) 234-6641</a>.</p>
                     </div>
 
                     <h2>Where we work</h2>
@@ -180,8 +180,8 @@ parking_lot = dict(
                     <p>Most owners can't close for two weeks. We split the lot into phases, keep the entrance and the front rows open, and put down temporary striping so the open half functions. For a church that means working Monday through Friday and clearing out for Sunday. For a restaurant it can mean removal at night. Tell us how the property is used and we'll build the phasing around it.</p>
 
                     <div class="callout">
-                        <h3>Request a lot walk-through</h3>
-                        <p>Address, approximate number of spaces, and whether it's asphalt or concrete. We'll schedule a walk and send a phased, fixed-price proposal. <a href="/instant-bid/">Start a bid request</a> or call <a href="tel:5732346641">(573) 234-6641</a>.</p>
+                        <h3>Request a Free Consultation</h3>
+                        <p>Address, approximate number of spaces, and whether it's asphalt or concrete. We'll schedule a walk and send a phased, fixed-price proposal. <a href="/consultation/">Request a free consultation</a> or call <a href="tel:5732346641">(573) 234-6641</a>.</p>
                     </div>
 
                     <h2>Where we work</h2>

@@ -99,7 +99,19 @@
 
 [[redirects]]
   from = "/instant-bid.html"
-  to = "/instant-bid/"
+  to = "/consultation/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/instant-bid"
+  to = "/consultation/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/instant-bid/"
+  to = "/consultation/"
   status = 301
   force = true
 

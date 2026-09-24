@@ -20,8 +20,9 @@ RETIRE = {  # old path -> new path (301)
     "/services/grading-drainage.html": "/site-work/",
     "/services/site-preparation.html": "/site-work/",
     "/services/land-clearing.html": "/site-work/",
-    "/services/": "/services",
-    "/instant-bid.html": "/instant-bid/",
+        "/instant-bid.html": "/consultation/",
+    "/instant-bid": "/consultation/",
+    "/instant-bid/": "/consultation/",
     "/blog/brush-hogging-columbia-mo.html": "/site-work/",
     "/blog/forestry-mulching-columbia-mo.html": "/site-work/",
     "/blog/fence-line-clearing-mid-missouri.html": "/site-work/",
@@ -81,7 +82,7 @@ def rewrite_href(h, page_dir):
         if h=="/index": h="/"
         if h in RETIRE: return RETIRE[h]
     # hub pages live in directories
-    if h in ("/demolition","/concrete","/site-work","/instant-bid"): h+="/"
+    if h in ("/demolition","/concrete","/site-work","/consultation"): h+="/"
     if h.startswith(("/demolition/","/concrete/")) and not h.endswith("/") and h.count("/")==2: h+="/"
     return h+frag
 
@@ -134,7 +135,7 @@ start=toml.find("# ---- restructure redirects")
 if start!=-1: toml=toml[:start]
 blocks=["# ---- restructure redirects (September 2026) ----"]
 for a,b in RETIRE.items():
-    if a.endswith("/") and a!="/services/": continue
+    if a.endswith("/") and a not in ("/instant-bid/",): continue
     blocks.append(f'[[redirects]]\n  from = "{a}"\n  to = "{b}"\n  status = 301\n  force = true\n')
 # .html -> extensionless for every remaining flat page
 for f in all_pages():
@@ -149,7 +150,7 @@ print("redirect rules:",toml.count("[[redirects]]"))
 
 # ---- sitemap ----
 today=datetime.date.today().isoformat()
-prio={"/":"1.0","/demolition/":"0.9","/concrete/":"0.9","/concrete/concrete-removal/":"0.9","/concrete/parking-lot-removal/":"0.9","/demolition/structural/":"0.8","/demolition/mobile-home-removal/":"0.8","/demolition/interior-selective/":"0.8","/concrete/driveway-replacement/":"0.8","/site-work/":"0.7","/instant-bid/":"0.8","/services":"0.6","/service-areas":"0.6","/about":"0.5","/contact":"0.6"}
+prio={"/":"1.0","/demolition/":"0.9","/concrete/":"0.9","/concrete/concrete-removal/":"0.9","/concrete/parking-lot-removal/":"0.9","/demolition/structural/":"0.8","/demolition/mobile-home-removal/":"0.8","/demolition/interior-selective/":"0.8","/concrete/driveway-replacement/":"0.8","/site-work/":"0.7","/consultation/":"0.8","/services":"0.6","/service-areas":"0.6","/about":"0.5","/contact":"0.6"}
 urls=[]
 for f in all_pages():
     if f in ("404.html","thank-you.html","sitemap.html"): continue

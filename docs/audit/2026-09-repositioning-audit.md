@@ -87,7 +87,7 @@ Word counts exclude header, nav and footer. Title length target ≤60, meta ≤1
 | /services/grading-drainage.html | 60 | 165 | 251 | — | **Redirect** → `/site-work/`. |
 | /services/site-preparation.html | 58 | 148 | 267 | — | **Redirect** → `/site-work/` (content merged). |
 | /services/land-clearing.html | 55 | 162 | 294 | land clearing (1) | **Redirect** → `/site-work/`. Retired scope. |
-| /instant-bid.html | 70 | 141 | 384 | — | **Replace** with scoped intake form at `/instant-bid/`. Add to sitemap. |
+| /instant-bid.html | 70 | 141 | 384 | — | **Replace** with scoped intake form at `/consultation/`. Add to sitemap. |
 | /service-areas.html | 59 | 164 | 183 | — | **Rewrite.** Absorb four small-town pages as sections. |
 | /about.html | 54 | 167 | 451 | atlas columbia (60) | **Rewrite.** Still says "excavation company" in keywords/alt. |
 | /contact.html | 56 | 155 | 222 | — | **Keep.** NAP check, email decision. |
@@ -169,7 +169,7 @@ Target IA, revised for the concrete front door. Extensionless URLs, directory-in
   /parking-lot-removal/    NEW  incl. asphalt removal + replacement     MONEY
   /driveway-replacement/   NEW  tear out + pour back
 /site-work/                NEW  single page: backfill, grading, pad prep, gravel, drainage-as-regrade
-/instant-bid/              REPLACE  scoped intake form (paid-search landing)
+/consultation/              REPLACE  scoped intake form (paid-search landing)
 /services/                 REWRITE  overview linking the three above
 /service-areas/            REWRITE  + four folded towns as anchored sections
 /locations/{columbia,jefferson-city,fulton,moberly,fayette}-mo/   BUILD
@@ -187,7 +187,7 @@ Target IA, revised for the concrete front door. Extensionless URLs, directory-in
 | /concrete/parking-lot-removal/ | No | Money page missing entirely. Zero content on the site for commercial lots. |
 | /concrete/driveway-replacement/ | No | The most common owner-direct concrete job has no page |
 | /site-work/ | No (four fragments: excavation, foundation, grading, site-prep) | Merge into one page framed as "after the teardown" |
-| /instant-bid/ | Calculator with land clearing tab | Replace |
+| /consultation/ | Calculator with land clearing tab | Replace |
 | Location pages | 8 thin | 5 build, 2 refresh, 4 fold, 3 new |
 | FAQPage on every service page | Yes on existing service pages | Carry forward; write the brief's nine questions into the hubs |
 | BreadcrumbList | Yes | Carry forward with new paths |
@@ -214,7 +214,7 @@ Target IA, revised for the concrete front door. Extensionless URLs, directory-in
 | T14 | Info | Core Web Vitals not measured tonight. Static HTML, no framework, ~36 KB documents: risk is image weight (T11), not scripts. | — | Run PageSpeed after Tier 2 ships. | Claude |
 | T15 | Info | All images carry alt text. FAQPage and BreadcrumbList already present on service pages and every post. HTTPS and canonicals present on every page. Robots allows all. | scans | Nothing to do. | — |
 
-Off-site items from the brief, not auditable from the repo: UTM parameters on the GBP website link; GBP booking button destination (route to `/instant-bid/`); citation NAP updates; DBA filing confirmation.
+Off-site items from the brief, not auditable from the repo: UTM parameters on the GBP website link; GBP booking button destination (route to `/consultation/`); citation NAP updates; DBA filing confirmation.
 
 ---
 
@@ -267,7 +267,7 @@ Content in parallel: expand the mobile home cost post and the concrete removal c
 | /concrete/parking-lot-removal/ | parking lot removal Columbia MO | parking lot demolition, asphalt removal, lot tear out and replacement, commercial concrete removal |
 | /concrete/driveway-replacement/ | concrete driveway replacement Columbia MO | driveway removal, cost to replace a concrete driveway, driveway tear out |
 | /site-work/ | site preparation Columbia MO | backfill and grading, building pad prep, basement fill in, grade and seed |
-| /instant-bid/ | demolition estimate Columbia MO | concrete removal quote, get a demolition bid |
+| /consultation/ | demolition estimate Columbia MO | concrete removal quote, get a demolition bid |
 | Cost posts | how much does it cost to demolish a house in Missouri | cost to remove a concrete driveway, cost to tear down a garage, mobile home removal cost, parking lot removal cost |
 
 ---
@@ -296,7 +296,7 @@ Extensionless targets. All 301. Old blog URLs are unchanged except the four reti
 | /locations/harrisburg-mo.html | /service-areas/#harrisburg |
 | /locations/rocheport-mo.html | /service-areas/#rocheport |
 | /locations/{columbia,fulton,boonville,ashland}-mo.html | /locations/{same}-mo/ |
-| /instant-bid.html | /instant-bid/ |
+| /instant-bid.html | /consultation/ |
 | /about.html, /contact.html, /service-areas.html | /about/, /contact/, /service-areas/ |
 | /blog/*.html (22 kept posts) | /blog/* (extensionless) |
 
@@ -353,7 +353,7 @@ Thickness, rebar, access for the excavator and distance to the recycler move the
 - Do you handle utility locates?
 - How far from Columbia do you travel?
 
-**CTA.** Get a written bid → /instant-bid/. Phone as clickable text.
+**CTA.** Request a free consultation → /consultation/. Phone as clickable text.
 
 ### 10.2 /concrete/parking-lot-removal/
 
@@ -405,7 +405,7 @@ Base condition is the swing factor. A lot with a sound base costs half what one 
 - Are you insured for commercial work?
 - Do you work in Jefferson City, Fulton and Moberly?
 
-**CTA.** Request a lot walk-through → /instant-bid/.
+**CTA.** Request a Free Consultation → /consultation/.
 
 ---
 
@@ -460,7 +460,7 @@ Two per week, Monday demolition, Thursday concrete. Every post links to its mone
 - 20 older blog posts still carry the 2025 title suffix and old inline CSS variable names; the CSS aliases fix the render, the titles get a refresh pass.
 - Photo slots: finished concrete pours and a finished parking lot are still needed from the concrete sub.
 - Location pages carry no specific job claims yet; add real jobs and photos per town as they come.
-- GBP: add UTM parameters to the website link, point the booking button at /instant-bid/, update the profile's website URL to the apex if it says www.
+- GBP: add UTM parameters to the website link, point the booking button at /consultation/, update the profile's website URL to the apex if it says www.
 - Google Ads realignment: separate session.
 - Review program: ask customers to describe the work; first concrete-mention review is the milestone.
 - Watch Search Console weekly through October for the URL migration; expect a dip on the land clearing terms (deliberate) and re-indexing of the new tree.

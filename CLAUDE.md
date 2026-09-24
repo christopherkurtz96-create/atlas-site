@@ -18,7 +18,7 @@ Two front doors, one tail. Positioning: "the demolition company that finishes th
 
 **Out of scope, never write as a service:** land clearing, forestry mulching, brush hogging, tree/stump work, standalone excavation or trenching, septic, foundation repair, concrete leveling/mudjacking/patch repair, general repairs.
 
-URL tree: /demolition/ (+ /structural/, /mobile-home-removal/, /interior-selective/), /concrete/ (+ /concrete-removal/, /parking-lot-removal/, /driveway-replacement/), /site-work/, /instant-bid/, /services, /service-areas, /locations/<town>-mo, /blog/<slug> (files stay blog/<slug>.html). Old /services/*.html paths are 301'd; never link to them.
+URL tree: /demolition/ (+ /structural/, /mobile-home-removal/, /interior-selective/), /concrete/ (+ /concrete-removal/, /parking-lot-removal/, /driveway-replacement/), /site-work/, /consultation/, /services, /service-areas, /locations/<town>-mo, /blog/<slug> (files stay blog/<slug>.html). Old /services/*.html paths are 301'd; never link to them.
 
 Claims allowed: "licensed and insured" (GL, umbrella, workers' comp). Email chris@deployatlas.com. Phone (573) 234-6641.
 
