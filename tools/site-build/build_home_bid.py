@@ -201,7 +201,7 @@ home_body = hero + services + process + about + testimonials + faq_section + are
 home_html = T.page(
     path="/", layout="custom",
     title="Demolition & Concrete Contractor | Columbia, MO | Atlas",
-    meta="Demolition and concrete contractor in Columbia, MO. Houses, mobile homes and commercial buildings down; driveways and parking lots out and poured new. (573) 234-6641.",
+    meta="Demolition and concrete contractor in Columbia, MO. Houses, mobile homes and commercial buildings down. Driveways and parking lots out and poured new.",
     keywords="demolition contractor Columbia MO, demolition company Columbia Missouri, concrete removal Columbia MO, parking lot removal, mobile home removal, house demolition, concrete contractor Columbia MO, site work",
     h1="", subtitle="", crumbs=[["/","Home"]], body=home_body, faqs=home_faqs,
     og_image="/images/house-demolition-teardown-excavator.jpg",
