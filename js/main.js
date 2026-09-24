@@ -225,3 +225,17 @@ if ('serviceWorker' in navigator) {
         // navigator.serviceWorker.register('/sw.js');
     });
 }
+
+// Conversion events: phone clicks and consultation form submits (GA4)
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof gtag !== 'function') return;
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(a) {
+        a.addEventListener('click', function() {
+            gtag('event', 'phone_click', { link_url: a.getAttribute('href'), page_path: location.pathname });
+        });
+    });
+    var f = document.getElementById('bid-lead-form');
+    if (f) f.addEventListener('submit', function() {
+        gtag('event', 'consultation_submit', { page_path: location.pathname });
+    });
+});

@@ -259,7 +259,7 @@ def page(*, path, title, meta, h1, subtitle, crumbs, body, faqs=(), sidebar=None
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css?v=20260924e">
+    <link rel="stylesheet" href="/css/style.css?v=20260924f">
 {extra_head}
 {GA}
 
@@ -268,7 +268,7 @@ def page(*, path, title, meta, h1, subtitle, crumbs, body, faqs=(), sidebar=None
 {header()}
 {main}
 {footer()}
-    <script src="/js/main.js?v=20260924e"></script>
+    <script src="/js/main.js?v=20260924f"></script>
 </body>
 </html>
 '''

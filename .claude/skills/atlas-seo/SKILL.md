@@ -1,304 +1,75 @@
 ---
 name: atlas-seo
-description: "ATLAS Demolition & Site Work SEO skill. Local + organic search strategy specific to Atlas in Columbia MO, 45-60 min radius. GBP optimization, review strategy, keyword targeting, blog clusters, service/location pages, backlinks. Use for any Atlas SEO work: blog posts, GBP posts, keyword research, content strategy, ranking analysis."
+description: ATLAS Demolition & Site Work SEO skill. Local + organic + AI search strategy specific to Atlas in Columbia MO, ~45 min radius. GBP optimization, review strategy, keyword targeting, blog clusters, service/location pages, citations, backlinks. Use for any Atlas SEO work: blog posts, GBP posts, keyword research, content strategy, ranking analysis.
 ---
 
 # ATLAS Demolition & Site Work SEO Skill
-## Local + Organic Search Domination for Atlas
-
----
-
-## Purpose
-
-This skill makes the AI an expert at SEO for **ATLAS Demolition & Site Work** — a demolition, excavation, and site prep company in Columbia, MO serving a 45-60 minute radius. It covers:
-
-1. **Google Maps / Local Pack ranking** (the 3-pack above organic results)
-2. **Organic search ranking** (blue link results)
-3. **Google Business Profile (GBP)** management — posts, photos, reviews, Q&A
-4. **Blog and content strategy** — topical authority, service pages, location pages
-5. **Technical SEO foundations** for the Atlas website
-
----
-
-## Atlas Business Context
-
-**Business name (exact):** ATLAS Demolition & Site Work
-**Owner:** Chris Kurtz
-**Address:** Columbia, MO (exact street address per GBP)
-**Phone:** [standardized format from GBP]
-**Website:** https://deployatlas.com (no www; extensionless URLs)
-**Service area:** ~45-60 minute radius from Columbia, MO — Boone, Callaway, Cole, Audrain, Howard, Cooper, Moniteau counties and surrounding areas
-
-**Primary services:**
-- Structural demolition (residential and light commercial)
-- Excavation and site prep
-- Grading (rough grade and finish grade)
-- Debris hauling and disposal
-- Hazmat coordination (asbestos/lead abatement coordination)
-- Permit coordination
-
-**Primary GBP category:** Demolition Contractor
-**Additional categories:** Excavating Contractor, Site Preparation, Grading Contractor
-
-**Key competitors:** Haskamp Excavation, JD Kelly Excavating, Twehous Excavating, Don Schnieders Excavating, AES (large commercial), Hendren's, various small operators
-
-**Atlas's SEO advantage:** Established competitors have weak or nonexistent online presence. They rely on 30-year reputations and word-of-mouth. Atlas can dominate search by simply being present and active where they aren't.
-
----
-
-## Keyword Strategy
-
-### Tier 1 — Money Keywords (Service Pages — Highest Priority)
-- "demolition contractor Columbia MO"
-- "excavation contractor Columbia MO"
-- "house demolition Columbia Missouri"
-- "commercial demolition mid-Missouri"
-- "site prep Columbia MO"
-- "grading contractor Columbia MO"
-- "structure demolition near me"
-- "excavating company Columbia Missouri"
-
-### Tier 2 — Location Variant Keywords (Location Pages)
-- "demolition contractor Jefferson City MO"
-- "excavation contractor Fulton MO"
-- "site prep Boonville Missouri"
-- "demolition services [each city in service area]"
-
-### Tier 3 — Question/Education Keywords (Blog Content)
-- "how much does demolition cost in Missouri"
-- "how long does it take to demolish a house"
-- "do I need a permit to tear down a building in Missouri"
-- "what to do about asbestos before demolition"
-- "how to prepare a site for construction"
-- "cost to grade a lot in Missouri"
-- "how to choose a demolition contractor"
-
----
-
-## PRIORITY 1: Google Business Profile Optimization
-
-GBP signals account for ~32% of Map Pack ranking. This is Atlas's single highest-leverage SEO activity.
-
-### Profile Completeness (One-Time Setup)
-
-- **Business Name:** "ATLAS Demolition & Site Work" — exact. No keywords added.
-- **Primary Category:** Demolition Contractor
-- **Additional Categories:** Excavating Contractor, Grading Contractor, Site Preparation
-- **Service Area:** All cities/zip codes within 45-60 min radius of Columbia
-- **Business Description:** 750 characters. Natural language. Include: demolition, excavation, site prep, Columbia MO, Mid-Missouri, what makes Atlas different (communication, transparency, clean sites).
-- **Services:** Add every service individually with description:
-  - Residential Demolition
-  - Commercial Demolition
-  - Excavation
-  - Site Preparation
-  - Grading (Rough and Finish)
-  - Debris Hauling and Disposal
-  - Hazmat Coordination
-  - Permit Coordination
-- **Hours:** Accurate. Update holiday hours proactively.
-- **Phone and Website:** Must match footer on website exactly.
-- **Photos:** 20+ before launching anything else. Exterior, crew, equipment, completed projects, before/after.
-
-### Ongoing GBP Activity
-
-**Weekly:**
-- 1 GBP post (rotate: project highlight, tip, offer, event)
-- 2-3 new photos uploaded (geo-tagged to service area)
-- Check and respond to all Q&A
 
-**Post specs:**
-- Image: 1080 × 1080 min, real photo from Atlas job
-- Text: 100-300 words; front-load with key point
-- Include city + service keyword naturally
-- CTA button: "Call Now" or "Get Quote"
-- Geo-tag images before uploading
-- Filename: "atlas-demolition-columbia-mo-[project].jpg"
+Rewritten 24 Sep 2026 for the demolition-plus-concrete repositioning. The quarter plan lives at `docs/seo/2026-q4-seo-plan.md`; the audit at `docs/audit/2026-09-repositioning-audit.md`. This file is the standing strategy.
 
-**Post content formula:**
-Line 1: What this project was (hook)
-Lines 2-4: Scope, timeline, result
-Last line: CTA
+## Business context
 
-Example:
-"We just wrapped a 2,400 sq ft house demolition in Ashland — structure down, debris hauled, and lot graded flat in 4 days. The property owner wanted the site ready for a new build, and that's exactly what they got. If you've got a structure that needs to go in Mid-Missouri, give us a call. [CTA: Call Now]"
+- **Name, exact, everywhere:** ATLAS Demolition & Site Work (uppercase ATLAS). Plain "Atlas" is fine in prose.
+- **Phone:** (573) 234-6641. **Email:** chris@deployatlas.com. **Site:** https://deployatlas.com (apex, no www, extensionless URLs).
+- **Base:** Columbia, MO 65201, service-area business (no storefront address shown). **Area:** ~45 minutes: Columbia, Jefferson City, Fulton, Moberly, Fayette, Boonville, Ashland, Centralia, Hallsville, Harrisburg, Rocheport. Counties: Boone, Callaway, Cole, Audrain, Howard, Cooper, Randolph, Moniteau.
+- **Positioning:** the demolition company that finishes the job. Tear it out, haul it off, put the site back.
+- **Two front doors, one tail.** Demolition (headline, any size). Site Work = concrete and paving (second door, $10K+, parking lots, driveways, slabs, tear-out and replace, no teardown required). Backfill, grading and pad prep are the tail, sold with a demo or concrete job only.
+- **Never write as a service:** land clearing, forestry mulching, brush hogging, tree or stump work, standalone excavation or trenching, septic, foundation repair, concrete leveling, mudjacking, patch repair, general repairs.
+- **Claims allowed:** licensed and insured (GL, umbrella, workers' comp). Nothing else.
+- **Framing:** locally owned, same people on the bid and on the site. Not "Chris does everything."
+- **Terminology:** the consultation is the process (free on-site consultation), the bid is the deliverable (fixed price in writing). Never "estimate" or "quote" in UI copy. "Estimate" is allowed only as a search keyword in blog titles and metas. No turnaround-time promises.
+- **GBP:** primary category Demolition Contractor; also Concrete Contractor, Excavating Contractor, Debris Removal Service. Managed under christopher.kurtz.96@gmail.com. Book Online button is Jobber's request form (kept on purpose).
 
----
+## URL tree
 
-## PRIORITY 2: Review Strategy
-
-**Current target:** Build to 50 reviews as fast as possible, then sustain 3-5/month.
+`/demolition/` (+ `/structural/`, `/mobile-home-removal/`, `/interior-selective/`) · `/concrete/` (+ `/concrete-removal/`, `/parking-lot-removal/`, `/driveway-replacement/`) · `/site-work/` · `/consultation/` · `/services` · `/service-areas` · `/about` · `/contact` · `/locations/<town>-mo` · `/blog/<slug>` (file stays `blog/<slug>.html`). Old `/services/*.html` and land clearing URLs are 301'd; never link to them.
 
-| Stage | Monthly Target |
-|---|---|
-| 0-25 reviews | 5+ per month |
-| 25-50 reviews | 3-4 per month |
-| 50+ reviews | 2-3 per month (sustained) |
-
-**How to get reviews:**
-1. Ask in person after successful job completion
-2. Text follow-up 24-48 hours after job: "Hi [Name], thanks for letting us work on your property. If you have a moment, a Google review helps our small business a lot. Here's the link: [link]"
-3. Email follow-up 3 days after completion
-
-**Respond to every review within 24 hours.**
-
-**Positive review response formula:**
-1. Thank by name
-2. Reference something specific about their project
-3. Include a natural keyword (city + service)
-4. Invite referral
-
-Example: "Thank you, [Name]! We really enjoyed working on your property in [City]. The crew takes a lot of pride in leaving a clean site — glad it showed. Hope to work with you again, and if you know anyone who needs demo or excavation work in Mid-Missouri, send them our way."
-
-**Negative review response formula:**
-1. Acknowledge without admitting liability
-2. Apologize for their experience
-3. Offer to resolve offline
-4. Keep it short
-
-Example: "Thank you for letting us know, [Name]. That's not our standard and I'm sorry the experience didn't meet expectations. Please call me directly at [phone] — I want to make this right."
-
----
-
-## PRIORITY 3: NAP Consistency and Citations
-
-**Standardized NAP (use everywhere, exactly):**
-- Name: ATLAS Demolition & Site Work
-- Address: [exact format from GBP]
-- Phone: [exact format]
-
-**Top citation sources to build/verify:**
-
-| Platform | Priority |
-|---|---|
-| Google Business Profile | ✅ Must have |
-| Yelp | ✅ Must have |
-| Facebook Business | ✅ Must have |
-| BBB | High |
-| Angi | High |
-| HomeAdvisor | High |
-| Houzz | Medium |
-| Yellow Pages | Medium |
-| Bing Places | Medium |
-| Apple Maps | Medium |
-| Columbia Chamber of Commerce | High — local authority |
-| Missouri AGC / NUCA | High — industry authority |
-
-Audit every 6 months for consistency.
-
----
-
-## PRIORITY 4: Website Service Pages
-
-**One page per service:**
-
-1. **/demolition-columbia-mo** — "Demolition Services in Columbia, MO"
-2. **/commercial-demolition-mid-missouri** — "Commercial Demolition in Mid-Missouri"
-3. **/excavation-columbia-mo** — "Excavation Services in Columbia, MO"
-4. **/site-preparation-columbia-missouri** — "Site Preparation & Grading in Columbia, MO"
-5. **/debris-hauling-columbia-mo** — "Debris Hauling & Disposal in Columbia, MO"
-6. **/hazmat-coordination** — "Hazmat Coordination for Demolition Projects"
-
-Each page: 600-1,500 words. H1 with target keyword. Process description. FAQ. Before/after photos. Clear CTA (phone number, estimate request). Schema markup (LocalBusiness + Service).
-
-### Location Pages (Service Area Expansion)
-
-One page per major city served:
-- /demolition-jefferson-city-mo
-- /excavation-fulton-mo
-- /demolition-boonville-missouri
-- /site-prep-mexico-mo
-- etc.
-
-Each page 60%+ unique content. Include local context, landmarks, distance from Columbia, any relevant project references.
-
----
-
-## PRIORITY 5: Blog Strategy — Topic Clusters
-
-### Cluster 1: Demolition Cost & Process (Pillar: "No Surprises")
-Pillar: "The Complete Guide to Demolition in Mid-Missouri"
-Cluster posts:
-- "How Much Does It Cost to Demolish a House in Missouri?"
-- "What to Expect During a Demolition Project"
-- "Do You Need a Permit to Tear Down a Building in Missouri?"
-- "What Happens with Asbestos Before Demolition?"
-- "Concrete vs. Wood Frame Demolition: What's Different?"
-- "How to Choose a Demolition Contractor in Columbia MO"
-- "Before and After: [Specific Project Case Study]"
-
-### Cluster 2: Site Prep & Excavation (Pillar: "Behind The Iron")
-Pillar: "Site Preparation & Excavation: What Property Owners Need to Know"
-Cluster posts:
-- "How Much Does Grading a Lot Cost in Missouri?"
-- "What Is Site Preparation and Why Does It Matter?"
-- "Rough Grade vs. Finish Grade: What's the Difference?"
-- "How to Prepare Your Property for New Construction"
-- "Drainage and Grading: Why Water Management Matters"
-
-### Cluster 3: Working with Atlas (Pillar: "We Answer The Phone")
-Pillar: "Why Communication Sets Atlas Apart"
-Cluster posts:
-- "What to Expect When You Call Atlas for an Estimate"
-- "How We Handle Hazmat Coordination So You Don't Have To"
-- "For GCs: How to Work with a Reliable Demo Sub"
-- Project case studies (ongoing series)
-
-**Blog frequency:** 2x per month minimum. Start with Cluster 1 (highest search volume, buyer-intent keywords).
-
----
-
-## PRIORITY 6: Backlinks
-
-**Highest-value link opportunities for Atlas:**
-- Columbia Chamber of Commerce membership
-- Missouri AGC (Associated General Contractors)
-- NUCA (National Utility Contractors Association) if applicable
-- Supplier websites (equipment dealers, material suppliers)
-- GC partner websites (mutual linking)
-- Local news coverage (community projects, sponsorships)
-- Real estate agent partner websites
-- Local .edu or .gov references (community involvement)
-
-**Target:** 2-4 quality links per month. Focus on relevance and local authority.
-
----
-
-## PRIORITY 7: Technical SEO
-
-- HTTPS required
-- Mobile-first (80%+ searches are mobile for local services)
-- Core Web Vitals: LCP < 2.5s, INP < 200ms, CLS < 0.1
-- Schema markup: LocalBusiness, Service, FAQPage on every relevant page
-- XML sitemap submitted to Search Console
-- Every page reachable within 3 clicks from homepage
-- Image alt text: descriptive + location ("residential demolition site Columbia MO")
-
----
-
-## Monthly SEO Action Plan
-
-### Daily (15-20 min)
-- Respond to all new Google reviews within 24 hours
-- Respond to GBP Q&A
-- Send review requests for completed jobs
-
-### Weekly (1-2 hours)
-- Publish 1 GBP post
-- Upload 2-3 geo-tagged photos to GBP
-- Check GBP Insights
-- 1 review request follow-up
-
-### Monthly (2-3 hours)
-- GBP full audit (info accurate, new services, Q&A seeding)
-- Review velocity check (on target?)
-- Google Search Console review (clicks, impressions, top queries, errors)
-- Publish 2 blog posts
-- Citation spot-check (top 5 sources)
-- Identify 2-3 backlink opportunities
-- Competitor check (who's in the Map Pack for your keywords?)
-
-### Quarterly
-- Full citation audit across all sources
-- Content audit — update underperforming posts
-- Technical SEO check (speed, mobile, Core Web Vitals)
-- Keyword strategy refresh
+## Keyword strategy
+
+**Tier 1, money pages**
+- demolition contractor Columbia MO · demolition services Columbia MO · house demolition Columbia MO
+- mobile home removal cost · mobile home demolition cost (the largest existing cluster)
+- concrete removal Columbia MO · concrete removal cost per square foot
+- parking lot removal Columbia MO · parking lot replacement cost · asphalt removal
+- concrete driveway replacement Columbia MO
+- interior demolition Columbia MO · commercial strip out
+- site preparation Columbia MO (tail; do not build standalone grading content)
+
+**Tier 2, locations:** demolition contractor + concrete in Jefferson City, Fulton, Moberly, Fayette, Boonville, Ashland. Pages exist; add job proof before adding more towns.
+
+**Tier 3, questions (blog):** how much does it cost to demolish a house in Missouri · cost to remove a concrete driveway · cost to tear down a garage · mobile home removal cost · parking lot removal cost · do I need a permit to demolish · what happens to demolition debris · asphalt vs concrete parking lot · how long does demolition take.
+
+## Blog clusters
+
+- **Demolition cost and process** (hub `/demolition/`): cost guides, permits, disconnects, asbestos inspections, what to expect, choosing a contractor, winter work, case studies.
+- **Concrete and parking lots** (hub `/concrete/`): removal cost, replacement cost, asphalt vs concrete, phasing, base failure, recycling, church/school/commercial lots, driveway base.
+- **Site restoration** (`/site-work/`): backfill, grading, pad prep, what's left after a teardown. Framed as the finish, never as a standalone service.
+
+Cadence: two posts a week (Mon demolition, Thu concrete) from the Notion "Quarterly Atlas Blog Post" page, via the `atlas-weekly-blog` task. 1,500–2,000 words. Primary link to the money page in the row's Notes, one sibling link, FAQ with FAQPage schema, byline "By Chris Kurtz, Owner — ATLAS Demolition & Site Work," CTA "Request a Free Consultation" → `/consultation/`. After a post publishes run `python3 tools/site-build/site_pass.py --no-delete`.
+
+## GBP operating rules
+
+- Weekly: 2–3 real job photos (town + service in caption), 1 post (job, numbers, result, CTA). Concrete and lot photos first in Q4.
+- Reviews: ask at completion, text the link same day, ask the customer to describe the work. Reply to every review within 24 hours using town + service. No staff quotas, no naming employees (Google policy, Apr 2026).
+- Google Q&A is retired. Ask Maps answers come from the profile, reviews and the site's FAQ blocks. Keep FAQs accurate.
+- Website link carries UTM (`utm_source=google&utm_medium=organic&utm_campaign=gbp`).
+
+## AI search
+
+Entity consistency (one name string, citations cleaned), structured facts (HomeAndConstructionBusiness + sameAs + offer catalog + FAQPage on every service page, `/llms.txt`), Bing (verified, IndexNow enabled; submit sitemap in Bing Webmaster), answer-shaped copy (direct answer with the number in the first sentence), third-party mentions (Chamber, BBB, Yelp, local news). Monthly check on ChatGPT, Perplexity and Gemini for the tracked queries.
+
+## Citations
+
+Exact NAP on: Google, Facebook, Instagram, Yelp, Bing Places, Apple Business Connect, BBB, Angi, Nextdoor, Yellow Pages, Columbia Chamber. Old name "Atlas Excavation & Demolition" must be replaced wherever it appears.
+
+## Links
+
+2–4 a month: Chamber listing, supplier and dealer pages, the concrete sub's site, GC partners, one local news or sponsorship mention per quarter.
+
+## Technical
+
+Static HTML on Netlify, apex canonical, extensionless URLs, shared header/footer from `tools/site-build/template.py`, redirect table and sitemap regenerated by `site_pass.py`. `/js` and `/css` are cached immutable for a year: bump the `?v=` query in the template when either changes. Monthly: crawl (status, canonical, H1, title ≤60, meta ≤160, JSON-LD parse), Search Console pull, PageSpeed on home and a money page.
+
+## Measurement
+
+Twelve tracked queries and the quarter targets are in the plan. Report on the 1st of each month: clicks, impressions, positions, reviews, GBP photos, consultation submissions, phone clicks (GA4 `phone_click` event), AI mentions.
