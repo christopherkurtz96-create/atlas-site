@@ -392,6 +392,6 @@ bid_html = T.page(
     og_image="/images/house-demolition-teardown-excavator.jpg",
     extra_head='    <script>document.addEventListener("DOMContentLoaded",function(){var p=new URLSearchParams(location.search);[["utm_source","bid-h-utm-source"],["utm_medium","bid-h-utm-medium"],["utm_campaign","bid-h-utm-campaign"],["utm_content","bid-h-utm-content"]].forEach(function(x){var e=document.getElementById(x[1]);if(e&&p.get(x[0]))e.value=p.get(x[0]);});});</script>',
 )
-os.makedirs(f"{REPO}/instant-bid", exist_ok=True)
+os.makedirs(f"{REPO}/consultation", exist_ok=True)
 open(f"{REPO}/consultation/index.html","w").write(bid_html)
-print("instant-bid/index.html", len(bid_html), "divs", bid_html.count("<div"), bid_html.count("</div>"))
+print("consultation/index.html", len(bid_html), "divs", bid_html.count("<div"), bid_html.count("</div>"))

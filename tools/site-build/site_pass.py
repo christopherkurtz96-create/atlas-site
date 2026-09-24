@@ -125,7 +125,7 @@ for f in all_pages():
     t=open(f,errors="ignore").read()
     for h in re.findall(r'href="([^"]+)"',t):
         if h.startswith(("http","mailto","tel","#","sms")): continue
-        p=h.split("#")[0]
+        p=h.split("#")[0].split("?")[0]
         if p and not exists(p): bad.append((f,h))
 print("broken internal links:",len(bad)); [print("  ",b) for b in bad[:40]]
 
