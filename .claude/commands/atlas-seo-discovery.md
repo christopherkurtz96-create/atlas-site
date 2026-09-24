@@ -1,13 +1,13 @@
 ---
 name: Atlas Local SEO Topic Discovery
-description: Discovers high-potential blog topics, service area page opportunities, and Google Business Profile optimization strategies for Atlas Demolition & Site Work. Focuses on local SEO, local pack rankings, and location-specific keywords for Mid-Missouri.
+description: Discovers high-potential blog topics, service area page opportunities, and Google Business Profile optimization strategies for ATLAS Demolition & Site Work. Focuses on local SEO, local pack rankings, and location-specific keywords for Mid-Missouri.
 ---
 
 # Atlas Local SEO Topic Discovery Skill
 
 ## Purpose
 
-This skill identifies content and optimization opportunities for Atlas Demolition & Site Work by analyzing:
+This skill identifies content and optimization opportunities for ATLAS Demolition & Site Work by analyzing:
 - Local search volume and keyword difficulty
 - Service + location keyword combinations
 - Google Business Profile optimization opportunities
@@ -33,7 +33,7 @@ Your topic recommendations should split between the two front doors (the blog ca
 ## Business Context
 
 ### Company Information
-- **Name**: Atlas Demolition & Site Work
+- **Name**: ATLAS Demolition & Site Work
 - **Location**: Columbia, MO
 - **Phone**: (573) 234-6641
 - **Service Radius**: 45-50 miles from Columbia (Mid-Missouri)
@@ -329,7 +329,7 @@ Generate weekly post ideas aligned with:
 - New service announcements
 
 #### GBP Optimization Checklist
-- [ ] Business name matches website exactly (Atlas Demolition & Site Work)
+- [ ] Business name matches website exactly (ATLAS Demolition & Site Work)
 - [ ] All services listed in GBP categories
 - [ ] Service area set correctly (45-50 mile radius)
 - [ ] Business hours accurate
@@ -352,7 +352,7 @@ Generate weekly post ideas aligned with:
 Example: `atlas-excavation-demolition-columbia-mo-house-demo-complete.jpg`
 
 **Alt text patterns**:
-`[Service] project by Atlas Demolition & Site Work in [City], MO`
+`[Service] project by ATLAS Demolition & Site Work in [City], MO`
 
 #### Review Generation Strategy
 - Request reviews after successful project completion
@@ -433,7 +433,7 @@ Each location page should include:
 ### Deliverable: Local SEO Topic Opportunity Report
 
 ```markdown
-# Local SEO Topic Opportunity Report: Atlas Demolition & Site Work
+# Local SEO Topic Opportunity Report: ATLAS Demolition & Site Work
 
 ## Executive Summary
 
@@ -499,7 +499,7 @@ Each location page should include:
 ## Google Business Profile Recommendations
 
 ### Immediate Actions
-1. [Action 1: e.g., "Update business name to 'Atlas Demolition & Site Work'"]
+1. [Action 1: e.g., "Update business name to 'ATLAS Demolition & Site Work'"]
 2. [Action 2]
 3. [Action 3]
 

@@ -1,17 +1,17 @@
 ---
 name: atlas-video
-description: "Atlas Demolition & Site Work video script writing. Atlas-specific video formats, job site footage, before/after content. Use when creating video scripts or Reels for Atlas."
+description: "ATLAS Demolition & Site Work video script writing. Atlas-specific video formats, job site footage, before/after content. Use when creating video scripts or Reels for Atlas."
 ---
 
-# Atlas Demolition & Site Work Video Script Skill — Research-Backed
+# ATLAS Demolition & Site Work Video Script Skill — Research-Backed
 ## Applies To: Facebook Reels · Instagram Reels · GBP Video · LinkedIn · X
-## Brand: Atlas Demolition & Site Work — Demo, Excavation, Site Prep in Mid-Missouri
+## Brand: ATLAS Demolition & Site Work — Demo, Excavation, Site Prep in Mid-Missouri
 
 ---
 
 ## Brand Context
 
-**Atlas Demolition & Site Work** handles structural demolition, excavation, and site prep in the Columbia, MO area.
+**ATLAS Demolition & Site Work** handles structural demolition, excavation, and site prep in the Columbia, MO area.
 
 **On-camera energy:** Confident, matter-of-fact, blue-collar professional. Not performative. Sounds like a contractor explaining something to a neighbor — knowledgeable, direct, a little proud of the work.
 
@@ -61,7 +61,7 @@ Text overlay + CTA (0:40-0:45): One line + phone number or "link in bio"
 [ON SCREEN: "6 years abandoned. 3 days to fix."]
 
 [VISUAL: Timelapse — excavator approaching, first wall coming down, debris loading, hauling, grading]
-[ON SCREEN: "Atlas Demolition & Site Work — Columbia, MO"]
+[ON SCREEN: "ATLAS Demolition & Site Work — Columbia, MO"]
 
 [VISUAL: Clean, flat, graded lot. Sun shining.]
 [ON SCREEN: "Ready to build. | Call (573) XXX-XXXX"]
@@ -158,7 +158,7 @@ SPOKEN: "Crew on site Monday morning. Structure down, debris hauled, lot graded 
 [VISUAL: Clean lot, wide angle]
 SPOKEN: "Three days. Clean site. No headaches."
 
-[ON SCREEN: "Atlas Demolition & Site Work | (573) XXX-XXXX"]
+[ON SCREEN: "ATLAS Demolition & Site Work | (573) XXX-XXXX"]
 SPOKEN: "If you've been trying to get someone out there — give us a call. We answer."
 ```
 

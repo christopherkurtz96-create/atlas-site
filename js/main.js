@@ -1,4 +1,4 @@
-// Atlas Demolition & Site Work - Main JavaScript
+// ATLAS Demolition & Site Work - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Toggle

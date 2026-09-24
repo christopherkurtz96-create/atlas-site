@@ -1,6 +1,6 @@
 ---
 name: atlas-seo-discovery
-description: "Discovers high-potential blog topics, service area page opportunities, and GBP optimization strategies for Atlas Demolition & Site Work. Auto-triggers when: looking for blog topics, planning content, asking what to write about, doing monthly content planning, finding SEO opportunities, or planning GBP posts. Also triggers on: find topics, what should we write, discover topics, content ideas, blog ideas, SEO opportunities for Atlas."
+description: "Discovers high-potential blog topics, service area page opportunities, and GBP optimization strategies for ATLAS Demolition & Site Work. Auto-triggers when: looking for blog topics, planning content, asking what to write about, doing monthly content planning, finding SEO opportunities, or planning GBP posts. Also triggers on: find topics, what should we write, discover topics, content ideas, blog ideas, SEO opportunities for Atlas."
 ---
 
 
@@ -51,7 +51,7 @@ description: "Discovers high-potential blog topics, service area page opportunit
 ## Google Business Profile Recommendations
 
 ### Immediate Actions
-1. [Action 1: e.g., "Update business name to 'Atlas Demolition & Site Work'"]
+1. [Action 1: e.g., "Update business name to 'ATLAS Demolition & Site Work'"]
 2. [Action 2]
 3. [Action 3]
 

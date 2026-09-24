@@ -1,9 +1,9 @@
 # Atlas page content spec (for page-writing agents)
 
-You are writing ONE OR MORE service pages for Atlas Demolition & Site Work, Columbia, Missouri. Output for each page is a JSON file at the path given in your task, with these keys (all strings unless noted):
+You are writing ONE OR MORE service pages for ATLAS Demolition & Site Work, Columbia, Missouri. Output for each page is a JSON file at the path given in your task, with these keys (all strings unless noted):
 
 - path: canonical path, e.g. "/demolition/structural/"
-- title: ≤60 chars, ends "| Atlas" or "| Atlas Demolition & Site Work" only if it fits. Primary keyword first.
+- title: ≤60 chars, ends "| Atlas" or "| ATLAS Demolition & Site Work" only if it fits. Primary keyword first.
 - meta: 140–158 chars, includes primary keyword + "Columbia" or "Mid-Missouri" + phone (573) 234-6641 if it fits.
 - keywords: comma list, 6–10 terms.
 - h1: primary keyword in natural language.
@@ -16,7 +16,7 @@ You are writing ONE OR MORE service pages for Atlas Demolition & Site Work, Colu
 - cta_h2, cta_p: optional overrides for the bottom CTA.
 
 ## Non-negotiables
-- Business name: Atlas Demolition & Site Work. Owner-operator: Chris Kurtz sells, bids and runs the work himself. Say "we" not "Atlas" repeatedly.
+- Business name: ATLAS Demolition & Site Work. Owner-operator: Chris Kurtz sells, bids and runs the work himself. Say "we" not "Atlas" repeatedly.
 - Phone (573) 234-6641 appears as clickable text once in the body: <a href="tel:5732346641">(573) 234-6641</a>.
 - "Licensed and insured" is allowed (general liability, umbrella, workers' comp). No other credential/certification claims.
 - Voice: direct, contractor-level, numbers-forward. Like a crew foreman explaining the job to a project manager. No hype adjectives, no "industry-leading", no "we pride ourselves", no exclamation marks. Short paragraphs. Lead with specifics: tonnage, days, square footage, thickness.

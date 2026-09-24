@@ -1,4 +1,4 @@
-# Netlify configuration for Atlas Demolition & Site Work
+# Netlify configuration for ATLAS Demolition & Site Work
 
 [build]
   publish = "."

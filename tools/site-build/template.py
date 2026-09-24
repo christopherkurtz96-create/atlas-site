@@ -25,7 +25,7 @@ def header():
         <div class="container">
             <div class="header-inner">
                 <a href="/" class="logo">
-                    <img src="/images/logo.svg" alt="Atlas Demolition & Site Work">
+                    <img src="/images/logo.svg" alt="ATLAS Demolition & Site Work">
                 </a>
 
                 <nav class="nav-menu">
@@ -85,8 +85,8 @@ def footer():
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="/images/logo-white.svg" alt="Atlas Demolition & Site Work" style="height: 50px; margin-bottom: 10px;">
-                    <p>Atlas Demolition & Site Work is a locally owned demolition and concrete contractor in Columbia, Missouri. We tear it out, haul it off, and put the site back. One contractor, start to finish, across Mid-Missouri.</p>
+                    <img src="/images/logo-white.svg" alt="ATLAS Demolition & Site Work" style="height: 50px; margin-bottom: 10px;">
+                    <p>ATLAS Demolition & Site Work is a locally owned demolition and concrete contractor in Columbia, Missouri. We tear it out, haul it off, and put the site back. One contractor, start to finish, across Mid-Missouri.</p>
                     <div class="footer-social">
                         <a href="https://www.facebook.com/profile.php?id=61584529212929" aria-label="Facebook" rel="noopener">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -138,7 +138,7 @@ def footer():
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Atlas Demolition & Site Work. All rights reserved.</p>
+                <p>&copy; 2026 ATLAS Demolition & Site Work. All rights reserved.</p>
                 <div class="footer-bottom-links">
                     <a href="/privacy">Privacy Policy</a>
                     <a href="/terms">Terms of Service</a>
@@ -152,7 +152,7 @@ def footer():
 def business_schema(extra_ids=None):
     return {
         "@context":"https://schema.org","@type":"HomeAndConstructionBusiness","@id":f"{SITE}/#business",
-        "name":"Atlas Demolition & Site Work","alternateName":"Atlas Demolition",
+        "name":"ATLAS Demolition & Site Work","alternateName":"ATLAS Demolition",
         "image":f"{SITE}/images/icon-512.png","logo":f"{SITE}/images/icon-512.png",
         "description":"Demolition and concrete contractor in Columbia, Missouri. Structural, mobile home, interior and concrete demolition; parking lot and driveway removal and replacement; site work after the teardown. Serving Mid-Missouri within about 45 minutes of Columbia.",
         "url":SITE,"telephone":"+1-573-234-6641","email":EMAIL,"priceRange":"$$$",
@@ -247,7 +247,7 @@ def page(*, path, title, meta, h1, subtitle, crumbs, body, faqs=(), sidebar=None
     <meta property="og:type" content="website">
     <meta property="og:url" content="{canon}">
     <meta property="og:image" content="{SITE}{og_image}">
-    <meta property="og:site_name" content="Atlas Demolition & Site Work">
+    <meta property="og:site_name" content="ATLAS Demolition & Site Work">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{H.escape(title,quote=True)}">
     <meta name="twitter:description" content="{H.escape(meta,quote=True)}">

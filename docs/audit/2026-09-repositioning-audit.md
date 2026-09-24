@@ -1,4 +1,4 @@
-# Atlas Demolition & Site Work — Site and SEO Audit
+# ATLAS Demolition & Site Work — Site and SEO Audit
 
 **Standard:** Atlas Direction Brief, September 2026, as refined by Chris on 24 Sep 2026 (see "Decisions that changed the brief").
 **Site:** deployatlas.com (static HTML, GitHub → Netlify).
@@ -24,7 +24,7 @@ These came out of the Q&A on 24 Sep and override the brief where they conflict.
 | Blog cadence | Weekly | **Two per week** (one demolition, one concrete) for Q4, then one per week plus refreshes. |
 | Licensing claim | Verify before repeating | **"Licensed and insured" stays.** Owner-confirmed. |
 | Reviews | — | Quote by first name. 11 five-star, none mention concrete yet. |
-| Footer legal line | — | "Atlas Demolition & Site Work" only. |
+| Footer legal line | — | "ATLAS Demolition & Site Work" only. |
 | Google Ads | Realign now | **Separate session** after the site ships. |
 
 ---
@@ -33,7 +33,7 @@ These came out of the Q&A on 24 Sep and override the brief where they conflict.
 
 | Change | PR | Verified live |
 |---|---|---|
-| Name flipped to Atlas Demolition & Site Work in every title, meta, OG, schema, header, footer, copyright (68 files) | #8 | Yes |
+| Name flipped to ATLAS Demolition & Site Work in every title, meta, OG, schema, header, footer, copyright (68 files) | #8 | Yes |
 | "Demolition & Land Clearing" → "Demolition & Site Work" in titles, H1s, home hero (stopgap) | #8 | Yes |
 | Land Clearing removed from desktop nav, mobile nav, footer on every page (136 lines) and the home service card | #8 | Yes |
 | New favicon set (ico 16/32/48, 96px PNG, 180px Apple touch, 512 master) linked root-absolute on 53 pages | #9 | Yes |
@@ -308,7 +308,7 @@ Brand voice: direct, contractor-level, numbers-forward. Ranges are market-based 
 
 ### 10.1 /concrete/concrete-removal/
 
-**Title:** Concrete Removal in Columbia, MO | Atlas Demolition & Site Work
+**Title:** Concrete Removal in Columbia, MO | ATLAS Demolition & Site Work
 **Meta:** Slab, driveway, sidewalk and foundation removal in Columbia and Mid-Missouri. Broken out, hauled off, ground left ready. Pour-back available. Call (573) 234-6641.
 **H1:** Concrete Removal in Columbia, MO
 

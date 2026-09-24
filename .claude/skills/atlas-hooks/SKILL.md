@@ -1,17 +1,17 @@
 ---
 name: atlas-hooks
-description: "Atlas Demolition & Site Work hook writing. Atlas-specific hook examples and brand voice calibration for demolition/excavation content. Use when writing hooks or opening lines for Atlas social media or video content."
+description: "ATLAS Demolition & Site Work hook writing. Atlas-specific hook examples and brand voice calibration for demolition/excavation content. Use when writing hooks or opening lines for Atlas social media or video content."
 ---
 
-# Atlas Demolition & Site Work Hook Writing Skill — Research-Backed
+# ATLAS Demolition & Site Work Hook Writing Skill — Research-Backed
 ## Applies To: Facebook (Primary) · Instagram · GBP · LinkedIn · Video
-## Brand: Atlas Demolition & Site Work — Demo, Excavation, Site Prep in Mid-Missouri
+## Brand: ATLAS Demolition & Site Work — Demo, Excavation, Site Prep in Mid-Missouri
 
 ---
 
 ## Brand Context
 
-**Atlas Demolition & Site Work** handles structural demolition, excavation, and site prep for property owners and general contractors in the Columbia, MO area (45-60 minute radius).
+**ATLAS Demolition & Site Work** handles structural demolition, excavation, and site prep for property owners and general contractors in the Columbia, MO area (45-60 minute radius).
 
 **Primary avatars:**
 1. Property owners (residential) — First-time demo buyers, 35-65, nervous about cost/process

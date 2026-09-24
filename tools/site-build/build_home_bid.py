@@ -156,7 +156,7 @@ cta = f'''    <section class="cta-section">
 '''
 
 home_faqs = [
-    ["What does Atlas Demolition & Site Work do?", "Demolition first: houses, mobile homes, garages, barns, sheds, decks, commercial strip-outs and selective demolition in Columbia and Mid-Missouri. Concrete and paving second: parking lots, driveways, slabs, sidewalks and foundations removed and replaced. Site work such as backfill, grading and pad prep is the finish on those jobs. One contract, owner on the job, licensed and insured."],
+    ["What does ATLAS Demolition & Site Work do?", "Demolition first: houses, mobile homes, garages, barns, sheds, decks, commercial strip-outs and selective demolition in Columbia and Mid-Missouri. Concrete and paving second: parking lots, driveways, slabs, sidewalks and foundations removed and replaced. Site work such as backfill, grading and pad prep is the finish on those jobs. One contract, owner on the job, licensed and insured."],
     ["Do you only do concrete if you're also doing demolition?", "No. Concrete jobs stand on their own. If you have a parking lot or driveway to replace and nothing to tear down, that's a normal job for us. We remove it with our own equipment and our concrete crew pours or paves it back under our contract and warranty. We don't do concrete leveling, mudjacking or small patch repairs."],
     ["How does pricing work?", "Fixed price for mobilization, equipment and crew, in writing after a site visit. Disposal is billed as a pass-through at actual loads and tonnage with the scale tickets attached to the invoice. Typical ranges are published on each service page so you can see the ballpark before you call."],
     ["How far do you travel from Columbia?", "About 45 minutes: Jefferson City, Fulton, Moberly, Fayette, Boonville, Ashland, Centralia, Hallsville, Harrisburg, Rocheport and the towns between. Larger jobs are worth the drive anywhere in Mid-Missouri."],
@@ -183,7 +183,7 @@ home_body = hero + services + process + about + testimonials + faq_section + are
 home_html = T.page(
     path="/", layout="custom",
     title="Demolition & Concrete Contractor | Columbia, MO | Atlas",
-    meta="Atlas Demolition & Site Work: demolition, concrete removal and parking lot replacement in Columbia and Mid-Missouri. Tear it out, haul it off, put it back. Licensed and insured. (573) 234-6641.",
+    meta="ATLAS Demolition & Site Work: demolition, concrete removal and parking lot replacement in Columbia and Mid-Missouri. Tear it out, haul it off, put it back. Licensed and insured. (573) 234-6641.",
     keywords="demolition contractor Columbia MO, demolition company Columbia Missouri, concrete removal Columbia MO, parking lot removal, mobile home removal, house demolition, concrete contractor Columbia MO, site work",
     h1="", subtitle="", crumbs=[["/","Home"]], body=home_body, faqs=home_faqs,
     og_image="/images/house-demolition-teardown-excavator.jpg",

@@ -1,6 +1,6 @@
 ---
 name: Atlas Local SEO Keyword Researcher
-description: Deep keyword research for Atlas Demolition & Site Work blog topics, service pages, and location pages. Analyzes local search intent, competition, and identifies the best primary and secondary keywords to target for Mid-Missouri local SEO.
+description: Deep keyword research for ATLAS Demolition & Site Work blog topics, service pages, and location pages. Analyzes local search intent, competition, and identifies the best primary and secondary keywords to target for Mid-Missouri local SEO.
 ---
 
 # Atlas Local SEO Keyword Researcher Skill
@@ -35,7 +35,7 @@ Your keyword recommendations should split between the two front doors (the blog 
 ## Business Context
 
 ### Company Information
-- **Name**: Atlas Demolition & Site Work
+- **Name**: ATLAS Demolition & Site Work
 - **Location**: Columbia, MO
 - **Phone**: (573) 234-6641
 - **Service Radius**: 45-50 miles from Columbia (Mid-Missouri)
@@ -459,7 +459,7 @@ Provide guidance on how to use keywords in local content:
 
 **NAP Consistency**:
 Ensure Name, Address, Phone appear exactly as on GBP:
-- Atlas Demolition & Site Work
+- ATLAS Demolition & Site Work
 - Columbia, MO (or full address if used)
 - (573) 234-6641
 
@@ -661,7 +661,7 @@ Anchor text variety:
 
 **Meta Description**:
 - **Recommended**: "[150-160 char description with keyword and location]"
-- **Example**: "Find out how much house demolition costs in Columbia, MO. Local pricing guide with Missouri-specific factors. Get a free estimate from Atlas Demolition & Site Work."
+- **Example**: "Find out how much house demolition costs in Columbia, MO. Local pricing guide with Missouri-specific factors. Get a free estimate from ATLAS Demolition & Site Work."
 - **Length**: [X characters]
 
 **H2 Sections** (with keywords):
