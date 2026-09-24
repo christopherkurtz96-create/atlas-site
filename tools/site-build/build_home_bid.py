@@ -349,9 +349,9 @@ bid_body = f'''    <section class="page-header">
                             </select>
                         </div>
                         <div class="form-group">
-                            <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-weight:400">
-                                <input type="checkbox" name="smsConsent" value="yes" style="margin-top:4px">
-                                <span>It's fine to text me about this bid at the number above. Message and data rates may apply. Reply STOP to opt out. See our <a href="/privacy">privacy policy</a>.</span>
+                            <label class="consent">
+                                <input type="checkbox" name="smsConsent" value="yes">
+                                <span>It's fine to text me about this consultation at the number above. Message and data rates may apply. Reply STOP to opt out. See our <a href="/privacy">privacy policy</a>.</span>
                             </label>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Request a Free Consultation</button>
