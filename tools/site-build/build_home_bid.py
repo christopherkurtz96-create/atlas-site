@@ -78,8 +78,8 @@ hero = '''    <section class="hero">
 services = f'''    <section class="section bg-white" id="services">
         <div class="container">
             <div class="section-header">
-                <h2>Two Things We Do Well</h2>
-                <p>Demolition first. Concrete and paving second. Everything else we do is the finish on one of those two jobs.</p>
+                <h2>What We Do</h2>
+                <p>Tear it out. Put it back.</p>
             </div>
 
             <div class="services-grid">
@@ -99,20 +99,24 @@ services = f'''    <section class="section bg-white" id="services">
                         <img src="/images/concrete-wall-removal-excavator.jpg" alt="Excavator with a hydraulic breaker removing a concrete retaining wall" loading="lazy">
                     </div>
                     <div class="service-card-content">
-                        <h3>Concrete &amp; Paving</h3>
-                        <p>Parking lots, driveways, slabs, sidewalks, foundations and retaining walls torn out, hauled off, and poured or paved back. Asphalt or concrete. Removal only or the whole job. No teardown required.</p>
-                        <a href="/concrete/" class="btn btn-primary">Concrete Services</a>
+                        <h3>Site Work</h3>
+                        <p>Once it's down, we put the site back. Concrete and paving poured or paved new, foundations filled, lots graded. Parking lots and driveways too, with or without a teardown.</p>
+                        <a href="/concrete/" class="btn btn-primary">Site Work Services</a>
                     </div>
                 </div>
             </div>
 
-            <div class="sub-services-grid" style="margin-top: 50px;">
+            <h3 class="section-sub" style="margin-top:50px">Demolition</h3>
+            <div class="sub-services-grid" style="margin-top: 18px;">
 {sub_card("/images/house-demolition.jpg","House demolition in progress in Columbia, MO","House, Garage &amp; Barn Teardowns","Structural demolition with the basement filled and the lot graded when we leave.","/demolition/structural/")}
 {sub_card("/images/mobile-home.jpg","Mobile home demolition with excavator and dumpster","Mobile Home Removal","Single and double-wides demolished in place, steel scrapped, pad left clean.","/demolition/mobile-home-removal/")}
 {sub_card("/images/interior-demolition.jpg","Commercial interior strip-out down to the shell","Interior &amp; Selective Demo","Strip-outs, tenant finish demo, porches and additions, occupied buildings.","/demolition/interior-selective/")}
+            </div>
+            <h3 class="section-sub" style="margin-top:40px">Site Work</h3>
+            <div class="sub-services-grid" style="margin-top: 18px;">
 {sub_card("/images/concrete-removal.jpg","Concrete slab being broken out for removal","Concrete Removal","Slabs, driveways, sidewalks, footings and foundations. Saw-cut, broken, recycled.","/concrete/concrete-removal/")}
 {sub_card("/images/concrete-lot-prep-excavator.jpg","Excavator grading a lot base before paving","Parking Lot Removal &amp; Replacement","Asphalt or concrete lots removed in phases and put back with a base that lasts.","/concrete/parking-lot-removal/")}
-{sub_card("/images/site-work-grading-excavator.jpg","Excavator rough-grading a site after demolition","Site Work After the Teardown","Backfill, compaction, grading, pad prep and gravel. The second half of the job.","/site-work/")}
+{sub_card("/images/site-work-grading-excavator.jpg","Excavator rough-grading a site after demolition","Backfill, Grading &amp; Pad Prep","Foundation holes filled, lots graded to drain, pads built for what comes next.","/site-work/")}
             </div>
         </div>
     </section>

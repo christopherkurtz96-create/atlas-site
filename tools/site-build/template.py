@@ -14,7 +14,7 @@ GA = """    <script async src="https://www.googletagmanager.com/gtag/js?id=G-11M
 PHONE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>'
 
 NAV_DEMO = [("/demolition/","Demolition Services"),("/demolition/structural/","House, Garage & Barn Teardowns"),("/demolition/mobile-home-removal/","Mobile Home Removal"),("/demolition/interior-selective/","Interior & Selective Demo")]
-NAV_CONC = [("/concrete/","Concrete & Paving"),("/concrete/concrete-removal/","Concrete Removal"),("/concrete/parking-lot-removal/","Parking Lot Removal & Replacement"),("/concrete/driveway-replacement/","Driveway Replacement")]
+NAV_CONC = [("/concrete/","Concrete & Paving"),("/concrete/concrete-removal/","Concrete Removal"),("/concrete/parking-lot-removal/","Parking Lot Removal & Replacement"),("/concrete/driveway-replacement/","Driveway Replacement"),("/site-work/","Backfill, Grading & Pad Prep")]
 NAV_AREAS = [("/locations/columbia-mo","Columbia, MO"),("/locations/jefferson-city-mo","Jefferson City, MO"),("/locations/fulton-mo","Fulton, MO"),("/locations/moberly-mo","Moberly, MO"),("/locations/fayette-mo","Fayette, MO"),("/locations/boonville-mo","Boonville, MO"),("/locations/ashland-mo","Ashland, MO"),("/service-areas","All Service Areas")]
 
 AREAS = ["Columbia","Jefferson City","Fulton","Moberly","Fayette","Boonville","Ashland","Centralia","Hallsville","Harrisburg","Rocheport"]
@@ -35,11 +35,10 @@ def header():
                         </div>
                     </div>
                     <div class="nav-dropdown">
-                        <a href="/concrete/" class="nav-link">Concrete</a>
+                        <a href="/concrete/" class="nav-link">Site Work</a>
                         <div class="nav-dropdown-content">{dd(NAV_CONC)}
                         </div>
                     </div>
-                    <a href="/site-work/" class="nav-link">Site Work</a>
                     <div class="nav-dropdown">
                         <a href="/service-areas" class="nav-link">Service Areas</a>
                         <div class="nav-dropdown-content">{dd(NAV_AREAS)}
@@ -70,8 +69,7 @@ def header():
     <nav class="mobile-nav" id="mobile-nav">
         <a href="/">Home</a>
         <a href="/demolition/">Demolition</a>
-        <a href="/concrete/">Concrete & Paving</a>
-        <a href="/site-work/">Site Work</a>
+        <a href="/concrete/">Site Work: Concrete & Paving</a>
         <a href="/service-areas">Service Areas</a>
         <a href="/about">About</a>
         <a href="/consultation/">Request a Free Consultation</a>
@@ -104,18 +102,17 @@ def footer():
                         <li><a href="/demolition/structural/">House & Garage Teardowns</a></li>
                         <li><a href="/demolition/mobile-home-removal/">Mobile Home Removal</a></li>
                         <li><a href="/demolition/interior-selective/">Interior & Selective Demo</a></li>
-                        <li><a href="/site-work/">Site Work After Demolition</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Concrete & Paving</h4>
+                    <h4>Site Work</h4>
                     <ul class="footer-links">
-                        <li><a href="/concrete/">Concrete Services</a></li>
+                        <li><a href="/concrete/">Concrete & Paving</a></li>
                         <li><a href="/concrete/concrete-removal/">Concrete Removal</a></li>
                         <li><a href="/concrete/parking-lot-removal/">Parking Lot Removal</a></li>
                         <li><a href="/concrete/driveway-replacement/">Driveway Replacement</a></li>
-                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/site-work/">Backfill, Grading & Pad Prep</a></li>
                     </ul>
                 </div>
 
@@ -263,7 +260,7 @@ def page(*, path, title, meta, h1, subtitle, crumbs, body, faqs=(), sidebar=None
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css?v=20260924b">
+    <link rel="stylesheet" href="/css/style.css?v=20260924c">
 {extra_head}
 {GA}
 
@@ -272,25 +269,24 @@ def page(*, path, title, meta, h1, subtitle, crumbs, body, faqs=(), sidebar=None
 {header()}
 {main}
 {footer()}
-    <script src="/js/main.js?v=20260924b"></script>
+    <script src="/js/main.js?v=20260924c"></script>
 </body>
 </html>
 '''
 
 def default_sidebar(path):
-    demo = path.startswith("/demolition") or path=="/site-work/"
+    demo = path.startswith("/demolition")
     items = NAV_DEMO if demo else NAV_CONC
     other = NAV_CONC if demo else NAV_DEMO
     li = lambda items: "".join(f'\n                            <li><a href="{h}"{" class=\"active\"" if h==path else ""}>{t}</a></li>' for h,t in items)
     return f'''                <div class="service-sidebar">
                     <div class="sidebar-card">
-                        <h4>{"Demolition" if demo else "Concrete & Paving"}</h4>
+                        <h4>{"Demolition" if demo else "Site Work"}</h4>
                         <ul class="sidebar-services">{li(items)}
-                            <li><a href="/site-work/"{' class="active"' if path=="/site-work/" else ''}>Site Work After Demolition</a></li>
                         </ul>
                     </div>
                     <div class="sidebar-card">
-                        <h4>{"Concrete & Paving" if demo else "Demolition"}</h4>
+                        <h4>{"Site Work" if demo else "Demolition"}</h4>
                         <ul class="sidebar-services">{li(other)}
                         </ul>
                     </div>
