@@ -323,15 +323,9 @@ bid_body = f'''    <section class="page-header">
                         </div>
 
                         <h2>3. You</h2>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="bid-first-name">First name</label>
-                                <input type="text" id="bid-first-name" name="firstName" class="bid-input" required autocomplete="given-name">
-                            </div>
-                            <div class="form-group">
-                                <label for="bid-last-name">Last name</label>
-                                <input type="text" id="bid-last-name" name="lastName" class="bid-input" required autocomplete="family-name">
-                            </div>
+                        <div class="form-group">
+                            <label for="bid-first-name">Name</label>
+                            <input type="text" id="bid-first-name" name="firstName" class="bid-input" required autocomplete="name">
                         </div>
                         <div class="form-row">
                             <div class="form-group">
@@ -365,8 +359,7 @@ bid_body = f'''    <section class="page-header">
                     </div>
                     <div class="sidebar-card">
                         <h4>Rather talk?</h4>
-                        <p style="margin-bottom:12px">Chris answers the phone. Owner, estimator and operator.</p>
-                        <a href="{T.PHONE_TEL}" class="btn btn-primary" style="width:100%">{T.PHONE}</a>
+                        <a href="{T.PHONE_TEL}" class="btn btn-primary" style="width:100%">Call {T.PHONE}</a>
                     </div>
                     <div class="sidebar-card">
                         <h4>Typical ranges</h4>
