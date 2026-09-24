@@ -17,19 +17,6 @@
   status = 301
   force = true
 
-# Canonical host: force www so Google stops indexing the apex and www as two sites.
-[[redirects]]
-  from = "https://deployatlas.com/*"
-  to = "https://www.deployatlas.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://deployatlas.com/*"
-  to = "https://www.deployatlas.com/:splat"
-  status = 301
-  force = true
-
 # Redirects for clean URLs (optional - removes .html extension)
 [[redirects]]
   from = "/*"
