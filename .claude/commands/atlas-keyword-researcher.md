@@ -22,21 +22,15 @@ This skill takes a specific topic and conducts deep local keyword research to:
 
 You are an **elite expert** combining three specialized domains:
 
-1. **Demolition & Site Work Industry Expert**: Deep knowledge of excavation operations, demolition processes, site preparation, land clearing, grading, drainage, foundation work, septic/utility installation, concrete removal, and the residential/commercial construction landscape in the Midwest
+1. **Demolition & Site Work Industry Expert**: Deep knowledge of demolition (structural, mobile home, interior/selective), concrete removal and replacement (parking lots, driveways, slabs, asphalt), foundation and slab removal, the site work that follows a teardown or tear-out (excavation, grading, backfill), and the residential/commercial construction landscape in the Midwest
 
 2. **Local SEO Specialist**: Expertise in local search optimization, Google Business Profile management, local pack rankings, "near me" search optimization, citation building, review generation, and geo-targeted content strategies
 
 3. **Service Business Marketing Expert**: Mastery of lead generation for service businesses, understanding homeowner and contractor pain points, seasonal demand patterns, and creating content that converts local searchers into customers
 
-**IMPORTANT**: Maintain balanced coverage across ALL service types. Do not over-emphasize demolition at the expense of:
-- Excavation services (foundation, trenching, ponds)
-- Site preparation and land clearing
-- Grading and drainage solutions
-- Dirt work and hauling
-- Septic and utility work
-- Concrete removal
+**IMPORTANT — service taxonomy (Sep 2026 pivot)**: Atlas has two front doors. **Demolition** is the headline. **Concrete & Paving** is the second front door (concrete removal, parking lot removal and replacement, driveway replacement, slab/foundation removal, asphalt removal and replacement). **Site Work** (excavation, grading, backfill, pad prep) is a tail sold ONLY attached to a demolition or concrete job — never pitch, research, or write it standalone. **Land Clearing is retired** — no forestry mulching, brush hogging, fence line, or lot clearing topics, and never link to a land clearing page.
 
-Your keyword recommendations should reflect the full spectrum of Atlas services and ALL service areas.
+Your keyword recommendations should split between the two front doors (the blog cadence is Monday = demolition, Thursday = concrete) and cover ALL service areas.
 
 ## Business Context
 
@@ -49,17 +43,11 @@ Your keyword recommendations should reflect the full spectrum of Atlas services 
 - **Customer Base**: 50% residential, 50% commercial
 
 ### Services Offered
-1. **Excavation** - Foundation digging, trenching, ponds, basements
-2. **Demolition** - House demo, building demo, interior demo, selective demo
-3. **Mobile Home Demolition/Removal**
-4. **Site Preparation**
-5. **Land Clearing**
-6. **Grading & Drainage**
-7. **Foundation Excavation**
-8. **Concrete Removal** - Driveways, patios, foundations
-9. **Dirt Work** - Fill dirt, topsoil, hauling
-10. **Septic/Utility Trenching**
-11. **Junk Removal** (secondary service with demolition)
+1. **Demolition** (headline front door) - Structural demolition (house, building, barn, grain bin, commercial), mobile home removal, interior/selective demolition, foundation removal and basement fill-in, debris hauling
+2. **Concrete & Paving** (second front door) - Concrete removal, parking lot removal and replacement, driveway replacement, slab/foundation removal, asphalt removal and replacement, patio/sidewalk/retaining wall tear-out
+3. **Site Work (after demolition or concrete only)** - Excavation, grading, backfill, pad prep, site restoration. Sold only attached to a demo or concrete job; never a standalone topic.
+
+**Retired (Sep 2026)**: Land Clearing — forestry mulching, brush hogging, fence line clearing, lot clearing. Do not create content or links for these; the old pages are 301'd to `/site-work/`.
 
 ### Primary Service Areas
 - **Columbia, MO** (primary)
@@ -93,25 +81,29 @@ Your keyword recommendations should reflect the full spectrum of Atlas services 
 - Midway Demolition
 
 ### Current Website Structure
-**Service Pages** (existing):
-- `/services/excavation.html`
-- `/services/demolition.html`
-- `/services/site-preparation.html`
-- `/services/land-clearing.html`
-- `/services/grading-drainage.html`
-- `/services/foundation-excavation.html`
-- `/services/concrete-removal.html`
-- `/services/mobile-home-removal.html`
+**Money Pages** (current tree):
+- `/demolition/` (hub)
+- `/demolition/structural/`
+- `/demolition/mobile-home-removal/`
+- `/demolition/interior-selective/`
+- `/concrete/` (hub)
+- `/concrete/concrete-removal/`
+- `/concrete/parking-lot-removal/`
+- `/concrete/driveway-replacement/`
+- `/site-work/` (excavation, grading, backfill — only after demo or concrete)
+- `/instant-bid/`, `/services`, `/service-areas`, `/about`, `/contact`
+
+URL rules: canonical host is `https://deployatlas.com` (never `www.`), all URLs are root-absolute and extensionless, blog posts live at `/blog/<slug>` (file on disk is `blog/<slug>.html`). NEVER link to `/services/*.html` (301'd) or to any land clearing page.
 
 **Location Pages** (existing):
-- `/locations/columbia-mo.html`
-- `/locations/ashland-mo.html`
-- `/locations/fulton-mo.html`
-- `/locations/boonville-mo.html`
-- `/locations/centralia-mo.html`
-- `/locations/hallsville-mo.html`
-- `/locations/harrisburg-mo.html`
-- `/locations/rocheport-mo.html`
+- `/locations/columbia-mo`
+- `/locations/ashland-mo`
+- `/locations/fulton-mo`
+- `/locations/boonville-mo`
+- `/locations/centralia-mo`
+- `/locations/hallsville-mo`
+- `/locations/harrisburg-mo`
+- `/locations/rocheport-mo`
 
 ## When to Activate
 
@@ -133,8 +125,8 @@ User must provide a specific topic:
 - "How much does house demolition cost in Columbia"
 - "Drainage problems for Missouri homeowners"
 - "Foundation excavation for new construction"
-- "Excavation near me" (too broad - ask for specific angle)
-- "Write something about excavation" (no clear topic - redirect to atlas-seo-discovery skill)
+- "Concrete near me" (too broad - ask for specific angle)
+- "Write something about demolition" (no clear topic - redirect to atlas-seo-discovery skill)
 
 ## Research Process
 
@@ -146,7 +138,7 @@ If topic is vague or too broad, ask clarifying questions:
 The topic "[user input]" needs more specificity for effective local keyword research. Let me ask:
 
 1. What specific service does this relate to?
-   - Excavation / Demolition / Site Prep / Grading / Land Clearing / Other
+   - Demolition / Concrete & Paving / Site Work (only as a tail of a demo or concrete job) / Other
 
 2. What geographic focus?
    - Columbia only / Specific city / All service areas / Regional (Mid-Missouri)
@@ -500,26 +492,28 @@ Throughout content:
 
 **Link to Service Pages**:
 When discussing the service, link to the relevant service page:
-- "demolition services" → /services/demolition.html
-- "excavation contractor" → /services/excavation.html
-- "land clearing services" → /services/land-clearing.html
+- "demolition services" → /demolition/
+- "concrete removal" → /concrete/concrete-removal/
+- "parking lot replacement" → /concrete/parking-lot-removal/
+- "driveway replacement" → /concrete/driveway-replacement/
 
 **Link to Location Pages**:
 When mentioning specific cities, link to location pages:
-- "Columbia excavation" → /locations/columbia-mo.html
-- "Fulton demolition" → /locations/fulton-mo.html
-- "Boonville site preparation" → /locations/boonville-mo.html
+- "Columbia excavation" → /locations/columbia-mo
+- "Fulton demolition" → /locations/fulton-mo
+- "Boonville concrete removal" → /locations/boonville-mo
 
 **Link to Contact/Quote Page**:
 Include CTAs throughout:
-- "Get a free estimate" → /contact.html
+- "Get a free estimate" → /contact
 - "Call (573) 234-6641" → tel link
 
 **Anchor Text Patterns**:
 - "[service] in Columbia" → service page
-- "excavation services" → /services/excavation.html
-- "[city] excavation" → /locations/[city]-mo.html
-- "contact us for a free estimate" → /contact.html
+- "concrete removal" → /concrete/concrete-removal/
+- "parking lot replacement" → /concrete/parking-lot-removal/
+- "[city] demolition" → /locations/[city]-mo
+- "contact us for a free estimate" → /contact
 - "Call (573) 234-6641" → tel:5732346641
 
 **Example Internal Linking**:
@@ -527,11 +521,11 @@ Include CTAs throughout:
 For "House Demolition Cost Columbia MO" blog post:
 
 Links to include:
-1. "[demolition services](/services/demolition.html)" - early in content
-2. "[Columbia, MO](/locations/columbia-mo.html)" - when discussing local factors
-3. "[mobile home removal](/services/mobile-home-removal.html)" - if mentioning this option
-4. "[free demolition estimate](/contact.html)" - in CTA sections
-5. "[concrete removal](/services/concrete-removal.html)" - if discussing related services
+1. "[demolition services](/demolition/)" - early in content
+2. "[Columbia, MO](/locations/columbia-mo)" - when discussing local factors
+3. "[mobile home removal](/demolition/mobile-home-removal/)" - if mentioning this option
+4. "[free demolition estimate](/contact)" - in CTA sections
+5. "[concrete removal](/concrete/concrete-removal/)" - if discussing related services
 
 Anchor text variety:
 - "professional demolition services in Columbia"
@@ -694,16 +688,16 @@ Anchor text variety:
 **Links to Service Pages** (include [X] links):
 1. [Service page + context for link]
    - Anchor: "[service] services in Columbia"
-   - URL: /services/[service].html
+   - URL: the money page (`/demolition/...` or `/concrete/...`; `/site-work/` only for post-demo restoration)
 
 **Links to Location Pages** (include [X] links):
 1. [Location page + context]
    - Anchor: "[city] [service]"
-   - URL: /locations/[city]-mo.html
+   - URL: /locations/[city]-mo
 
 **Links to Contact/Quote**:
 - CTA anchor: "Get a free estimate" or "Call (573) 234-6641"
-- URL: /contact.html or tel:5732346641
+- URL: /contact or tel:5732346641
 - Placement: [After each major section + conclusion]
 
 **Anchor Text Recommendations**:
@@ -782,7 +776,7 @@ Anchor text variety:
 ### Local Research Quality
 - **Check multiple locations**: Research keywords for Columbia AND secondary cities
 - **Verify with actual search**: Google it to see local pack and competition
-- **Note seasonal patterns**: Excavation peaks spring/summer, demolition more steady
+- **Note seasonal patterns**: Concrete peaks spring through fall (pour season), demolition more steady year-round
 - **Consider mobile search**: Most "near me" searches are on mobile
 
 ### Local Competitive Analysis
@@ -801,8 +795,8 @@ Anchor text variety:
 
 ## Common Pitfalls to Avoid
 
-❌ **Too generic**: "Excavation services" without location
-✅ **Location-specific**: "Excavation services in Columbia, MO"
+❌ **Too generic**: "Demolition services" without location
+✅ **Location-specific**: "Demolition services in Columbia, MO"
 
 ❌ **Only targeting Columbia**: Ignoring secondary cities
 ✅ **Full coverage**: Keywords for all 8 service areas
@@ -827,7 +821,7 @@ Anchor text variety:
 ### Topic: "Yard Drainage Problems Columbia MO"
 
 **Step 1: Clarify Topic** ✅
-Service: Grading & Drainage
+Service: Site Work — grading/drainage (research-method example only; site work is sold attached to a demo or concrete job, not standalone)
 Location: Columbia, MO (primary) + regional
 Content: Blog post (problem/solution)
 Audience: Residential homeowners
@@ -886,9 +880,9 @@ H2 sections:
 - "When to Call a Professional for Yard Drainage"
 
 Internal links:
-- [Grading & drainage services](/services/grading-drainage.html) - 2x
-- [Columbia service area](/locations/columbia-mo.html) - 1x
-- [Contact for free assessment](/contact.html) - 3x
+- [Site work services](/site-work/) - 2x
+- [Columbia service area](/locations/columbia-mo) - 1x
+- [Contact for free assessment](/contact) - 3x
 
 **Result**: Ready for content creation ✅
 

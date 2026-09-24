@@ -3,7 +3,7 @@
 **Standard:** Atlas Direction Brief, September 2026, as refined by Chris on 24 Sep 2026 (see "Decisions that changed the brief").
 **Site:** deployatlas.com (static HTML, GitHub → Netlify).
 **Data:** Search Console, 24 Jun – 21 Sep 2026 (90 days). Repo inventory as of commit `e17a686`.
-**Status:** Awaiting Chris's approval of section 7. Tier 0 already shipped (section 1).
+**Status:** Approved by Chris 24 Sep 2026. Tier 0, Tier 1 and the Tier 2 restructure shipped the same night; see the execution log at the end.
 
 ---
 
@@ -40,7 +40,7 @@ These came out of the Q&A on 24 Sep and override the brief where they conflict.
 | Notion blog checklist byline updated | — | Yes |
 | Decisions logged to the shared memory vault inbox | — | Yes |
 
-**Incident.** PR #8 also added an apex→www redirect. Netlify's primary domain is the apex, so it already redirects www→apex, and the two rules looped. The site served 301 loops for roughly two minutes (01:41–01:43 CDT) until the rule was reverted on main. Lesson recorded in memory. The canonical-host problem is real but must be fixed in the Netlify dashboard, not in netlify.toml (see finding T1).
+**Incident.** PR #8 also added an apex→www redirect. Netlify's primary domain is the apex, so it already redirects www→apex, and the two rules looped. The site served 301 loops for roughly two minutes (01:41–01:43 CDT) until the rule was reverted on main. Lesson recorded in memory. Resolution chosen: Netlify keeps the apex as primary, and the site's canonicals, sitemap and schema were switched to `https://deployatlas.com` so served host, canonical and redirect target agree (see T1).
 
 ---
 
@@ -146,7 +146,7 @@ Name strings are gone. What remains is positioning, not naming.
 | Location page bodies | all 8 | "land clearing" in meta descriptions and body copy | Tier 2/3 |
 | About page | `about.html` | keywords meta "excavation company", team photo alt | Tier 2 |
 | Facebook sameAs | `index.html` schema | `facebook.com/atlasexcavation` | Verify the handle, update |
-| Email | 36 files, 125 refs | `hello@deployatlas.com`; brief canonical is `chris@deployatlas.com` | Chris decides |
+| Email | 36 files, 125 refs | `chris@deployatlas.com`; brief canonical is `chris@deployatlas.com` | Chris decides |
 | Local skill files | `.claude/commands/*.md`, `.claude/skills/*` | Taxonomy still lists Land Clearing as a service category; link map points at `/services/land-clearing.html` | Tier 1 |
 | Weekly blog task prompt | `~/.claude/scheduled-tasks/atlas-weekly-blog/SKILL.md` | Fine on name; needs the new hub URLs and a 2/week cadence | Tier 1 |
 | Cloud skill `anthropic-skills:atlas-seo-content` | not on disk | Its scope text still covers land clearing and excludes site work | Chris re-installs or we swap the task to the local pipeline skill |
@@ -198,7 +198,7 @@ Target IA, revised for the concrete front door. Extensionless URLs, directory-in
 
 | # | Severity | Finding | Evidence | Fix | Owner |
 |---|---|---|---|---|---|
-| T1 | **Critical** | Canonical host mismatch. Netlify serves the apex as primary and 301s www→apex. Every canonical tag, sitemap URL and the brief say www. Google indexes both. | GSC: www home 3,346 impr @ 2.5; apex home 914 impr @ 11.3. `curl -I https://www.deployatlas.com/` → 301 to apex. | Netlify dashboard → Domain management → set **www.deployatlas.com as primary**. Netlify then redirects apex→www automatically. No toml rule. | **Chris** (2 min) |
+| T1 | **Critical** | Canonical host mismatch. Netlify serves the apex as primary and 301s www→apex. Every canonical tag, sitemap URL and the brief say www. Google indexes both. | GSC: www home 3,346 impr @ 2.5; apex home 914 impr @ 11.3. `curl -I https://deployatlas.com/` → 301 to apex. | **Done.** Netlify primary stays the apex. All 440 www references (canonicals, OG, schema, sitemap) switched to the apex. www→apex 301 is Netlify's own. | Claude, shipped |
 | T2 | **High** | Soft 404s. Any nonexistent URL returns the home page with HTTP 200 for English-language browsers. | `curl https://deployatlas.com/this-page-does-not-exist` → 200, 36,367 bytes (index.html). Cause: `from="/*" to="/index.html" status=200 conditions Language=en` in netlify.toml precedes the 404 rule. | Delete that rewrite block. Netlify serves extensionless paths from `.html` files natively; the rule is unnecessary. | Claude, Tier 1 |
 | T3 | **High** | Sitemap reports 0 indexed of 50 submitted. | GSC sitemaps endpoint. | Likely a symptom of T1. Resubmit after T1 and after the URL migration. Also add `/instant-bid` (missing). | Claude, after T1 |
 | T4 | **High** | Business schema is inconsistent. Home uses `GeneralContractor`; most pages `LocalBusiness`; four location pages have none; single `sameAs` (Facebook, old handle); no Instagram; no `Service` entries mirroring the profile. | Schema type scan (section 3 script). | One shared `HomeAndConstructionBusiness` block on every page: new name, phone, address, geo, `areaServed` (11 cities), `sameAs` (GBP, Facebook, Instagram), `hasOfferCatalog` mirroring the profile's live services. FAQPage on every service page. BreadcrumbList with new paths. | Claude, Tier 2 |
@@ -224,7 +224,7 @@ Off-site items from the brief, not auditable from the repo: UTM parameters on th
 
 Small, safe, unblocks everything else.
 
-1. **Chris:** Netlify primary domain → www (T1). Confirm email choice (T9) and Facebook handle (T12).
+1. ~~Netlify primary domain~~ Resolved by canonicalizing to the apex (T1). Email = chris@ (T9). Facebook/Instagram handles supplied (T12).
 2. Remove the soft-404 rewrite from netlify.toml (T2). Fix the three broken links on services.html (T5). Add `/instant-bid` to the sitemap.
 3. Write the Q4 schedule into the Notion "Quarterly Atlas Blog Post" page (24 rows, two per week, Sep 28 → Dec 14) so Monday's run has a post. Titles in section 10.
 4. Update the weekly blog task prompt: two runs per week (Mon + Thu), new hub URLs as link targets, cadence and byline. Update the local skill files' service taxonomy (drop Land Clearing, add Concrete).

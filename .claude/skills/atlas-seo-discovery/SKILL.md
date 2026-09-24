@@ -22,8 +22,8 @@ description: "Discovers high-potential blog topics, service area page opportunit
 [1-2 sentences on the unique approach]
 
 **Internal Links**:
-- Link to: /services/[relevant-service].html
-- Link to: /locations/[relevant-location].html
+- Link to: the post's money page (`/demolition/...` or `/concrete/...` tree; `/site-work/` only for post-demo restoration)
+- Link to: /locations/[relevant-location]
 
 **Estimated Length**: X words
 **Target Audience**: [Residential homeowners / Commercial contractors / Both]
@@ -145,8 +145,8 @@ description: "Discovers high-potential blog topics, service area page opportunit
 
 ## Common Pitfalls to Avoid
 
-❌ **Too generic**: "Excavation services" without location
-✅ **Location-specific**: "Excavation services in Columbia, MO"
+❌ **Too generic**: "Demolition services" without location
+✅ **Location-specific**: "Demolition services in Columbia, MO"
 
 ❌ **Ignoring secondary cities**: Only targeting Columbia
 ✅ **Full coverage**: Content for all service areas

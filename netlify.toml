@@ -17,14 +17,6 @@
   status = 301
   force = true
 
-# Redirects for clean URLs (optional - removes .html extension)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Language = ["en"]}
-  force = false
-
 # Custom headers for security and performance
 [[headers]]
   for = "/*"
@@ -55,6 +47,385 @@
   skip_processing = false
 [build.processing.html]
   pretty_urls = false
+
+# ---- restructure redirects (September 2026) ----
+[[redirects]]
+  from = "/services/demolition.html"
+  to = "/demolition/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/mobile-home-removal.html"
+  to = "/demolition/mobile-home-removal/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/concrete-removal.html"
+  to = "/concrete/concrete-removal/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/excavation.html"
+  to = "/site-work/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/foundation-excavation.html"
+  to = "/site-work/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/grading-drainage.html"
+  to = "/site-work/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/site-preparation.html"
+  to = "/site-work/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/land-clearing.html"
+  to = "/site-work/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/"
+  to = "/services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/instant-bid.html"
+  to = "/instant-bid/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/brush-hogging-columbia-mo.html"
+  to = "/site-work/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/forestry-mulching-columbia-mo.html"
+  to = "/site-work/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/fence-line-clearing-mid-missouri.html"
+  to = "/site-work/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/land-clearing-cost-columbia-mo.html"
+  to = "/site-work/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/brush-hogging-columbia-mo"
+  to = "/site-work/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/forestry-mulching-columbia-mo"
+  to = "/site-work/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/fence-line-clearing-mid-missouri"
+  to = "/site-work/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/land-clearing-cost-columbia-mo"
+  to = "/site-work/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/centralia-mo.html"
+  to = "/service-areas#centralia"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/hallsville-mo.html"
+  to = "/service-areas#hallsville"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/harrisburg-mo.html"
+  to = "/service-areas#harrisburg"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/rocheport-mo.html"
+  to = "/service-areas#rocheport"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/centralia-mo"
+  to = "/service-areas#centralia"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/hallsville-mo"
+  to = "/service-areas#hallsville"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/harrisburg-mo"
+  to = "/service-areas#harrisburg"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/rocheport-mo"
+  to = "/service-areas#rocheport"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/barn-demolition-mid-missouri.html"
+  to = "/blog/barn-demolition-mid-missouri"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/commercial-demolition-contractor-columbia-mo.html"
+  to = "/blog/commercial-demolition-contractor-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/commercial-strip-out-demolition-columbia-mo.html"
+  to = "/blog/commercial-strip-out-demolition-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/concrete-removal-columbia-mo.html"
+  to = "/blog/concrete-removal-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/concrete-removal-cost-columbia-mo.html"
+  to = "/blog/concrete-removal-cost-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/demolish-or-renovate-house-columbia-mo.html"
+  to = "/blog/demolish-or-renovate-house-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/demolition-cost-columbia-missouri.html"
+  to = "/blog/demolition-cost-columbia-missouri"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/demolition-debris-disposal-columbia-mo.html"
+  to = "/blog/demolition-debris-disposal-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/demolition-permit-columbia-mo.html"
+  to = "/blog/demolition-permit-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/does-insurance-cover-demolition-columbia-mo.html"
+  to = "/blog/does-insurance-cover-demolition-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/fire-damage-demolition-columbia-mo.html"
+  to = "/blog/fire-damage-demolition-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/garage-demolition-cost-columbia-mo.html"
+  to = "/blog/garage-demolition-cost-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/hire-demolition-contractor-columbia-mo.html"
+  to = "/blog/hire-demolition-contractor-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/house-demolition-cost-columbia-mo.html"
+  to = "/blog/house-demolition-cost-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/how-long-does-demolition-take-columbia-mo.html"
+  to = "/blog/how-long-does-demolition-take-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/interior-demolition-mid-missouri.html"
+  to = "/blog/interior-demolition-mid-missouri"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/lot-grading-after-demolition-columbia-mo.html"
+  to = "/blog/lot-grading-after-demolition-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/mobile-home-removal-boone-county-mo.html"
+  to = "/blog/mobile-home-removal-boone-county-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/mobile-home-removal-cost-mid-missouri.html"
+  to = "/blog/mobile-home-removal-cost-mid-missouri"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/partial-demolition-columbia-mo.html"
+  to = "/blog/partial-demolition-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/pool-removal-columbia-mo.html"
+  to = "/blog/pool-removal-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/shed-deck-removal-columbia-mo.html"
+  to = "/blog/shed-deck-removal-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/ashland-mo.html"
+  to = "/locations/ashland-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/boonville-mo.html"
+  to = "/locations/boonville-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/columbia-mo.html"
+  to = "/locations/columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/fayette-mo.html"
+  to = "/locations/fayette-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/fulton-mo.html"
+  to = "/locations/fulton-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/jefferson-city-mo.html"
+  to = "/locations/jefferson-city-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations/moberly-mo.html"
+  to = "/locations/moberly-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy.html"
+  to = "/privacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/service-areas.html"
+  to = "/service-areas"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services.html"
+  to = "/services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sitemap.html"
+  to = "/sitemap"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms.html"
+  to = "/terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
 
 # 404 page
 [[redirects]]

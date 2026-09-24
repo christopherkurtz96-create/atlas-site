@@ -21,25 +21,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header class="header" id="header">
         <div class="container">
             <div class="header-inner">
-                <a href="index.html" class="logo"><img src="images/logo.svg" alt="Atlas Demolition & Site Work"></a>
+                <a href="/" class="logo"><img src="/images/logo.svg" alt="Atlas Demolition & Site Work"></a>
                 <nav class="nav-menu">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="services.html" class="nav-link">Services</a>
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/services" class="nav-link">Services</a>
+                    <a href="/about" class="nav-link">About</a>
+                    <a href="/contact" class="nav-link">Contact</a>
                 </nav>
                 <div class="header-cta">
                     <a href="tel:5732346641" class="header-phone">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                         (573) 234-6641
                     </a>
-                    <a href="instant-bid.html" class="btn btn-primary btn-sm">Instant Estimate</a>
+                    <a href="/instant-bid/" class="btn btn-primary btn-sm">Instant Estimate</a>
                 </div>
                 <div class="mobile-toggle" id="mobile-toggle"><span></span><span></span><span></span></div>
             </div>
@@ -52,23 +52,78 @@
             <h2 style="color: var(--white); margin-bottom: 20px;">Page Not Found</h2>
             <p style="color: rgba(255,255,255,0.8); margin-bottom: 30px;">The page you're looking for doesn't exist or has been moved.</p>
             <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="index.html" class="btn btn-primary">Go to Homepage</a>
-                <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                <a href="/" class="btn btn-primary">Go to Homepage</a>
+                <a href="/contact" class="btn btn-outline">Contact Us</a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="/images/logo-white.svg" alt="Atlas Demolition & Site Work" style="height: 50px; margin-bottom: 10px;">
+                    <p>Atlas Demolition & Site Work is a locally owned demolition and concrete contractor in Columbia, Missouri. We tear it out, haul it off, and put the site back. One contractor, start to finish, across Mid-Missouri.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61584529212929" aria-label="Facebook" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/deployatlas/" aria-label="Instagram" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 4H8C5.79 4 4 5.79 4 8v8c0 2.21 1.79 4 4 4h8c2.21 0 4-1.79 4-4V8c0-2.21-1.79-4-4-4zm-4 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm4.5-7.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Demolition</h4>
+                    <ul class="footer-links">
+                        <li><a href="/demolition/">Demolition Services</a></li>
+                        <li><a href="/demolition/structural/">House & Garage Teardowns</a></li>
+                        <li><a href="/demolition/mobile-home-removal/">Mobile Home Removal</a></li>
+                        <li><a href="/demolition/interior-selective/">Interior & Selective Demo</a></li>
+                        <li><a href="/site-work/">Site Work After Demolition</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Concrete & Paving</h4>
+                    <ul class="footer-links">
+                        <li><a href="/concrete/">Concrete Services</a></li>
+                        <li><a href="/concrete/concrete-removal/">Concrete Removal</a></li>
+                        <li><a href="/concrete/parking-lot-removal/">Parking Lot Removal</a></li>
+                        <li><a href="/concrete/driveway-replacement/">Driveway Replacement</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        <a href="tel:5732346641">(573) 234-6641</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <a href="mailto:chris@deployatlas.com">chris@deployatlas.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <span>Columbia, MO 65201 · Serving Columbia, Jefferson City, Fulton, Moberly, Fayette and Mid-Missouri</span>
+                    </div>
+                    <p style="margin-top:12px;font-size:13px;opacity:.8">Licensed and insured. General liability, umbrella and workers' compensation.</p>
+                </div>
+            </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2026 Atlas Demolition & Site Work. All rights reserved. | <a href="tel:5732346641">(573) 234-6641</a></p>
+                <p>&copy; 2026 Atlas Demolition & Site Work. All rights reserved.</p>
                 <div class="footer-bottom-links">
                     <a href="/privacy">Privacy Policy</a>
                     <a href="/terms">Terms of Service</a>
+                    <a href="/sitemap">Sitemap</a>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>

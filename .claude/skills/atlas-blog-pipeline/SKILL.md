@@ -83,29 +83,33 @@ Write the full blog post as an HTML file matching the exact template used by exi
 - Business name: Atlas Demolition & Site Work
 - Location: Columbia, MO
 - Phone: (573) 234-6641
-- Email: hello@deployatlas.com
+- Email: chris@deployatlas.com
 - Website: deployatlas.com
 - Service radius: 45-50 miles from Columbia
 
-**Service pages** (for internal linking):
-- `/services/excavation.html`
-- `/services/demolition.html`
-- `/services/site-preparation.html`
-- `/services/land-clearing.html`
-- `/services/grading-drainage.html`
-- `/services/foundation-excavation.html`
-- `/services/concrete-removal.html`
-- `/services/mobile-home-removal.html`
+**Money pages** (for internal linking — primary link goes to the post's money page):
+- `/demolition/` (hub)
+- `/demolition/structural/`
+- `/demolition/mobile-home-removal/`
+- `/demolition/interior-selective/`
+- `/concrete/` (hub)
+- `/concrete/concrete-removal/`
+- `/concrete/parking-lot-removal/`
+- `/concrete/driveway-replacement/`
+- `/site-work/` (excavation, grading, backfill — only after demo or concrete)
+- `/instant-bid/`, `/services`, `/service-areas`, `/about`, `/contact`
+
+URL rules: canonical host is `https://deployatlas.com` (never `www.`), all URLs are root-absolute and extensionless, blog posts live at `/blog/<slug>` (file on disk is `blog/<slug>.html`). NEVER link to `/services/*.html` (301'd) or to any land clearing page.
 
 **Location pages** (for internal linking):
-- `/locations/columbia-mo.html`
-- `/locations/ashland-mo.html`
-- `/locations/fulton-mo.html`
-- `/locations/boonville-mo.html`
-- `/locations/centralia-mo.html`
-- `/locations/hallsville-mo.html`
-- `/locations/harrisburg-mo.html`
-- `/locations/rocheport-mo.html`
+- `/locations/columbia-mo`
+- `/locations/ashland-mo`
+- `/locations/fulton-mo`
+- `/locations/boonville-mo`
+- `/locations/centralia-mo`
+- `/locations/hallsville-mo`
+- `/locations/harrisburg-mo`
+- `/locations/rocheport-mo`
 
 **Brand voice**: Competent and direct. Field-grounded. Straight answer without padding. Like a crew foreman explaining something to a project manager. No hype, no fluff, no corporate speak.
 
