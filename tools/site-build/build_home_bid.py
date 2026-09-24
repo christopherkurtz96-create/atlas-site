@@ -201,7 +201,7 @@ home_body = hero + services + process + about + testimonials + faq_section + are
 home_html = T.page(
     path="/", layout="custom",
     title="Demolition & Concrete Contractor | Columbia, MO | Atlas",
-    meta="ATLAS Demolition & Site Work: demolition, concrete removal and parking lot replacement in Columbia and Mid-Missouri. Tear it out, haul it off, put it back. Licensed and insured. (573) 234-6641.",
+    meta="Demolition and concrete contractor in Columbia, MO. Houses, mobile homes and commercial buildings down; driveways and parking lots out and poured new. (573) 234-6641.",
     keywords="demolition contractor Columbia MO, demolition company Columbia Missouri, concrete removal Columbia MO, parking lot removal, mobile home removal, house demolition, concrete contractor Columbia MO, site work",
     h1="", subtitle="", crumbs=[["/","Home"]], body=home_body, faqs=home_faqs,
     og_image="/images/house-demolition-teardown-excavator.jpg",
@@ -377,8 +377,8 @@ bid_body = f'''    <section class="page-header">
 '''
 bid_html = T.page(
     path="/consultation/", layout="custom",
-    title="Free Consultation | ATLAS Demolition & Site Work | Columbia, MO",
-    meta="Free on-site consultation for demolition, concrete removal, parking lot or driveway replacement in Columbia and Mid-Missouri. We walk the site, then put a fixed price in writing. (573) 234-6641.",
+    title="Free Consultation | ATLAS Demolition, Columbia MO",
+    meta="Free on-site consultation for demolition, concrete and parking lot work in Columbia and Mid-Missouri. We walk the site, then put a fixed price in writing.",
     keywords="demolition estimate Columbia MO, demolition bid, concrete removal quote, parking lot replacement quote, get a demolition quote Missouri",
     h1="", subtitle="", crumbs=[["/","Home"],["/consultation/","Free Consultation"]], body=bid_body, faqs=[],
     og_image="/images/house-demolition-teardown-excavator.jpg",
