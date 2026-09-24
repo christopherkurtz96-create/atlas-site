@@ -4,6 +4,13 @@
    CSS Variables - Brand Colors
    ============================================ */
 :root {
+    /* aliases used by blog inline styles */
+    --charcoal: #3A3A3A;
+    --atlas-orange: #F76500;
+    --gray: #666666;
+    --navy: #1E2A38;
+    --orange: #F76500;
+    --light: #F7F5F2;
     --deep-navy: #1E2A38;
     --construction-orange: #F74500;
     --charcoal-gray: #3A3A3A;
@@ -1662,3 +1669,31 @@ p {
 .delay-2 { animation-delay: 0.2s; }
 .delay-3 { animation-delay: 0.3s; }
 .delay-4 { animation-delay: 0.4s; }
+
+/* ---- 2026-09 restructure additions: FAQ accordions, callouts, content tables, intake form ---- */
+.faq-list { margin: 10px 0 30px; border-top: 1px solid var(--border-color); }
+.faq-item { border-bottom: 1px solid var(--border-color); }
+.faq-item summary { list-style: none; cursor: pointer; padding: 16px 36px 16px 0; position: relative; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary h3 { margin: 0; font-size: 1.05rem; line-height: 1.4; color: var(--deep-navy); }
+.faq-item summary::after { content: "+"; position: absolute; right: 6px; top: 12px; font-size: 26px; line-height: 1; color: var(--construction-orange); font-weight: 600; }
+.faq-item[open] summary::after { content: "\2013"; }
+.faq-answer { padding: 0 0 18px; }
+.faq-answer p { margin: 0; }
+.callout { background: var(--dust-white); border-left: 4px solid var(--construction-orange); border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0; padding: 22px 26px; margin: 34px 0; }
+.callout h3 { margin: 0 0 8px; }
+.callout p { margin: 0; }
+.service-detail-content table { width: 100%; border-collapse: collapse; margin: 14px 0 22px; font-size: 0.95rem; }
+.service-detail-content th, .service-detail-content td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border-color); vertical-align: top; }
+.service-detail-content th { background: var(--dust-white); font-weight: 600; color: var(--deep-navy); }
+.service-detail-content td:last-child { white-space: nowrap; font-variant-numeric: tabular-nums; }
+@media (max-width: 600px) { .service-detail-content td:last-child { white-space: normal; } }
+.bid-intake h2 { font-size: 1.25rem; margin: 28px 0 12px; color: var(--deep-navy); }
+.bid-intake .form-group { margin-bottom: 16px; }
+.bid-intake label { display: block; font-weight: 600; margin-bottom: 6px; color: var(--deep-navy); }
+.bid-intake .bid-input { width: 100%; padding: 12px 14px; border: 1px solid var(--border-color); border-radius: var(--border-radius); font: inherit; background: #fff; }
+.bid-intake .bid-input:focus { outline: 2px solid var(--construction-orange); outline-offset: 1px; }
+.bid-intake small { display: block; color: var(--gray-light); margin-top: 6px; font-size: 0.85rem; }
+.bid-intake .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 640px) { .bid-intake .form-row { grid-template-columns: 1fr; } }
+.bid-disclaimer { color: var(--gray-light); font-size: 0.9rem; }

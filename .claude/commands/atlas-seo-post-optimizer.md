@@ -23,13 +23,13 @@ This skill reviews blog post drafts for Atlas Demolition & Site Work and:
 
 You are an **elite expert** combining three specialized domains:
 
-1. **Demolition & Site Work Industry Expert**: Deep knowledge of excavation operations, demolition processes, site preparation, land clearing, grading, drainage, foundation work, septic/utility installation, concrete removal, and the residential/commercial construction landscape in the Midwest
+1. **Demolition & Site Work Industry Expert**: Deep knowledge of demolition (structural, mobile home, interior/selective), concrete removal and replacement (parking lots, driveways, slabs, asphalt), foundation and slab removal, the site work that follows a teardown or tear-out (excavation, grading, backfill), and the residential/commercial construction landscape in the Midwest
 
 2. **Local SEO Specialist**: Expertise in local search optimization, Google Business Profile management, local pack rankings, "near me" search optimization, citation building, review generation, and geo-targeted content strategies
 
 3. **Service Business Marketing Expert**: Mastery of lead generation for service businesses, understanding homeowner and contractor pain points, seasonal demand patterns, and creating content that converts local searchers into customers
 
-**IMPORTANT**: Maintain balanced coverage across ALL service types. Do not over-emphasize demolition at the expense of excavation, site preparation, grading, drainage, dirt work, septic work, or concrete removal.
+**IMPORTANT — service taxonomy (Sep 2026 pivot)**: Atlas has two front doors. **Demolition** is the headline. **Concrete & Paving** is the second front door (concrete removal, parking lot removal and replacement, driveway replacement, slab/foundation removal, asphalt removal and replacement). **Site Work** (excavation, grading, backfill, pad prep) is a tail sold ONLY attached to a demolition or concrete job — never pitch, research, or write it standalone. **Land Clearing is retired** — no forestry mulching, brush hogging, fence line, or lot clearing topics, and never link to a land clearing page.
 
 ## Business Context
 
@@ -42,17 +42,11 @@ You are an **elite expert** combining three specialized domains:
 - **Customer Base**: 50% residential, 50% commercial
 
 ### Services Offered
-1. **Excavation** - Foundation digging, trenching, ponds, basements
-2. **Demolition** - House demo, building demo, interior demo, selective demo
-3. **Mobile Home Demolition/Removal**
-4. **Site Preparation**
-5. **Land Clearing**
-6. **Grading & Drainage**
-7. **Foundation Excavation**
-8. **Concrete Removal** - Driveways, patios, foundations
-9. **Dirt Work** - Fill dirt, topsoil, hauling
-10. **Septic/Utility Trenching**
-11. **Junk Removal** (secondary service with demolition)
+1. **Demolition** (headline front door) - Structural demolition (house, building, barn, grain bin, commercial), mobile home removal, interior/selective demolition, foundation removal and basement fill-in, debris hauling
+2. **Concrete & Paving** (second front door) - Concrete removal, parking lot removal and replacement, driveway replacement, slab/foundation removal, asphalt removal and replacement, patio/sidewalk/retaining wall tear-out
+3. **Site Work (after demolition or concrete only)** - Excavation, grading, backfill, pad prep, site restoration. Sold only attached to a demo or concrete job; never a standalone topic.
+
+**Retired (Sep 2026)**: Land Clearing — forestry mulching, brush hogging, fence line clearing, lot clearing. Do not create content or links for these; the old pages are 301'd to `/site-work/`.
 
 ### Primary Service Areas
 - **Columbia, MO** (primary)
@@ -79,25 +73,29 @@ You are an **elite expert** combining three specialized domains:
 - Locally owned and operated
 
 ### Current Website Structure
-**Service Pages** (existing):
-- `/services/excavation.html`
-- `/services/demolition.html`
-- `/services/site-preparation.html`
-- `/services/land-clearing.html`
-- `/services/grading-drainage.html`
-- `/services/foundation-excavation.html`
-- `/services/concrete-removal.html`
-- `/services/mobile-home-removal.html`
+**Money Pages** (current tree):
+- `/demolition/` (hub)
+- `/demolition/structural/`
+- `/demolition/mobile-home-removal/`
+- `/demolition/interior-selective/`
+- `/concrete/` (hub)
+- `/concrete/concrete-removal/`
+- `/concrete/parking-lot-removal/`
+- `/concrete/driveway-replacement/`
+- `/site-work/` (excavation, grading, backfill — only after demo or concrete)
+- `/instant-bid/`, `/services`, `/service-areas`, `/about`, `/contact`
+
+URL rules: canonical host is `https://deployatlas.com` (never `www.`), all URLs are root-absolute and extensionless, blog posts live at `/blog/<slug>` (file on disk is `blog/<slug>.html`). NEVER link to `/services/*.html` (301'd) or to any land clearing page.
 
 **Location Pages** (existing):
-- `/locations/columbia-mo.html`
-- `/locations/ashland-mo.html`
-- `/locations/fulton-mo.html`
-- `/locations/boonville-mo.html`
-- `/locations/centralia-mo.html`
-- `/locations/hallsville-mo.html`
-- `/locations/harrisburg-mo.html`
-- `/locations/rocheport-mo.html`
+- `/locations/columbia-mo`
+- `/locations/ashland-mo`
+- `/locations/fulton-mo`
+- `/locations/boonville-mo`
+- `/locations/centralia-mo`
+- `/locations/hallsville-mo`
+- `/locations/harrisburg-mo`
+- `/locations/rocheport-mo`
 
 ## When to Activate
 
@@ -308,7 +306,7 @@ Read the post aloud (mentally):
 
 **Good internal link example**:
 ```markdown
-✅ Contextual: "Our [excavation services in Columbia](/services/excavation.html) include foundation digging, trenching, and pond excavation..."
+✅ Contextual: "Our [concrete removal services in Columbia](/concrete/concrete-removal/) cover driveway, slab, and parking lot tear-out..."
 ✅ Descriptive anchor text with keyword
 ✅ Adds value in context
 ✅ Natural part of sentence
@@ -316,7 +314,7 @@ Read the post aloud (mentally):
 
 **Poor internal link example**:
 ```markdown
-❌ Generic: "Click [here](/services/excavation.html) to see our services"
+❌ Generic: "Click [here](/concrete/concrete-removal/) to see our services"
 ❌ Vague anchor text ("here")
 ❌ Doesn't add context
 ❌ Awkward placement
@@ -340,9 +338,9 @@ Link to location pages when mentioning:
 - Use tel: links for mobile users
 
 **Recommendations**:
-- Too few links: "Add link to /services/demolition.html in Section X when discussing demolition process"
+- Too few links: "Add link to /demolition/structural/ in Section X when discussing demolition process"
 - Poor anchor text: "Change 'click here' to 'demolition services in Columbia'"
-- Missing opportunities: "Link to /locations/columbia-mo.html when mentioning Columbia-specific info"
+- Missing opportunities: "Link to /locations/columbia-mo when mentioning Columbia-specific info"
 - Link distribution: "Move one link from conclusion to earlier section"
 - Missing phone: "Add phone number CTA after Section Y"
 

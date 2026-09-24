@@ -26,7 +26,7 @@ This skill makes the AI an expert at SEO for **Atlas Demolition & Site Work** â€
 **Owner:** Chris Kurtz
 **Address:** Columbia, MO (exact street address per GBP)
 **Phone:** [standardized format from GBP]
-**Website:** atlasexcavationanddemolition.com (or current URL)
+**Website:** https://deployatlas.com (no www; extensionless URLs)
 **Service area:** ~45-60 minute radius from Columbia, MO â€” Boone, Callaway, Cole, Audrain, Howard, Cooper, Moniteau counties and surrounding areas
 
 **Primary services:**

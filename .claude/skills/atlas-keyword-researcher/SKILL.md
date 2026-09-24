@@ -142,16 +142,16 @@ description: "Deep local SEO keyword research for Atlas Demolition & Site Work b
 **Links to Service Pages** (include [X] links):
 1. [Service page + context for link]
    - Anchor: "[service] services in Columbia"
-   - URL: /services/[service].html
+   - URL: the money page (`/demolition/...` or `/concrete/...`; `/site-work/` only for post-demo restoration)
 
 **Links to Location Pages** (include [X] links):
 1. [Location page + context]
    - Anchor: "[city] [service]"
-   - URL: /locations/[city]-mo.html
+   - URL: /locations/[city]-mo
 
 **Links to Contact/Quote**:
 - CTA anchor: "Get a free estimate" or "Call (573) 234-6641"
-- URL: /contact.html or tel:5732346641
+- URL: /contact or tel:5732346641
 - Placement: [After each major section + conclusion]
 
 **Anchor Text Recommendations**:
@@ -230,7 +230,7 @@ description: "Deep local SEO keyword research for Atlas Demolition & Site Work b
 ### Local Research Quality
 - **Check multiple locations**: Research keywords for Columbia AND secondary cities
 - **Verify with actual search**: Google it to see local pack and competition
-- **Note seasonal patterns**: Excavation peaks spring/summer, demolition more steady
+- **Note seasonal patterns**: Concrete peaks spring through fall (pour season), demolition more steady year-round
 - **Consider mobile search**: Most "near me" searches are on mobile
 
 ### Local Competitive Analysis
@@ -249,8 +249,8 @@ description: "Deep local SEO keyword research for Atlas Demolition & Site Work b
 
 ## Common Pitfalls to Avoid
 
-❌ **Too generic**: "Excavation services" without location
-✅ **Location-specific**: "Excavation services in Columbia, MO"
+❌ **Too generic**: "Demolition services" without location
+✅ **Location-specific**: "Demolition services in Columbia, MO"
 
 ❌ **Only targeting Columbia**: Ignoring secondary cities
 ✅ **Full coverage**: Keywords for all 8 service areas
@@ -275,7 +275,7 @@ description: "Deep local SEO keyword research for Atlas Demolition & Site Work b
 ### Topic: "Yard Drainage Problems Columbia MO"
 
 **Step 1: Clarify Topic** ✅
-Service: Grading & Drainage
+Service: Site Work — grading/drainage (research-method example only; site work is sold attached to a demo or concrete job, not standalone)
 Location: Columbia, MO (primary) + regional
 Content: Blog post (problem/solution)
 Audience: Residential homeowners
@@ -334,9 +334,9 @@ H2 sections:
 - "When to Call a Professional for Yard Drainage"
 
 Internal links:
-- [Grading & drainage services](/services/grading-drainage.html) - 2x
-- [Columbia service area](/locations/columbia-mo.html) - 1x
-- [Contact for free assessment](/contact.html) - 3x
+- [Site work services](/site-work/) - 2x
+- [Columbia service area](/locations/columbia-mo) - 1x
+- [Contact for free assessment](/contact) - 3x
 
 **Result**: Ready for content creation ✅
 
