@@ -389,7 +389,7 @@ bid_body = f'''    <section class="page-header">
 '''
 bid_html = T.page(
     path="/consultation/", layout="custom",
-    title="Get a Written Demolition or Concrete Bid | ATLAS Columbia, MO",
+    title="Free Consultation | ATLAS Demolition & Site Work | Columbia, MO",
     meta="Free on-site consultation for demolition, concrete removal, parking lot or driveway replacement in Columbia and Mid-Missouri. We walk the site, then put a fixed price in writing. (573) 234-6641.",
     keywords="demolition estimate Columbia MO, demolition bid, concrete removal quote, parking lot replacement quote, get a demolition quote Missouri",
     h1="", subtitle="", crumbs=[["/","Home"],["/consultation/","Free Consultation"]], body=bid_body, faqs=[],
