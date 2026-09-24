@@ -438,3 +438,29 @@ Two per week, Monday demolition, Thursday concrete. Every post links to its mone
 4. The five job photos from tonight need to land on disk (AirDrop to the Mac, or drop in `~/Downloads/atlas-photos/`). Two concrete shots seen: excavator breaking a concrete wall by a treeline; excavator on a gravel lot. The Kubota mulching shot is retired scope and won't be used.
 5. A rough list of completed jobs by town for the five location pages.
 6. Approval of this plan, or edits.
+
+---
+
+## 13. Execution log (24 Sep 2026, 00:50–02:30 CDT)
+
+| Time | What | PR / commit |
+|---|---|---|
+| 01:35 | Tier 0: name flip, land clearing out of nav, home card removed | #8 |
+| 01:41 | Redirect loop from apex→www rule; reverted on main within ~2 min | e17a686 |
+| 01:42 | New favicon set | #9 |
+| 01:46 | Audit published, approved by Chris | 3b40fe9 |
+| 02:00 | Tier 1: canonical host → apex (440 refs), email → chris@, sameAs, soft-404 rule removed, broken links fixed, five photos imported | in #10 |
+| 02:05 | Q4 blog schedule (24 rows) written to Notion; task cron → Mon+Thu; seven skill files rescoped | — |
+| 02:28 | Tier 2: full restructure live. 23 files added, 17 retired, 50 modified. 65 redirect rules, 46-URL sitemap | #10 |
+| 02:29 | Hotfix: `/services/` trailing-slash rule looped; removed | 0788560 |
+| 02:30 | Sitemap resubmitted to Search Console (accepted). Build tooling committed to `tools/site-build/` | 4a7b771 |
+
+**Still open (Tier 3 and follow-ups)**
+- Cost content cluster posts publish on the Q4 schedule from 28 Sep (two a week).
+- 20 older blog posts still carry the 2025 title suffix and old inline CSS variable names; the CSS aliases fix the render, the titles get a refresh pass.
+- Photo slots: finished concrete pours and a finished parking lot are still needed from the concrete sub.
+- Location pages carry no specific job claims yet; add real jobs and photos per town as they come.
+- GBP: add UTM parameters to the website link, point the booking button at /instant-bid/, update the profile's website URL to the apex if it says www.
+- Google Ads realignment: separate session.
+- Review program: ask customers to describe the work; first concrete-mention review is the milestone.
+- Watch Search Console weekly through October for the URL migration; expect a dip on the land clearing terms (deliberate) and re-indexing of the new tree.
