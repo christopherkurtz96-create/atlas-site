@@ -165,3 +165,56 @@ ATLAS Demolition & Site Work is a locally owned demolition and concrete contract
 ## 8. Done today, 24 Sep (so nothing here repeats it)
 
 Site restructure live. NAP string unified as ATLAS. Canonicals on the apex. 22 titles and metas trimmed. Sitemap resubmitted. IndexNow enabled and pinged. llms.txt published. GBP website link (UTM) and consultation link added. Q4 Notion schedule loaded and the task runs Mon + Thu. Phone-click and form-submit events added to GA4.
+
+---
+
+## 9. For Chris to do
+
+Work down the list as time allows. Nothing here has a deadline except the weekly rhythm at the bottom. Check them off in this file or just tell Claude.
+
+**Done**
+- [x] Google Business Profile: name, description, services, website UTM link (24 Sep)
+- [x] Bing Webmaster: sitemap resubmitted (24 Sep)
+- [x] BBB free business profile (24 Sep)
+
+**Quick checks**
+- [ ] Submit the consultation form once from your phone and confirm where the lead lands (Jobber, sheet, email). Tell Claude the result.
+- [ ] Facebook page name and Instagram bio say "ATLAS Demolition & Site Work" and link to https://deployatlas.com.
+
+**Photos and proof (unblocks the money pages and location pages)**
+- [ ] A finished concrete pour photo and a finished parking lot photo, from the concrete sub if needed. Send to Claude.
+- [ ] A rough list of past jobs by town: Columbia, Jefferson City, Fulton, Moberly, Fayette, Boonville, Ashland. One line each is enough.
+
+**Free listings to create or claim (exact name, phone, https://deployatlas.com)**
+- [ ] Apple Business Connect: businessconnect.apple.com (Apple Maps and Siri)
+- [ ] Bing Places: bingplaces.com (can import from the Google profile)
+- [ ] Nextdoor business page
+- [ ] Yelp: claim the listing, fix the name, add 5 photos. Decline the ad calls.
+- [ ] LinkedIn company page
+- [ ] Angi free listing only (not Angi Leads)
+- [ ] Yellow Pages / yp.com listing check
+
+**Paid, worth it**
+- [ ] Columbia Chamber of Commerce membership and directory listing (best local link available)
+- [ ] BBB accreditation: hold until reviews pass 25 or a commercial buyer asks for it
+
+**Legal and admin**
+- [ ] Missouri fictitious name (DBA) filing for "ATLAS Demolition & Site Work" under Prex Land Services LLC
+- [ ] Certificates of insurance on file from the concrete sub before the first subbed pour is sold
+- [ ] Warranty language for subcontracted work added to the proposal template
+
+**Old name cleanup (tell Claude which accounts you're signed into in Chrome and he'll do the edits)**
+- [ ] Yelp
+- [ ] Facebook page
+- [ ] Instagram
+- [ ] Nextdoor
+- [ ] Any printed material, vehicle magnets, email signature
+
+**Skip on purpose**
+- HomeAdvisor, Angi Leads, Thumbtack. They sell small jobs to five contractors at once.
+
+**Every week, 20 minutes**
+- [ ] 2–3 job photos to the Google profile, caption with town and service
+- [ ] 1 Google post
+- [ ] Reply to every new review
+- [ ] Ask for a review at every job completion; text the link the same day; ask them to describe the work
