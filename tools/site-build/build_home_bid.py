@@ -48,9 +48,9 @@ hero = '''    <section class="hero">
             <div class="hero-content">
                 <div class="hero-badge">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-                    Demolition and Concrete Contractor, Columbia, MO
+                    Tear it out. Haul it off. Put it back.
                 </div>
-                <h1>Tear It Out. Haul It Off. <span>Put It Back.</span></h1>
+                <h1>Professional <span>Demolition</span> &amp; <span>Site Work</span> Services</h1>
                 <p class="hero-subtitle">Demolition is what we do. Houses, mobile homes, garages, barns, commercial strip-outs, slabs and parking lots come out, get hauled to a recycler, and the site gets put back: graded, backfilled, or poured new. One contractor, one contract, owner on the job. Columbia and Mid-Missouri.</p>
                 <div class="hero-btns">
                     <a href="/instant-bid/" class="btn btn-primary btn-lg">Get a Written Bid</a>
