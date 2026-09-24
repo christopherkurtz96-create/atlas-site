@@ -51,10 +51,9 @@ hero = '''    <section class="hero">
                     Tear it out. Haul it off. Put it back.
                 </div>
                 <h1>Professional <span>Demolition</span> &amp; <span>Site Work</span> Services</h1>
-                <p class="hero-subtitle">Demolition is what we do. Houses, mobile homes, garages, barns, commercial strip-outs, slabs and parking lots come out, get hauled to a recycler, and the site gets put back: graded, backfilled, or poured new. Free on-site consultation, fixed price in writing. Columbia and Mid-Missouri.</p>
+                <p class="hero-subtitle">Houses, mobile homes, garages, barns, strip-outs, slabs and parking lots come out, and the site gets put back. Free on-site consultation, fixed price in writing. Columbia and Mid-Missouri.</p>
                 <div class="hero-btns">
-                    <a href="/consultation/" class="btn btn-primary btn-lg">Request a Free Consultation</a>
-                    <a href="/demolition/" class="btn btn-outline btn-lg">Demolition Services</a>
+                    <a href="/consultation/" class="btn btn-primary btn-lg">Free Consultation</a>
                 </div>
                 <div class="hero-stats">
                     <div class="hero-stat">
