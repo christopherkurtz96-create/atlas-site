@@ -218,10 +218,9 @@ def page(*, path, title, meta, h1, subtitle, crumbs, body, faqs=(), sidebar=None
         <div class="container">
             <h2>{cta_h2}</h2>
             <p>{cta_p}</p>
-            <a href="/consultation/" class="btn btn-outline btn-lg">Request a Free Consultation</a>
-            <div class="cta-phone">
-                {PHONE_SVG}
-                <a href="{PHONE_TEL}">{PHONE}</a>
+            <div class="hero-btns" style="justify-content:center">
+                <a href="/consultation/" class="btn btn-primary btn-lg">Request a Free Consultation</a>
+                <a href="{PHONE_TEL}" class="btn btn-outline btn-lg">Call {PHONE}</a>
             </div>
         </div>
     </section>
@@ -260,7 +259,7 @@ def page(*, path, title, meta, h1, subtitle, crumbs, body, faqs=(), sidebar=None
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css?v=20260924d">
+    <link rel="stylesheet" href="/css/style.css?v=20260924e">
 {extra_head}
 {GA}
 
@@ -269,7 +268,7 @@ def page(*, path, title, meta, h1, subtitle, crumbs, body, faqs=(), sidebar=None
 {header()}
 {main}
 {footer()}
-    <script src="/js/main.js?v=20260924d"></script>
+    <script src="/js/main.js?v=20260924e"></script>
 </body>
 </html>
 '''

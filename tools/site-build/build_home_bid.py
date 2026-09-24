@@ -54,6 +54,7 @@ hero = '''    <section class="hero">
                 <p class="hero-subtitle">Houses, mobile homes, garages, barns and commercial buildings down. Driveways and parking lots out and poured new. Free consultation, fixed price in writing. Columbia, MO.</p>
                 <div class="hero-btns">
                     <a href="/consultation/" class="btn btn-primary btn-lg">Free Consultation</a>
+                    <a href="tel:5732346641" class="btn btn-outline btn-lg">Call (573) 234-6641</a>
                 </div>
                 <div class="hero-stats">
                     <div class="hero-stat">
@@ -226,6 +227,10 @@ bid_body = f'''    <section class="page-header">
         <div class="container">
             <div class="service-detail-grid">
                 <div class="service-detail-content">
+                    <div class="callout" style="margin-top:0">
+                        <h3>Rather talk?</h3>
+                        <p><a href="tel:5732346641" class="btn btn-primary">Call (573) 234-6641</a></p>
+                    </div>
                     <form id="bid-lead-form" name="instant-bid" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" class="bid-intake">
                         <input type="hidden" name="form-name" value="instant-bid">
                         <p class="hidden-field" hidden><label>Don't fill this out: <input name="bot-field"></label></p>
