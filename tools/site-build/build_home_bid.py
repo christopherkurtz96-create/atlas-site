@@ -303,11 +303,11 @@ bid_body = f'''    <section class="page-header">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="bid-details">Anything we should know</label>
+                            <label for="bid-details">Anything we should know <span style="font-weight:400;color:var(--gray-light)">(optional)</span></label>
                             <textarea id="bid-details" name="details" class="bid-input" rows="4" placeholder="Basement or slab? Utilities still on? Asbestos inspection done? Gate width, tight access, tenants in the building, a date you need to hit."></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="bid-photos">Photos (up to 3, phone photos are fine)</label>
+                            <label for="bid-photos">Photos <span style="font-weight:400;color:var(--gray-light)">(optional, up to 3)</span></label>
                             <input type="file" id="bid-photos" name="photos" class="bid-input" accept="image/*" multiple>
                             <small>Two or three photos and a wide shot of the access usually let us get a number close before we visit.</small>
                         </div>
