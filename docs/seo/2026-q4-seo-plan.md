@@ -293,3 +293,21 @@ Shipped 0 in the tracked table (Q3 rows were replaced today by the Q4 schedule),
 - Post one GBP update with a real demo or concrete photo, town + service in the caption, "Request a free consultation" CTA (15 min).
 - Ask the last two finished customers for a review and text them the link, asking them to name the work ("tore out our driveway") (10 min).
 - Submit the consultation form once from your phone and tell Claude where the lead landed (5 min).
+
+---
+
+## 11. Q3 close-out (quarterly routine, 24 Sep, evening)
+
+First run of `atlas-quarterly-seo-plan`. This plan was written the same day and the Q4 Notion queue (28 Sep → 17 Dec) hasn't started, so the run audited and stopped there. It did not write a new plan file or replace the Notion rows. The next full run is 22 Dec, which writes the Q1 2027 plan.
+
+| Check | Result |
+|---|---|
+| Site crawl (`site_check.py`) | 46 pages, 0 issues, avg 182 ms. All redirect, host and 404 checks pass. |
+| Search Console, 24 Jun – 21 Sep vs 26 Mar – 23 Jun | Clicks 98 vs 56 (+75%). Impressions 8,846 vs 7,159 (+24%). Avg position 8.9 vs 7.9. |
+| Query mix | Land clearing 2,319 impr (down from 3,075, intended). Demolition 1,226 (up from 720). Concrete 14 (was 77). Brand 166. |
+| Tracked queries | Only the two mobile home cost terms show data (positions 21 and 28). The other ten have no impressions yet. That matches the section 2 baseline. |
+| Sitemap | 46 submitted, 0 errors, "indexed" counter still 0 (lags). |
+| URL inspection | Home, /demolition/, /concrete/parking-lot-removal/, /concrete/concrete-removal/: indexed, Google canonical = apex. **/consultation/: "URL is unknown to Google"** (new page; it's in the sitemap and set to index). |
+| PageSpeed | PSI quota (429) again. Still unmeasured; run by hand on 28 Sep. |
+
+**Carry into October:** request indexing for /consultation/ in Search Console if it's still unknown on 1 Oct. The mobile home cost cluster (≈250 impressions across 10 variants, positions 20–30) is the biggest near-term win, and the 9 Nov refresh row covers it. Consider pulling that refresh forward.
