@@ -168,6 +168,24 @@ Site restructure live. NAP string unified as ATLAS. Canonicals on the apex. 22 t
 
 ---
 
+## 10. Routines (the machine)
+
+Three scheduled tasks in Claude Code run this plan. They run while the Claude app is open on the Mac; if it's closed at the scheduled time, they run at next launch. Each one texts Chris when it finishes.
+
+| Routine | When | What it does | Source of truth |
+|---|---|---|---|
+| `atlas-weekly-blog` | Mon + Thu, 7:00 AM | Takes the next row from the Notion schedule, researches, writes a 1,500–2,000 word post, validates, publishes to the site, marks the row DONE, texts the link. | Notion "Quarterly Atlas Blog Post" table |
+| `atlas-monthly-seo-review` | 1st of the month, 7:30 AM | Crawls the live site (`tools/seo/site_check.py`), pulls 28 days of Search Console vs the prior 28, checks the blog queue and tops it up with 8 rows if fewer than 6 remain, appends a "Monthly update" with 3–5 ranked suggestions and 1–3 items for Chris to this file, commits, republishes the plan page, texts a five-line summary. | This file, section 6 tracked queries |
+| `atlas-quarterly-seo-plan` | 22nd of Mar, Jun, Sep, Dec, 7:30 AM | Full audit (crawl, 90-day Search Console, indexing, PageSpeed), scorecard against section 2, writes next quarter's plan file, loads 24 new rows into Notion, carries unchecked "For Chris" items forward, publishes the new plan page, texts the top three asks. | This file as template; `.claude/skills/atlas-seo/SKILL.md` |
+
+**Blog schedule for this quarter:** 24 rows already loaded in Notion, 28 Sep → 17 Dec, Monday demolition and Thursday concrete. The routines pull from it; nobody has to hand them a topic. The monthly review keeps the queue at least six deep, and the quarterly run reloads it for the next quarter.
+
+**One-time setup for Chris.** Open each of the two new routines in the Scheduled section of the app and click "Run now" once, while you're at the keyboard. That pre-approves the tools they use (Search Console, Notion, git). Without that first supervised run, an unattended run can stall on a permission prompt, which is exactly what took the blog task down in July.
+
+**What the routines can't see.** Reviews, GBP photo counts and the AI-search check (asking ChatGPT, Perplexity and Gemini the tracked queries) are done by hand in a session with Claude on the 1st. Chris's part of the monthly number is the review count.
+
+---
+
 ## 9. For Chris to do
 
 Work down the list as time allows. Nothing here has a deadline except the weekly rhythm at the bottom. Check them off in this file or just tell Claude.
