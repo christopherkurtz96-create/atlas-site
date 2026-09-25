@@ -31,6 +31,7 @@ Live crawl of all 46 sitemap URLs plus redirect, host and error checks. Search C
 **Migration verdict: clean.** Nothing outstanding from the restructure itself.
 
 **Carry-forward items from the audit**
+
 - Photo slots: finished concrete pours and a finished lot are still needed for the concrete pages.
 - Location pages carry no job proof yet.
 - 20 older posts still use the old inline CSS variable names (aliased, renders fine); a body refresh pass is on the content schedule.
@@ -64,6 +65,7 @@ Land clearing impressions (2,310) will fall to near zero. That is intended.
 The map pack produces the calls today. Protect it, then push it into the concrete category.
 
 **Profile fixes, week 1**
+
 - Update the business description to the new positioning (draft in section 7).
 - Services list: add Parking lot removal, Parking lot replacement, Driveway replacement, Concrete removal, Retaining wall removal, Backfill and grading, Building pad prep. Remove anything phrased as land clearing, lot clearing or landscape site prep.
 - Confirm the profile website URL saved as the UTM version (pending review this morning).
@@ -72,10 +74,12 @@ The map pack produces the calls today. Protect it, then push it into the concret
 - Add the Instagram and Facebook links in the social profiles section (already on the site).
 
 **Weekly, Chris (30 min)**
+
 - 2–3 photos from real jobs, phone-taken, uploaded from the GBP app. Caption with town + service ("Parking lot removal, Fulton"). Photos with visible concrete or lots are the priority for Q4.
 - 1 GBP post. Formula: what the job was, scope and timeline in numbers, result, CTA "Request a free consultation." Alternate demolition and concrete.
 
 **Reviews, every job**
+
 - Ask at completion, in person, then text the link the same day.
 - The ask: "If you'd leave a review, say what we did, like 'tore out our driveway and poured a new one.' Google reads the words."
 - Reply to every review within 24 hours. Use the town and the service in the reply.
@@ -191,19 +195,23 @@ Three scheduled tasks in Claude Code run this plan. They run while the Claude ap
 Work down the list as time allows. Nothing here has a deadline except the weekly rhythm at the bottom. Check them off in this file or just tell Claude.
 
 **Done**
+
 - [x] Google Business Profile: name, description, services, website UTM link (24 Sep)
 - [x] Bing Webmaster: sitemap resubmitted (24 Sep)
 - [x] BBB free business profile (24 Sep)
 
 **Quick checks**
+
 - [ ] Submit the consultation form once from your phone and confirm where the lead lands (Jobber, sheet, email). Tell Claude the result.
 - [ ] Facebook page name and Instagram bio say "ATLAS Demolition & Site Work" and link to https://deployatlas.com.
 
 **Photos and proof (unblocks the money pages and location pages)**
+
 - [ ] A finished concrete pour photo and a finished parking lot photo, from the concrete sub if needed. Send to Claude.
 - [ ] A rough list of past jobs by town: Columbia, Jefferson City, Fulton, Moberly, Fayette, Boonville, Ashland. One line each is enough.
 
 **Free listings to create or claim (exact name, phone, https://deployatlas.com)**
+
 - [ ] Apple Business Connect: businessconnect.apple.com (Apple Maps and Siri)
 - [ ] Bing Places: bingplaces.com (can import from the Google profile)
 - [ ] Nextdoor business page
@@ -213,15 +221,18 @@ Work down the list as time allows. Nothing here has a deadline except the weekly
 - [ ] Yellow Pages / yp.com listing check
 
 **Paid, worth it**
+
 - [ ] Columbia Chamber of Commerce membership and directory listing (best local link available)
 - [ ] BBB accreditation: hold until reviews pass 25 or a commercial buyer asks for it
 
 **Legal and admin**
+
 - [ ] Missouri fictitious name (DBA) filing for "ATLAS Demolition & Site Work" under Prex Land Services LLC
 - [ ] Certificates of insurance on file from the concrete sub before the first subbed pour is sold
 - [ ] Warranty language for subcontracted work added to the proposal template
 
 **Old name cleanup (tell Claude which accounts you're signed into in Chrome and he'll do the edits)**
+
 - [ ] Yelp
 - [ ] Facebook page
 - [ ] Instagram
@@ -229,9 +240,11 @@ Work down the list as time allows. Nothing here has a deadline except the weekly
 - [ ] Any printed material, vehicle magnets, email signature
 
 **Skip on purpose**
+
 - HomeAdvisor, Angi Leads, Thumbtack. They sell small jobs to five contractors at once.
 
 **Every week, 20 minutes**
+
 - [ ] 2–3 job photos to the Google profile, caption with town and service
 - [ ] 1 Google post
 - [ ] Reply to every new review
