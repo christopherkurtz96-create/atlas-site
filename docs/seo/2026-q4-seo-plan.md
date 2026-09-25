@@ -142,7 +142,7 @@ AI engines answer from three sources: entities they can verify across the web, s
 
 | Who | When | What |
 |---|---|---|
-| Chris | Mon + Thu mornings | Read the SMS from the blog task; skim the post on the phone. |
+| Chris | Mon + Thu afternoons | Read the SMS from the blog task; skim the post on the phone. |
 | Chris | Any job completion | Review ask + text. Two photos to GBP. |
 | Chris | Friday, 20 min | One GBP post. Reply to any reviews. |
 | Claude | Mon + Thu | Post publishes via the task. Run site_pass. |
@@ -174,9 +174,9 @@ Three scheduled tasks in Claude Code run this plan. They run while the Claude ap
 
 | Routine | When | What it does | Source of truth |
 |---|---|---|---|
-| `atlas-weekly-blog` | Mon + Thu, 7:00 AM | Takes the next row from the Notion schedule, researches, writes a 1,500–2,000 word post, validates, publishes to the site, marks the row DONE, texts the link. | Notion "Quarterly Atlas Blog Post" table |
-| `atlas-monthly-seo-review` | 1st of the month, 7:30 AM | Crawls the live site (`tools/seo/site_check.py`), pulls 28 days of Search Console vs the prior 28, checks the blog queue and tops it up with 8 rows if fewer than 6 remain, appends a "Monthly update" with 3–5 ranked suggestions and 1–3 items for Chris to this file, commits, republishes the plan page, texts a five-line summary. | This file, section 6 tracked queries |
-| `atlas-quarterly-seo-plan` | 22nd of Mar, Jun, Sep, Dec, 7:30 AM | Full audit (crawl, 90-day Search Console, indexing, PageSpeed), scorecard against section 2, writes next quarter's plan file, loads 24 new rows into Notion, carries unchecked "For Chris" items forward, publishes the new plan page, texts the top three asks. | This file as template; `.claude/skills/atlas-seo/SKILL.md` |
+| `atlas-weekly-blog` | Mon + Thu, 1:00 PM | Takes the next row from the Notion schedule, researches, writes a 1,500–2,000 word post, validates, publishes to the site, marks the row DONE, texts the link. | Notion "Quarterly Atlas Blog Post" table |
+| `atlas-monthly-seo-review` | 1st of the month, 1:00 PM | Crawls the live site (`tools/seo/site_check.py`), pulls 28 days of Search Console vs the prior 28, checks the blog queue and tops it up with 8 rows if fewer than 6 remain, appends a "Monthly update" with 3–5 ranked suggestions and 1–3 items for Chris to this file, commits, republishes the plan page, texts a five-line summary. | This file, section 6 tracked queries |
+| `atlas-quarterly-seo-plan` | 22nd of Mar, Jun, Sep, Dec, 1:00 PM | Full audit (crawl, 90-day Search Console, indexing, PageSpeed), scorecard against section 2, writes next quarter's plan file, loads 24 new rows into Notion, carries unchecked "For Chris" items forward, publishes the new plan page, texts the top three asks. | This file as template; `.claude/skills/atlas-seo/SKILL.md` |
 
 **Blog schedule for this quarter:** 24 rows already loaded in Notion, 28 Sep → 17 Dec, Monday demolition and Thursday concrete. The routines pull from it; nobody has to hand them a topic. The monthly review keeps the queue at least six deep, and the quarterly run reloads it for the next quarter.
 
