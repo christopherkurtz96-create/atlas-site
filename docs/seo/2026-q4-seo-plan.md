@@ -236,3 +236,60 @@ Work down the list as time allows. Nothing here has a deadline except the weekly
 - [ ] 1 Google post
 - [ ] Reply to every new review
 - [ ] Ask for a review at every job completion; text the link the same day; ask them to describe the work
+
+---
+
+## Monthly update — 2026-09-24
+
+Run early (24 Sep, not 1 Oct). Windows: 25 Aug – 21 Sep vs 28 Jul – 24 Aug. Most of both windows predate today's restructure, so this is the pre-migration baseline, not a verdict on it.
+
+### Numbers (28 days vs prior 28)
+
+| Metric | Current | Prior | Change |
+|---|---|---|---|
+| Clicks | 27 | 26 | +4% |
+| Impressions | 3,130 | 2,638 | +19% |
+| Avg position | 7.3 | 10.0 | +2.7 better |
+| Non-brand impressions | 1,549 | 912 | +70% |
+| Demolition-cluster impressions | 403 | 182 | +121% |
+| Land-clearing-cluster impressions (retired) | 962 | 530 | +82% |
+| Concrete-cluster impressions | 2 | 6 | flat, near zero |
+
+| Tracked query | Position (impr) | Prior | Delta |
+|---|---|---|---|
+| demolition contractor Columbia MO | not seen | not seen | — |
+| demolition Columbia MO | not seen | not seen | — |
+| house demolition Columbia MO | not seen | not seen | — |
+| mobile home removal cost | 20.7 (10) | 16.3 (11) | −4.4 |
+| mobile home demolition cost | 24.9 (11) | 26.8 (13) | +1.9 |
+| concrete removal Columbia MO | not seen | not seen | — |
+| concrete removal cost per square foot | not seen | not seen | — |
+| parking lot removal Columbia MO | not seen | not seen | — |
+| parking lot replacement cost | not seen | not seen | — |
+| concrete driveway replacement Columbia MO | not seen | not seen | — |
+| demolition Jefferson City MO | not seen | not seen | — |
+| site preparation Columbia MO | not seen | not seen | — |
+
+Top non-brand query: "demolition contractor" (259 impr, position 1.0, 0 clicks; 1 impression last window). Top pages: home (www) 1,400 impr at 1.9; mobile home cost post 613 at 10.7; fence line clearing post 310 at 8.5 (retired lane, up 90%); demolition permit post 186 at 7.1 and the best clicker (6); house demolition cost post 178, slipped 5.4 → 8.6.
+
+### Site check
+
+46 pages, 0 issues, average 318 ms. Host, https, legacy /services/ and /instant-bid redirects, 404, robots.txt and llms.txt all correct. No fixes needed.
+
+### Blog
+
+Shipped 0 in the tracked table (Q3 rows were replaced today by the Q4 schedule), missed 0, queue depth 24 (28 Sep → 17 Dec), rows added 0.
+
+### Suggestions (ranked by expected impact)
+
+1. Link the demolition permit post from /demolition/ and /demolition/structural/ (it currently has no hub link). It's the site's top-clicking page and "city of columbia building permits" sits at position 10, so a hub link is the cheapest push to page 1.
+2. Refresh the house demolition cost post with 2026 numbers and a direct-answer opening. It lost 3 positions (5.4 → 8.6) while the demolition cluster doubled, so the demand is there and the page is slipping.
+3. Watch "demolition contractor": 259 impressions at position 1 with zero clicks. That pattern is a map-pack or knowledge-panel impression, so the lever is GBP (photos, reviews, a weekly post), not the site.
+4. Make the 1 Oct parking lot removal cost post the concrete beachhead: link it from /concrete/, /concrete/parking-lot-removal/ and the home page on publish. Concrete impressions are at 2; nothing else on the site is pulling that cluster yet.
+5. Let land clearing decay. Its impressions rose 82%, but the pages now 301 to /site-work/; don't refresh or re-link them, and expect the cluster to fall toward zero by November.
+
+### For Chris this month
+
+- Post one GBP update with a real demo or concrete photo, town + service in the caption, "Request a free consultation" CTA (15 min).
+- Ask the last two finished customers for a review and text them the link, asking them to name the work ("tore out our driveway") (10 min).
+- Submit the consultation form once from your phone and tell Claude where the lead landed (5 min).
