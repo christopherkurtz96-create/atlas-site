@@ -254,6 +254,12 @@
   force = true
 
 [[redirects]]
+  from = "/blog/demolition-columbia-mo-guide.html"
+  to = "/blog/demolition-columbia-mo-guide"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/blog/demolition-cost-columbia-missouri.html"
   to = "/blog/demolition-cost-columbia-missouri"
   status = 301
