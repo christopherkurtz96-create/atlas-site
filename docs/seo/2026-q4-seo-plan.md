@@ -324,3 +324,107 @@ First run of `atlas-quarterly-seo-plan`. This plan was written the same day and 
 | PageSpeed | PSI quota (429) again. Still unmeasured; run by hand on 28 Sep. |
 
 **Carry into October:** request indexing for /consultation/ in Search Console if it's still unknown on 1 Oct. The mobile home cost cluster (≈250 impressions across 10 variants, positions 20–30) is the biggest near-term win, and the 9 Nov refresh row covers it. Consider pulling that refresh forward.
+
+---
+
+## Monthly update — 2026-10-01
+
+Windows: 1–28 Sep vs 4–31 Aug. Only the last four days (25–28 Sep) are post-restructure, so this is still mostly a pre-migration read. November's update is the first clean one.
+
+### Numbers (28 days vs prior 28)
+
+| Metric | Current | Prior | Change |
+|---|---|---|---|
+| Clicks | 27 | 30 | −10% |
+| Impressions | 3,473 | 2,609 | +33% |
+| Avg position | 7.4 | 10.2 | +2.8 better |
+| Non-brand impressions (visible queries) | 1,645 | 938 | +75% |
+| Demolition-cluster impressions (incl. mobile home) | 585 | 288 | +103% |
+| Mobile home impressions | 155 | 174 | −11% |
+| Permit impressions | 42 | 27 | +56% |
+| Concrete-cluster impressions | 18 | 6 | +200%, still tiny |
+| Land-clearing-cluster impressions (retired) | 932 | 593 | +57% |
+
+**Read the +33% with care.** Two days carry it: 7 Sep (779 impressions at position 1.7) and 21 Sep (331 at 3.4). Both are profile-style bursts on the www home URL: "demolition contractor" (260) and four land clearing queries (~177 each), all at position 1 with zero clicks. Strip those two days and the month runs 91 impressions a day against 93 prior. Flat. The demolition cluster is +13% without the burst, not +103%.
+
+**The real signal is 25–28 Sep.** The four days after the restructure average 159 impressions a day, against roughly 80 before it. Clean URLs are already showing for nine blog posts, /demolition/ and three location pages. 28 Sep had 4 clicks, the best day of the window.
+
+| Tracked query | Position (impr) | Prior | Delta |
+|---|---|---|---|
+| demolition contractor Columbia MO | not seen | not seen | — |
+| demolition Columbia MO | not seen | not seen | — |
+| house demolition Columbia MO | not seen | not seen | — |
+| mobile home removal cost | 18.3 (11) | 16.0 (12) | −2.3 |
+| mobile home demolition cost | 20.4 (12) | 26.4 (14) | +6.0 |
+| concrete removal Columbia MO | not seen | not seen | — |
+| concrete removal cost per square foot | not seen | not seen | — |
+| parking lot removal Columbia MO | not seen | not seen | — |
+| parking lot replacement cost | not seen | not seen | — |
+| concrete driveway replacement Columbia MO | not seen | not seen | — |
+| demolition Jefferson City MO | not seen | not seen | — |
+| site preparation Columbia MO | not seen | not seen | — |
+
+**Top 15 non-brand queries by impressions**
+
+| Query | Impr | Position | Prior impr |
+|---|---|---|---|
+| demolition contractor | 260 | 1.2 | — |
+| land clearing columbia | 178 | 1.0 | 25 |
+| land clearing service | 178 | 1.0 | 25 |
+| land clearing near me | 177 | 1.0 | 24 |
+| land clearing rocheport | 176 | 1.0 | 15 |
+| fence row clearing | 36 | 19.7 | 2 |
+| land clearing | 36 | 2.4 | 384 |
+| demolition estimate near me | 32 | 66.8 | 9 |
+| columbia land clearing | 28 | 2.0 | 41 |
+| fence line clearing | 23 | 20.7 | 2 |
+| fence line clearing cost | 23 | 7.9 | 4 |
+| city of columbia building permits | 17 | 10.5 | 6 |
+| mobile home demolition and removal cost | 14 | 29.9 | 9 |
+| cost to remove mobile home | 13 | 20.0 | 13 |
+| mobile home demolition cost | 12 | 20.4 | 14 |
+
+No non-brand query earned a visible click. The only query-level click was "atlas demolition." The other 26 clicks came from queries Google doesn't report.
+
+**Top 10 pages by impressions**
+
+| Page | Impr | Clicks | Position | Prior impr |
+|---|---|---|---|---|
+| www home | 1,299 | 4 | 1.9 | 851 |
+| /blog/mobile-home-removal-cost-mid-missouri.html | 549 | 1 | 9.5 | 713 |
+| /blog/fence-line-clearing-mid-missouri.html (retired, 301'd) | 343 | 3 | 8.8 | 149 |
+| /blog/demolition-permit-columbia-mo.html | 240 | 5 | 7.9 | 217 |
+| apex home | 218 | 5 | 10.9 | 253 |
+| /blog/house-demolition-cost-columbia-mo.html | 209 | 1 | 7.9 | 177 |
+| /services/demolition.html (301'd to /demolition/) | 105 | 0 | 27.1 | 145 |
+| /locations/fulton-mo.html | 80 | 0 | 11.1 | 128 |
+| /blog/house-demolition-cost-columbia-mo (clean URL) | 66 | 1 | 10.6 | new |
+| /blog/mobile-home-removal-cost-mid-missouri (clean URL) | 56 | 0 | 8.9 | new |
+
+Movers over 30%: house demolition cost post, both URLs combined, 275 impressions vs 183 (+50%) but position slipped 6.4 → 7.9. Fulton page position 27.2 → 11.1 on fewer impressions. Mobile home cost post, both URLs, 605 vs 715 (−15%) and clicks 5 → 1. Fence line clearing post +130%, a retired lane that now redirects. The head term "land clearing" fell 384 → 36.
+
+### Site check
+
+47 pages, 0 issues, average 346 ms. Host, https, legacy /services/ and /instant-bid redirects, 404, robots.txt and llms.txt all correct. No fixes needed. URL inspection: /consultation/ is now "Submitted and indexed" (crawled 25 Sep), which closes the Q3 carry item. The 28 Sep Columbia guide was indexed 29 Sep. /demolition/ and /concrete/parking-lot-removal/ are indexed with the apex canonical.
+
+### Blog
+
+Shipped 1 in the Q4 table (28 Sep, Columbia demolition guide; the 7 Sep lot grading post shipped from the old Q3 table). Missed 0. Queue depth 23: 22 future rows through 17 Dec plus today's parking lot removal cost row, which the 1 PM blog task picks up. Rows added 0.
+
+### Suggestions (ranked by expected impact)
+
+1. Put "contractor" in the /demolition/ hub title: "Demolition Contractor Columbia MO | ATLAS" in place of "Demolition Services Columbia MO | Atlas." The head tracked term has no impressions, the hub has 9 at position 15.8, and the title doesn't carry the word the query uses.
+2. Link the house demolition cost post from the /demolition/ hub and open it with a one-sentence answer that states the range. It's the third-largest post (275 impressions), it's slipping (6.4 → 7.9), and the hub links the general cost post but not this one.
+3. Confirm the Google profile has no land clearing service or category left. Four land clearing queries put 700+ impressions on the profile at position 1 this month, and that's a retired service drawing the wrong calls.
+4. Add the first job note and photo to the Fulton page. It moved from position 27 to 11 with no job proof on it, and "atlas fulton mo" already shows 21 impressions at 4.9, so it's the closest location page to page 1.
+5. Aim the 9 Nov mobile home cost refresh at the variants: "cost to remove a mobile home," "mobile home demolition cost," "trailer removal cost," with a single-wide and double-wide price table near the top. About ten variants sit at positions 18–30 and the post lost 15% of its impressions and most of its clicks this window.
+
+Not done in this run: the AI-search check and the review count (both need a session with Chris), and PageSpeed (still unmeasured since the PSI quota errors).
+
+### For Chris this month
+
+- Open the Google Business Profile app, Edit services, and confirm nothing says land clearing, lot clearing or mulching. Remove anything that does (5 min).
+- Text the review link to the last two finished customers and ask them to name the work, like "tore out our driveway" (10 min).
+- Send Claude one Fulton job: one line on what it was and one photo (5 min).
+
+Still open from September: submit the consultation form once from your phone and say where the lead landed.
