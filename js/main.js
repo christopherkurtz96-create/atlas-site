@@ -195,6 +195,10 @@ document.addEventListener('DOMContentLoaded', function() {
     phoneInputs.forEach(input => {
         input.addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
+            // Autofill and some callers include the US country code ("+1 660-247-3972").
+            // Drop it, then keep the first 10 digits so the last digit is never cut off.
+            if (value.length === 11 && value.charAt(0) === '1') value = value.substring(1);
+            value = value.substring(0, 10);
             if (value.length >= 6) {
                 value = '(' + value.substring(0,3) + ') ' + value.substring(3,6) + '-' + value.substring(6,10);
             } else if (value.length >= 3) {
