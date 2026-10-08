@@ -266,17 +266,11 @@
                                     name="sms_consent"
                                     id="sms_consent"
                                     value="yes"
+                                    required
                                     style="margin-top: 4px; flex-shrink: 0;"
                                 />
                                 <span>
-                                    I agree to receive text messages from ATLAS Demolition &amp; Site Work
-                                    about my estimate, project updates, scheduling, and follow-up
-                                    communication. Message frequency varies (typically 2&ndash;6 messages per
-                                    project). Message and data rates may apply. Reply STOP to unsubscribe
-                                    or HELP for help. Consent is not required to make a purchase. See our
-                                    <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a>
-                                    and
-                                    <a href="/terms" target="_blank" rel="noopener">Terms</a>.
+                                    I agree that ATLAS Demolition &amp; Site Work may contact me about my project by phone call and text message at the number I provided, including calls and texts placed with automated technology or an artificial or prerecorded voice. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of any purchase. Prefer not to agree? Call us at <a href="tel:5732346641">(573) 234-6641</a>. See our <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms" target="_blank" rel="noopener">Terms</a>. <span aria-hidden="true">*</span>
                                 </span>
                             </label>
                         </div>
@@ -404,7 +398,7 @@
     })();
     </script>
     <script>
-    // Fire a sidecar POST to the n8n general lead webhook on submit.
+    // Send a copy of the submission to the ATLAS lead engine on submit.
     // Native Netlify form submission continues in parallel as the backup.
     (function() {
       var form = document.getElementById('contact-form');
@@ -413,6 +407,7 @@
         try {
           var fd = new FormData(form);
           var payload = {
+            form: 'contact',
             source: 'contact-form',
             name: fd.get('name') || '',
             phone: fd.get('phone') || '',
@@ -426,7 +421,7 @@
             referrer: document.referrer || '',
             timestamp: new Date().toISOString()
           };
-          fetch('https://prexinvestments.app.n8n.cloud/webhook/atlas-general-lead', {
+          fetch('https://oihevxbiwggnnwsplkwx.supabase.co/functions/v1/web-intake', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload),

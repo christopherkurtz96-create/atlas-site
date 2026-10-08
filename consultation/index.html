@@ -469,8 +469,8 @@
                         </div>
                         <div class="form-group">
                             <label class="consent">
-                                <input type="checkbox" name="smsConsent" value="yes">
-                                <span>It's fine to text me about this consultation at the number above. Message and data rates may apply. Reply STOP to opt out. See our <a href="/privacy">privacy policy</a>.</span>
+                                <input type="checkbox" name="smsConsent" value="yes" required>
+                                <span>I agree that ATLAS Demolition &amp; Site Work may contact me about my project by phone call and text message at the number I provided, including calls and texts placed with automated technology or an artificial or prerecorded voice. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of any purchase. Prefer not to agree? Call us at <a href="tel:5732346641">(573) 234-6641</a>. See our <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms" target="_blank" rel="noopener">Terms</a>. <span aria-hidden="true">*</span></span>
                             </label>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Request a Free Consultation</button>
@@ -572,5 +572,30 @@
     </footer>
 
     <script src="/js/main.js?v=20261008a"></script>
+    <script>
+    // Send a copy of the consultation request to the ATLAS lead engine on submit.
+    // Native Netlify form submission continues in parallel as the backup.
+    (function() {
+      var form = document.getElementById('bid-lead-form');
+      if (!form) return;
+      form.addEventListener('submit', function() {
+        try {
+          var fd = new FormData(form);
+          var photos = form.querySelector('input[type="file"]');
+          var payload = { form: 'instant-bid', page: window.location.pathname, referrer: document.referrer || '', timestamp: new Date().toISOString() };
+          fd.forEach(function(value, key) {
+            if (typeof value === 'string' && key !== 'form-name') payload[key] = value;
+          });
+          payload.photoCount = photos && photos.files ? String(photos.files.length) : '0';
+          fetch('https://oihevxbiwggnnwsplkwx.supabase.co/functions/v1/web-intake', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+            keepalive: true
+          }).catch(function() {});
+        } catch (e) {}
+      });
+    })();
+    </script>
 </body>
 </html>
