@@ -358,7 +358,7 @@
                 <span class="current">Free Consultation</span>
             </div>
             <h1>Free On-Site Consultation</h1>
-            <p>Tell us what's coming out and what you want left behind. We walk the site with you, tell you what we'd do, and put a fixed price in writing.</p>
+            <p>Four quick fields. We call you, walk the site with you, tell you what we'd do, and put a fixed price in writing.</p>
         </div>
     </section>
 
@@ -370,7 +370,7 @@
                         <h3>Rather talk?</h3>
                         <p><a href="tel:5732346641" class="btn btn-primary">Call (573) 234-6641</a></p>
                     </div>
-                    <form id="bid-lead-form" name="instant-bid" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" class="bid-intake">
+                    <form id="bid-lead-form" name="instant-bid" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" class="bid-intake">
                         <input type="hidden" name="form-name" value="instant-bid">
                         <p class="hidden-field" hidden><label>Don't fill this out: <input name="bot-field"></label></p>
                         <input type="hidden" name="source" value="instant-bid">
@@ -379,102 +379,21 @@
                         <input type="hidden" name="utmCampaign" id="bid-h-utm-campaign">
                         <input type="hidden" name="utmContent" id="bid-h-utm-content">
 
-                        <h2>1. The job</h2>
-                        <div class="form-group">
-                            <label for="bid-project-type">What needs to happen?</label>
-                            <select id="bid-project-type" name="projectType" class="bid-input" required>
-                                <option value="">Select one</option>
-                                <optgroup label="Demolition">
-                                    <option>House or building teardown</option>
-                                    <option>Mobile home removal</option>
-                                    <option>Garage, barn, shed or outbuilding</option>
-                                    <option>Interior strip-out or selective demo</option>
-                                    <option>Pool, deck, porch or addition removal</option>
-                                </optgroup>
-                                <optgroup label="Concrete &amp; paving">
-                                    <option>Parking lot removal and replacement</option>
-                                    <option>Parking lot removal only</option>
-                                    <option>Driveway removal and replacement</option>
-                                    <option>Slab, patio, sidewalk or foundation removal</option>
-                                    <option>New concrete: pad, drive, lot</option>
-                                </optgroup>
-                                <optgroup label="After the teardown">
-                                    <option>Backfill, grading or pad prep (with a demo or concrete job)</option>
-                                </optgroup>
-                                <option>Something else</option>
-                            </select>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="bid-sqft">Approximate size</label>
-                                <input type="text" id="bid-sqft" name="approxSize" class="bid-input" placeholder="e.g. 1,400 sq ft house, 40-space lot, 20x24 slab" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="bid-put-back">When we're done, you want</label>
-                                <select id="bid-put-back" name="finishState" class="bid-input" required>
-                                    <option value="">Select one</option>
-                                    <option>Bare, graded ground</option>
-                                    <option>Graded, seeded and strawed</option>
-                                    <option>Pad prepped for a new build</option>
-                                    <option>New concrete poured back</option>
-                                    <option>New asphalt paved back</option>
-                                    <option>Not sure yet</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="bid-property-type">Property</label>
-                                <select id="bid-property-type" name="propertyType" class="bid-input" required>
-                                    <option value="">Select one</option>
-                                    <option>Residential, I own it</option>
-                                    <option>Commercial, I own or manage it</option>
-                                    <option>Church, school or nonprofit</option>
-                                    <option>I'm a general contractor</option>
-                                    <option>Government or public</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="bid-timeline">Timeline</label>
-                                <select id="bid-timeline" name="timeline" class="bid-input" required>
-                                    <option value="">Select one</option>
-                                    <option>As soon as possible</option>
-                                    <option>Within 30 days</option>
-                                    <option>1 to 3 months</option>
-                                    <option>Planning, no date yet</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="bid-details">Anything we should know <span style="font-weight:400;color:var(--gray-light)">(optional)</span></label>
-                            <textarea id="bid-details" name="details" class="bid-input" rows="4" placeholder="Basement or slab? Utilities still on? Asbestos inspection done? Gate width, tight access, tenants in the building, a date you need to hit."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="bid-photos">Photos <span style="font-weight:400;color:var(--gray-light)">(optional, up to 3)</span></label>
-                            <input type="file" id="bid-photos" name="photos" class="bid-input" accept="image/*" multiple>
-                            <small>Two or three photos and a wide shot of the access usually let us get a number close before we visit.</small>
-                        </div>
-
-                        <h2>2. The site</h2>
-                        <div class="form-group">
-                            <label for="bid-address">Project location <span style="font-weight:400;color:var(--gray-light)">(city and state is fine)</span></label>
-                            <input type="text" id="bid-address" name="propertyAddress" class="bid-input" required autocomplete="off" placeholder="e.g. Columbia, MO">
-                        </div>
-
-                        <h2>3. You</h2>
                         <div class="form-group">
                             <label for="bid-first-name">Name</label>
                             <input type="text" id="bid-first-name" name="firstName" class="bid-input" required autocomplete="name">
                         </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="bid-phone">Phone</label>
-                                <input type="tel" id="bid-phone" name="phone" class="bid-input" required autocomplete="tel">
-                            </div>
-                            <div class="form-group">
-                                <label for="bid-email">Email</label>
-                                <input type="email" id="bid-email" name="email" class="bid-input" required autocomplete="email">
-                            </div>
+                        <div class="form-group">
+                            <label for="bid-phone">Phone</label>
+                            <input type="tel" id="bid-phone" name="phone" class="bid-input" required autocomplete="tel" inputmode="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="bid-address">Town the project is in</label>
+                            <input type="text" id="bid-address" name="propertyAddress" class="bid-input" required autocomplete="off" placeholder="e.g. Columbia, MO">
+                        </div>
+                        <div class="form-group">
+                            <label for="bid-details">Tell us a bit about the project</label>
+                            <textarea id="bid-details" name="details" class="bid-input" rows="4" required placeholder="What's coming out, roughly how big, and what you want left when we're done."></textarea>
                         </div>
                         <div class="form-group">
                             <label class="consent">
