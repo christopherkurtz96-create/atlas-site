@@ -13,7 +13,7 @@ GA = """    <script async src="https://www.googletagmanager.com/gtag/js?id=G-11M
     </script>"""
 PHONE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>'
 
-NAV_DEMO = [("/demolition/","Demolition Services"),("/demolition/structural/","House, Garage & Barn Teardowns"),("/demolition/mobile-home-removal/","Mobile Home Removal"),("/demolition/interior-selective/","Interior & Selective Demo")]
+NAV_DEMO = [("/demolition/","Demolition Services"),("/demolition/structural/","House, Garage & Barn Teardowns"),("/demolition/mobile-home-removal/","Mobile Home Removal"),("/demolition/interior-selective/","Interior & Selective Demo"),("/demolition/asbestos-abatement/","Asbestos Abatement")]
 NAV_CONC = [("/concrete/","Concrete & Paving"),("/concrete/concrete-removal/","Concrete Removal"),("/concrete/parking-lot-removal/","Parking Lot Removal & Replacement"),("/concrete/driveway-replacement/","Driveway Replacement"),("/site-work/","Backfill, Grading & Pad Prep")]
 NAV_AREAS = [("/locations/columbia-mo","Columbia, MO"),("/locations/jefferson-city-mo","Jefferson City, MO"),("/locations/fulton-mo","Fulton, MO"),("/locations/moberly-mo","Moberly, MO"),("/locations/fayette-mo","Fayette, MO"),("/locations/boonville-mo","Boonville, MO"),("/locations/ashland-mo","Ashland, MO"),("/service-areas","All Service Areas")]
 
@@ -102,6 +102,7 @@ def footer():
                         <li><a href="/demolition/structural/">House & Garage Teardowns</a></li>
                         <li><a href="/demolition/mobile-home-removal/">Mobile Home Removal</a></li>
                         <li><a href="/demolition/interior-selective/">Interior & Selective Demo</a></li>
+                        <li><a href="/demolition/asbestos-abatement/">Asbestos Abatement</a></li>
                     </ul>
                 </div>
 
@@ -161,7 +162,7 @@ def business_schema(extra_ids=None):
         "sameAs":["https://www.facebook.com/profile.php?id=61584529212929","https://www.instagram.com/deployatlas/"],
         "hasOfferCatalog":{"@type":"OfferCatalog","name":"Demolition and concrete services","itemListElement":[
             {"@type":"Offer","itemOffered":{"@type":"Service","name":n,"url":SITE+u}} for n,u in [
-            ("Structural demolition","/demolition/structural/"),("Mobile home removal","/demolition/mobile-home-removal/"),("Interior and selective demolition","/demolition/interior-selective/"),
+            ("Structural demolition","/demolition/structural/"),("Mobile home removal","/demolition/mobile-home-removal/"),("Interior and selective demolition","/demolition/interior-selective/"),("Asbestos abatement before demolition (arranged under contract)","/demolition/asbestos-abatement/"),
             ("Concrete removal","/concrete/concrete-removal/"),("Parking lot removal and replacement","/concrete/parking-lot-removal/"),("Concrete driveway replacement","/concrete/driveway-replacement/"),
             ("Site work after demolition","/site-work/")]]}
     }
@@ -268,7 +269,7 @@ def page(*, path, title, meta, h1, subtitle, crumbs, body, faqs=(), sidebar=None
 {header()}
 {main}
 {footer()}
-    <script src="/js/main.js?v=20260924f"></script>
+    <script src="/js/main.js?v=20261008a"></script>
 </body>
 </html>
 '''

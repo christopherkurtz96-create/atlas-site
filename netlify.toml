@@ -218,6 +218,18 @@
   force = true
 
 [[redirects]]
+  from = "/blog/asbestos-inspection-before-demolition-missouri.html"
+  to = "/blog/asbestos-inspection-before-demolition-missouri"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/asphalt-vs-concrete-parking-lot-mid-missouri.html"
+  to = "/blog/asphalt-vs-concrete-parking-lot-mid-missouri"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/blog/barn-demolition-mid-missouri.html"
   to = "/blog/barn-demolition-mid-missouri"
   status = 301
@@ -232,6 +244,12 @@
 [[redirects]]
   from = "/blog/commercial-strip-out-demolition-columbia-mo.html"
   to = "/blog/commercial-strip-out-demolition-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/concrete-driveway-replacement-cost-columbia-mo.html"
+  to = "/blog/concrete-driveway-replacement-cost-columbia-mo"
   status = 301
   force = true
 
@@ -290,6 +308,12 @@
   force = true
 
 [[redirects]]
+  from = "/blog/foundation-removal-columbia-mo.html"
+  to = "/blog/foundation-removal-columbia-mo"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/blog/garage-demolition-cost-columbia-mo.html"
   to = "/blog/garage-demolition-cost-columbia-mo"
   status = 301
@@ -334,6 +358,12 @@
 [[redirects]]
   from = "/blog/mobile-home-removal-cost-mid-missouri.html"
   to = "/blog/mobile-home-removal-cost-mid-missouri"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/parking-lot-removal-cost-missouri.html"
+  to = "/blog/parking-lot-removal-cost-missouri"
   status = 301
   force = true
 

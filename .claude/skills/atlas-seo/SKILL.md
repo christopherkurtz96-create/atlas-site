@@ -22,7 +22,7 @@ Rewritten 24 Sep 2026 for the demolition-plus-concrete repositioning. The quarte
 
 ## URL tree
 
-`/demolition/` (+ `/structural/`, `/mobile-home-removal/`, `/interior-selective/`) · `/concrete/` (+ `/concrete-removal/`, `/parking-lot-removal/`, `/driveway-replacement/`) · `/site-work/` · `/consultation/` · `/services` · `/service-areas` · `/about` · `/contact` · `/locations/<town>-mo` · `/blog/<slug>` (file stays `blog/<slug>.html`). Old `/services/*.html` and land clearing URLs are 301'd; never link to them.
+`/demolition/` (+ `/structural/`, `/mobile-home-removal/`, `/interior-selective/`, `/asbestos-abatement/`) · `/concrete/` (+ `/concrete-removal/`, `/parking-lot-removal/`, `/driveway-replacement/`) · `/site-work/` · `/consultation/` · `/services` · `/service-areas` · `/about` · `/contact` · `/locations/<town>-mo` · `/blog/<slug>` (file stays `blog/<slug>.html`). Old `/services/*.html` and land clearing URLs are 301'd; never link to them.
 
 ## Keyword strategy
 
@@ -33,6 +33,7 @@ Rewritten 24 Sep 2026 for the demolition-plus-concrete repositioning. The quarte
 - parking lot removal Columbia MO · parking lot replacement cost · asphalt removal
 - concrete driveway replacement Columbia MO
 - interior demolition Columbia MO · commercial strip out
+- asbestos abatement Columbia MO · asbestos removal before demolition · asbestos inspection Columbia MO (page /demolition/asbestos-abatement/; arranged under contract, performed by a registered sub; skip popcorn-ceiling and DIY-testing intents)
 - site preparation Columbia MO (tail; do not build standalone grading content)
 
 **Tier 2, locations:** demolition contractor + concrete in Jefferson City, Fulton, Moberly, Fayette, Boonville, Ashland. Pages exist; add job proof before adding more towns.

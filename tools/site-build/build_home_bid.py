@@ -339,8 +339,8 @@ bid_body = f'''    <section class="page-header">
                         </div>
                         <div class="form-group">
                             <label class="consent">
-                                <input type="checkbox" name="smsConsent" value="yes">
-                                <span>It's fine to text me about this consultation at the number above. Message and data rates may apply. Reply STOP to opt out. See our <a href="/privacy">privacy policy</a>.</span>
+                                <input type="checkbox" name="smsConsent" value="yes" required>
+                                <span>I agree that ATLAS Demolition &amp; Site Work may contact me about my project by phone call and text message at the number I provided, including calls and texts placed with automated technology or an artificial or prerecorded voice. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of any purchase. Prefer not to agree? Call us at <a href="tel:5732346641">(573) 234-6641</a>. See our <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms" target="_blank" rel="noopener">Terms</a>. <span aria-hidden="true">*</span></span>
                             </label>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Request a Free Consultation</button>
@@ -385,5 +385,7 @@ bid_html = T.page(
     extra_head='    <script>document.addEventListener("DOMContentLoaded",function(){var p=new URLSearchParams(location.search);[["utm_source","bid-h-utm-source"],["utm_medium","bid-h-utm-medium"],["utm_campaign","bid-h-utm-campaign"],["utm_content","bid-h-utm-content"]].forEach(function(x){var e=document.getElementById(x[1]);if(e&&p.get(x[0]))e.value=p.get(x[0]);});});</script>',
 )
 os.makedirs(f"{REPO}/consultation", exist_ok=True)
+LEAD_ENGINE_SCRIPT = '    <script>\n    // Send a copy of the consultation request to the ATLAS lead engine on submit.\n    // Native Netlify form submission continues in parallel as the backup.\n    (function() {\n      var form = document.getElementById(\'bid-lead-form\');\n      if (!form) return;\n      form.addEventListener(\'submit\', function() {\n        try {\n          var fd = new FormData(form);\n          var photos = form.querySelector(\'input[type="file"]\');\n          var payload = { form: \'instant-bid\', page: window.location.pathname, referrer: document.referrer || \'\', timestamp: new Date().toISOString() };\n          fd.forEach(function(value, key) {\n            if (typeof value === \'string\' && key !== \'form-name\') payload[key] = value;\n          });\n          payload.photoCount = photos && photos.files ? String(photos.files.length) : \'0\';\n          fetch(\'https://oihevxbiwggnnwsplkwx.supabase.co/functions/v1/web-intake\', {\n            method: \'POST\',\n            headers: { \'Content-Type\': \'application/json\' },\n            body: JSON.stringify(payload),\n            keepalive: true\n          }).catch(function() {});\n        } catch (e) {}\n      });\n    })();\n    </script>\n'
+bid_html = bid_html.replace("</body>", LEAD_ENGINE_SCRIPT + "</body>", 1)
 open(f"{REPO}/consultation/index.html","w").write(bid_html)
 print("consultation/index.html", len(bid_html), "divs", bid_html.count("<div"), bid_html.count("</div>"))

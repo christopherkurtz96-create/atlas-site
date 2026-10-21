@@ -12,13 +12,13 @@
 
 Two front doors, one tail. Positioning: "the demolition company that finishes the job. Tear it out, haul it off, put the site back."
 
-1. **Demolition** (headline offer, any size): structural (houses, mobile homes, garages, barns, sheds, decks), commercial and interior/selective demo, concrete demolition, debris haul-off billed as pass-through.
+1. **Demolition** (headline offer, any size): structural (houses, mobile homes, garages, barns, sheds, decks), commercial and interior/selective demo, concrete demolition, asbestos abatement arranged under our contract (performed by a Missouri-registered abatement contractor; never "we abate"), debris haul-off billed as pass-through.
 2. **Concrete & paving** (second front door, $10K+ target, $25–50K sweet spot, not contingent on a teardown): parking lot removal and replacement, driveway removal and replacement, slab/foundation removal, asphalt removal AND replacement.
 3. **Site work** (tail only, sold attached to a demo or concrete job): backfill, grading, pad prep, gravel, drainage as part of a regrade.
 
 **Out of scope, never write as a service:** land clearing, forestry mulching, brush hogging, tree/stump work, standalone excavation or trenching, septic, foundation repair, concrete leveling/mudjacking/patch repair, general repairs.
 
-URL tree: /demolition/ (+ /structural/, /mobile-home-removal/, /interior-selective/), /concrete/ (+ /concrete-removal/, /parking-lot-removal/, /driveway-replacement/), /site-work/, /consultation/, /services, /service-areas, /locations/<town>-mo, /blog/<slug> (files stay blog/<slug>.html). Old /services/*.html paths are 301'd; never link to them.
+URL tree: /demolition/ (+ /structural/, /mobile-home-removal/, /interior-selective/, /asbestos-abatement/), /concrete/ (+ /concrete-removal/, /parking-lot-removal/, /driveway-replacement/), /site-work/, /consultation/, /services, /service-areas, /locations/<town>-mo, /blog/<slug> (files stay blog/<slug>.html). Old /services/*.html paths are 301'd; never link to them.
 
 Claims allowed: "licensed and insured" (GL, umbrella, workers' comp). Email chris@deployatlas.com. Phone (573) 234-6641.
 
