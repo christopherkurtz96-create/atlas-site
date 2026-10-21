@@ -115,7 +115,7 @@ services = f'''    <section class="section bg-white" id="services">
             <h3 class="section-sub" style="margin-top:40px">Site Work</h3>
             <div class="sub-services-grid" style="margin-top: 18px;">
 {sub_card("/images/concrete-removal.jpg","Concrete slab being broken out for removal","Concrete Removal","Slabs, driveways, sidewalks, footings and foundations. Saw-cut, broken, recycled.","/concrete/concrete-removal/")}
-{sub_card("/images/concrete-lot-prep-excavator.jpg","Excavator grading a lot base before paving","Parking Lot Removal &amp; Replacement","Asphalt or concrete lots removed in phases and put back with a base that lasts.","/concrete/parking-lot-removal/")}
+{sub_card("/images/concrete-lot-prep-excavator-wide.jpg","Excavator grading a lot base before paving","Parking Lot Removal &amp; Replacement","Asphalt or concrete lots removed in phases and put back with a base that lasts.","/concrete/parking-lot-removal/")}
 {sub_card("/images/site-work-grading-excavator.jpg","Excavator rough-grading a site after demolition","Backfill, Grading &amp; Pad Prep","Foundation holes filled, lots graded to drain, pads built for what comes next.","/site-work/")}
             </div>
         </div>

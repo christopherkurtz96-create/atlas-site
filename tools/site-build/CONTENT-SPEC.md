@@ -30,7 +30,7 @@ You are writing ONE OR MORE service pages for ATLAS Demolition & Site Work, Colu
 - Available photos (root-absolute paths, use with descriptive alt text):
   /images/house-demolition-teardown-excavator.jpg — Cat 308 tearing the roof off a house in Columbia
   /images/concrete-wall-removal-excavator.jpg — excavator breaking out a concrete retaining wall (portrait)
-  /images/concrete-lot-prep-excavator.jpg — excavator on a graded gravel lot with crew (portrait)
+  /images/concrete-lot-prep-excavator-wide.jpg — excavator on a graded gravel lot with crew (portrait)
   /images/site-work-grading-excavator.jpg — excavator rough-grading a cleared hillside
   /images/demolition-service.jpg, /images/mobile-home.jpg, /images/interior-demolition.jpg, /images/concrete-removal.jpg, /images/commercial-demo.jpg, /images/house-demolition.jpg, /images/foundation.jpg, /images/excavation-service.jpg (older real photos already on the site)
   Use <img src="..." alt="..." loading="lazy" style="border-radius:12px;margin:24px 0;width:100%">.

@@ -117,13 +117,13 @@ parking_lot = dict(
     h1="Parking Lot Removal and Replacement in Columbia, MO",
     subtitle="Asphalt or concrete. Taken out in phases so your customers still have somewhere to park, hauled off, and put back with a base that will last.",
     crumbs=[["/","Home"],["/concrete/","Site Work"],["/concrete/parking-lot-removal/","Parking Lot Removal & Replacement"]],
-    og_image="/images/concrete-lot-prep-excavator.jpg",
+    og_image="/images/concrete-lot-prep-excavator-wide.jpg",
     service={"name":"Parking lot removal and replacement","type":"Parking lot contractor"},
     cta_h2="Time to replace the lot?",
     cta_p="Send us the address and roughly how many spaces. We'll walk it, check the base, and send a phased proposal with a fixed price.",
     body="""                    <p>Old lots crack, heave, hold water and drain the wrong way. We take them out, asphalt or concrete, and put a new one back: base, grade, drainage, surface, curbs and striping. The removal is our excavator and our trucks. The new surface is our concrete or asphalt crew under our contract and warranty. We phase the work so tenants and customers keep a place to park, and you deal with one company from the first saw cut to the last stripe.</p>
 
-                    <img src="/images/concrete-lot-prep-excavator.jpg" alt="Atlas excavator on a graded gravel lot in Columbia, MO with the crew setting grade for a new surface" loading="lazy" style="border-radius:12px;margin:24px 0;width:100%;max-height:520px;object-fit:cover">
+                    <img src="/images/concrete-lot-prep-excavator-wide.jpg" alt="Atlas excavator on a graded gravel lot in Columbia, MO with the crew setting grade for a new surface" loading="lazy" style="border-radius:12px;margin:24px 0;width:100%;max-height:520px;object-fit:cover">
 
                     <h2>Who this is for</h2>
                     <p>Property owners and managers of retail strips, offices, churches, apartment complexes, schools, shops and light-industrial buildings, with lots from about 5,000 to 60,000 square feet. We sell owner-direct. If you're a general contractor with a lot in a larger scope, we'll bid that too. This is not a patch-and-seal service. If your lot needs crack fill and a sealcoat, a paving maintenance company will do that cheaper than we will.</p>
