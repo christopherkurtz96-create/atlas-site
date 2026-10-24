@@ -425,6 +425,13 @@ p {
     font-weight: 600;
     margin-bottom: 20px;
     border: 1px solid rgba(247, 69, 0, 0.3);
+    white-space: nowrap;
+}
+
+.hero-badge svg { flex-shrink: 0; }
+
+@media (max-width: 420px) {
+    .hero-badge { font-size: 0.8125rem; padding: 8px 14px; }
 }
 
 .hero h1 {
