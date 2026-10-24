@@ -320,6 +320,12 @@
   force = true
 
 [[redirects]]
+  from = "/blog/grain-bin-removal-missouri.html"
+  to = "/blog/grain-bin-removal-missouri"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/blog/hire-demolition-contractor-columbia-mo.html"
   to = "/blog/hire-demolition-contractor-columbia-mo"
   status = 301
