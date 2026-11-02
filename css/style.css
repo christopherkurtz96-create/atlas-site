@@ -1708,3 +1708,46 @@ p {
 .bid-intake .consent { display: flex; align-items: flex-start; gap: 12px; cursor: pointer; font-weight: 400; color: var(--charcoal-gray); line-height: 1.5; }
 .bid-intake .consent input[type="checkbox"] { width: 20px; height: 20px; flex: 0 0 auto; margin: 3px 0 0; padding: 0; accent-color: var(--construction-orange); }
 .bid-intake .consent span { flex: 1 1 auto; }
+
+/* ============================================
+   Sticky phone action bar (Call / Text / Get my price)
+   ============================================ */
+.site-action-bar {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 998;
+    background-color: var(--deep-navy);
+    grid-template-columns: 1fr 1fr 2fr;
+    box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.25);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+.site-action-bar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-height: 64px;
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Open Sans', var(--font-primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+.site-action-bar a svg { width: 22px; height: 22px; }
+.site-action-bar a.site-action-bar-primary {
+    background-color: var(--construction-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    border-right: 0;
+}
+body.nav-open .site-action-bar { display: none !important; }
+@media (max-width: 1024px) {
+    .site-action-bar { display: grid; }
+    body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+}
