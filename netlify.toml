@@ -3,6 +3,9 @@
 [build]
   publish = "."
 
+[functions]
+  directory = "netlify/functions"
+
 # Retire old privacy-policy URL — single canonical privacy page at /privacy
 # now that A2P 10DLC compliance language lives there.
 [[redirects]]
@@ -16,6 +19,17 @@
   to = "/privacy"
   status = 301
   force = true
+
+# Estimator map tiles: plain proxy rewrites to public USGS / AWS Open Data tile feeds (no query strings, no secrets).
+[[redirects]]
+  from = "/api/tile/usgs/:z/:x/:y"
+  to = "https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/:z/:y/:x"
+  status = 200
+
+[[redirects]]
+  from = "/api/tile/terrain/:z/:x/:y"
+  to = "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/:z/:x/:y.png"
+  status = 200
 
 # Custom headers for security and performance
 [[headers]]
@@ -480,3 +494,8 @@
   from = "/*"
   to = "/404.html"
   status = 404
+
+[[headers]]
+  for = "/estimate/vendor/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

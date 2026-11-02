@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Get My Price | Instant Estimate for Driveways, Drainage, Culverts & Pads | ATLAS Columbia, MO</title>
+  <meta name="description" content="Type your address, draw the job on a real aerial of your property and see a price range in about two minutes. Gravel driveways, drainage, culverts and gravel pads around Columbia, MO. Free site visit locks it in writing.">
+  <link rel="canonical" href="https://deployatlas.com/estimate/">
+  <meta property="og:title" content="Get My Price | ATLAS Demolition & Site Work">
+  <meta property="og:description" content="Draw the job on your property and see a price range in about two minutes.">
+  <meta property="og:url" content="https://deployatlas.com/estimate/">
+  <meta property="og:image" content="https://deployatlas.com/images/og-image.jpg">
+  <link rel="icon" href="/favicon.ico">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-11MK2WQ0NC"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-11MK2WQ0NC');</script>
+  <link rel="stylesheet" href="vendor/maplibre-gl.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a href="/" class="logo" data-testid="brand-home"><img src="logo.svg" alt="ATLAS Demolition & Site Work"></a>
+      <div class="right">
+        <a class="phone" href="tel:5732346641">(573) 234-6641</a>
+        <a class="btn btn-primary btn-sm" href="#tool">Get my price</a>
+      </div>
+    </div>
+  </header>
+  <main id="app" data-testid="app">
+    <noscript><p>This tool requires JavaScript.</p></noscript>
+  </main>
+  <!-- Netlify Forms detection stubs (hidden). The live forms are rendered by app.js and POST these names. -->
+  <form name="site-visit-request" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="site-visit-request"><input name="bot-field">
+    <input name="name"><input name="phone"><input name="email"><input name="contact"><input name="address"><input name="timing"><textarea name="notes"></textarea>
+    <input name="service"><input name="price_low"><input name="price_high"><input name="price_typical"><input name="quantities"><input name="property"><textarea name="estimate_json"></textarea>
+  </form>
+  <form name="demolition-consultation" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="demolition-consultation"><input name="bot-field">
+    <input name="name"><input name="phone"><input name="email"><input name="address"><input name="what"><textarea name="notes"></textarea>
+  </form>
+  <nav class="action-bar" data-testid="action-bar" aria-label="Contact Atlas">
+    <a href="tel:5732346641" data-testid="bar-call"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg><span>Call</span></a>
+    <a href="sms:5732346641" data-testid="bar-text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Text</span></a>
+    <a href="#tool" class="primary" data-testid="bar-price">Get my price</a>
+  </nav>
+  <footer class="foot">Online ranges are planning figures — not a quote, not binding, not guaranteed. A written price after a free site visit is the only real number. Aerials: USGS National Map and City of Columbia GIS. Ground: USGS 3DEP. <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/">deployatlas.com</a></footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
