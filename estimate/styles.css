@@ -85,6 +85,14 @@ p { margin: 6px 0; }
 .demo-form .not-sent { font-size: .8rem; }
 @media (max-width: 480px) { .path-tiles { grid-template-columns: 1fr; } .path-tile { min-height: 0; } }
 
+/* questions wizard */
+.wiz-progress { font-size: .8rem; font-weight: 700; color: #b7c0cc; letter-spacing: .04em; text-transform: uppercase; margin: 6px 0 4px; }
+.wiz-svc { color: #b7c0cc; font-size: .95rem; font-weight: 700; flex: 1; margin: 0; }
+.wiz-choices { display: grid; gap: 8px; margin: 8px 0 14px; }
+.wiz-choice { background: var(--navy-light); border: 2px solid rgba(255,255,255,.25); color: var(--white); border-radius: var(--radius); padding: 14px; text-align: left; cursor: pointer; font: inherit; font-weight: 700; font-size: 1.05rem; min-height: 54px; }
+.wiz-choice:hover, .wiz-choice:focus { border-color: var(--orange); outline: none; }
+.wiz-choice.on { border-color: var(--orange); }
+.err { color: #ffb4a3; font-size: .85rem; margin: 6px 0; }
 /* contact block */
 .contact .lead { max-width: 640px; }
 .contact-list { display: grid; gap: 0; margin: 10px 0; padding: 0; border-top: 2px solid var(--navy); }

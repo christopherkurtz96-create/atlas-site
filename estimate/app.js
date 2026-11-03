@@ -19,7 +19,7 @@ const ICONS = {
 
 // ---------------- state (memory only) ----------------
 const st = {
-  path: null, demoLead: null,
+  path: null, siteEntry: null, demoLead: null, wiz: null,
   view: 'landing', address: null, geocode: null, service: null, opts: {}, custom: { width_ft: '20', length_ft: '20' },
   geometry: null, ground: { status: 'idle' }, groundRev: 0, lead: null, map: null, mode: 'map',
 };
@@ -49,14 +49,19 @@ function heroCard() {
   if (st.path === 'site') return `
         ${testPill()}
         <button type="button" class="link back-link" data-testid="path-back">‹ Back</button>
-        <h2>Draw it on your property.<br>See the price.</h2>
-        <p>Aerial photos and USGS ground data for your lot. Drainage, driveways, culverts and gravel pads. No email needed to see a number.</p>
+        <h2>Site work.<br>Get your price.</h2>
+        <p>Gravel driveways, drainage, culverts and gravel pads. See a range in about two minutes, then lock it in with a free site visit.</p>
+        <div class="path-tiles" data-testid="site-tiles">
+          <button type="button" class="path-tile" data-testid="site-questions"><strong>Answer a few questions</strong><span>Tell us what you need and the size. Fastest way to a number.</span><em>Start →</em></button>
+          <button type="button" class="path-tile" data-testid="site-map"><strong>Draw it on the aerial</strong><span>Pull up your property and trace the job. We measure it and read the ground.</span><em>Open the map →</em></button>
+        </div>
+        ${st.siteEntry === 'map' ? `
         <form class="addr" data-testid="address-form" novalidate>
           <label for="addr">Your property address</label>
           <div class="addr-row"><input id="addr" type="text" autocomplete="off" placeholder="Start typing your address" data-testid="address-input" value="${esc(st.address || '')}"><button class="btn btn-primary" type="submit" data-testid="address-submit">Show my property</button></div>
           <p class="addr-status" data-testid="address-status" aria-live="polite"></p>
-          <div class="addr-alt"><button type="button" class="link" data-testid="use-demo">Use the public demo address (Boone County Courthouse)</button><button type="button" class="link" data-testid="use-describe">Rather answer a few questions?</button></div>
-        </form>`;
+          <div class="addr-alt"><button type="button" class="link" data-testid="use-demo">Use the public demo address (Boone County Courthouse)</button></div>
+        </form>` : ''}`;
   if (st.path === 'demo') return `
         <button type="button" class="link back-link" data-testid="path-back">‹ Back</button>
         <h2>Demolition.<br>Free consultation.</h2>
@@ -129,14 +134,15 @@ function renderLanding() {
       <li><strong>Walkthrough.</strong> We walk the finished job with you and clean up before we leave.</li>
     </ol>
   </div></section>`;
-  $$('.path-tile').forEach((b) => b.addEventListener('click', () => setPath(b.dataset.path)));
-  $('[data-testid=path-back]')?.addEventListener('click', () => setPath(null));
+  $$('.path-tile[data-path]').forEach((b) => b.addEventListener('click', () => setPath(b.dataset.path)));
+  $('[data-testid=path-back]')?.addEventListener('click', () => { st.siteEntry = null; setPath(null); });
+  $('[data-testid=site-questions]')?.addEventListener('click', () => { st.mode = 'describe'; st.service = null; st.wiz = null; openEstimator({ label: 'Step-by-step estimate', lon: DEMO_ADDRESS.lon, lat: DEMO_ADDRESS.lat, source: 'none' }); });
+  $('[data-testid=site-map]')?.addEventListener('click', () => { st.siteEntry = 'map'; st.mode = 'map'; renderLanding(); const el = $('#addr'); if (el) { el.scrollIntoView({ block: 'center' }); el.focus(); } });
   $$('a[href="#tool"]').forEach((l) => l.addEventListener('click', (e) => { e.preventDefault(); setPath(null); }));
   const form = $('[data-testid=address-form]');
   if (form) {
     form.addEventListener('submit', (e) => { e.preventDefault(); locate($('#addr').value); });
     $('[data-testid=use-demo]').addEventListener('click', () => { $('#addr').value = DEMO_ADDRESS.query; openEstimator({ label: DEMO_ADDRESS.label, lon: DEMO_ADDRESS.lon, lat: DEMO_ADDRESS.lat, source: 'public demo coordinates (not geocoded)' }); });
-    $('[data-testid=use-describe]').addEventListener('click', () => { st.mode = 'describe'; openEstimator(st.geocode || { label: 'No address — step-by-step estimate', lon: DEMO_ADDRESS.lon, lat: DEMO_ADDRESS.lat, source: 'none' }); });
   }
   const dform = $('[data-testid=demo-form]');
   if (dform) dform.addEventListener('submit', async (e) => {
@@ -173,6 +179,79 @@ function openEstimator(geo) {
 }
 function closeEstimator() { st.view = 'landing'; st.map = null; document.body.classList.remove('est-open'); renderLanding(); window.scrollTo(0, 0); }
 
+// ----- step-by-step questions (describe mode): one question per screen, price only at the end -----
+function wizSteps() {
+  const svc = SERVICES[st.service]; if (!svc) return [];
+  const steps = [...svc.options.map((o) => ({ kind: 'option', option: o }))];
+  if (svc.geometry === 'rect') { if (st.opts.size === 'custom') steps.push({ kind: 'dims' }); }
+  else steps.push({ kind: 'length' });
+  return steps;
+}
+function renderWizard() {
+  const body = $('#est-body'); if (!body) return;
+  if (!st.service) { renderBody(); return; } // job tiles screen (shared)
+  const svc = SERVICES[st.service];
+  const steps = wizSteps();
+  if (!st.wiz) st.wiz = { step: 0, done: false };
+  const total = steps.length;
+  const idx = Math.min(st.wiz.step, total);
+  if (st.wiz.done || idx >= total) { renderWizardResult(); return; }
+  const step = steps[idx];
+  const progress = `<p class="wiz-progress" data-testid="wiz-progress">Question ${idx + 1} of ${total}</p>`;
+  let qhtml = '';
+  if (step.kind === 'option') {
+    const o = step.option;
+    qhtml = `<h2 class="h-bebas" data-testid="wiz-question">${esc(o.question || o.label)}</h2><div class="wiz-choices">${o.choices.map((c) => `<button type="button" class="wiz-choice${st.opts[o.id] === c.id ? ' on' : ''}" data-opt="${o.id}" data-val="${c.id}" data-testid="wiz-${o.id}-${c.id}">${esc(c.label)}</button>`).join('')}</div>`;
+  } else if (step.kind === 'length') {
+    qhtml = `<h2 class="h-bebas" data-testid="wiz-question">${esc(svc.lengthQuestion || 'How long is it?')}</h2><p class="small light">${svc.geometry === 'line' ? 'Pace it off or use a tape. Close is fine; we confirm on site.' : ''}</p>
+      <form data-testid="wiz-form" novalidate><label>Length (ft)<input type="text" inputmode="decimal" data-testid="custom-length" value="${esc(st.custom.length_ft || '')}" autocomplete="off"></label><p class="err" data-testid="wiz-error" hidden></p><button type="submit" class="btn btn-primary" data-testid="wiz-next">See my price</button></form>`;
+  } else {
+    qhtml = `<h2 class="h-bebas" data-testid="wiz-question">What size pad?</h2>
+      <form data-testid="wiz-form" novalidate><div class="two"><label>Width (ft)<input type="text" inputmode="decimal" data-testid="custom-width" value="${esc(st.custom.width_ft || '')}" autocomplete="off"></label><label>Length (ft)<input type="text" inputmode="decimal" data-testid="custom-length" value="${esc(st.custom.length_ft || '')}" autocomplete="off"></label></div><p class="err" data-testid="wiz-error" hidden></p><button type="submit" class="btn btn-primary" data-testid="wiz-next">See my price</button></form>`;
+  }
+  body.innerHTML = `<div class="svc-head"><span class="tile-ico">${ICONS[svc.icon]}</span><h3 class="wiz-svc">${esc(svc.label)}</h3><button type="button" class="link" data-testid="wiz-startover">Start over</button></div>${progress}${qhtml}
+    <div class="btn-row">${idx > 0 ? `<button type="button" class="btn btn-ghost btn-sm" data-testid="wiz-back">‹ Back</button>` : ''}</div>`;
+  $$('.wiz-choice', body).forEach((b) => b.addEventListener('click', () => { st.opts[b.dataset.opt] = b.dataset.val; st.wiz.step = idx + 1; const next = wizSteps(); if (st.wiz.step >= next.length) st.wiz.done = true; renderWizard(); }));
+  $('[data-testid=wiz-form]')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const f = e.target; const err = $('[data-testid=wiz-error]');
+    const vals = {}; let bad = null;
+    $$('input', f).forEach((i) => { const k = i.getAttribute('data-testid') === 'custom-width' ? 'width_ft' : 'length_ft'; const n = Number(String(i.value).trim()); vals[k] = i.value; if (!/^\d*\.?\d+$/.test(String(i.value).trim()) || !Number.isFinite(n) || n <= 0) bad = bad || 'Enter a number of feet greater than zero.'; });
+    if (!bad && vals.length_ft && Number(vals.length_ft) > 5000) bad = 'That is longer than we price online. Call us.';
+    if (!bad && svc.maxLengthFt && Number(vals.length_ft) > svc.maxLengthFt) bad = `Longer than a culvert we price online (max ${svc.maxLengthFt} ft). Call us.`;
+    if (bad) { err.textContent = bad; err.hidden = false; return; }
+    Object.assign(st.custom, vals); st.wiz.step = idx + 1; st.wiz.done = true; renderWizard();
+  });
+  $('[data-testid=wiz-back]')?.addEventListener('click', () => { st.wiz.step = Math.max(0, idx - 1); renderWizard(); });
+  $('[data-testid=wiz-startover]').addEventListener('click', () => { st.service = null; st.wiz = null; renderWizard(); });
+  const first = $('[data-testid=custom-width]') || $('[data-testid=custom-length]'); if (first) first.focus();
+}
+function renderWizardResult() {
+  const body = $('#est-body'); const svc = SERVICES[st.service];
+  const q = quantities(); const r = q ? evaluate(st.service, st.opts, q) : null;
+  if (!r) { st.wiz = { step: 0, done: false }; renderWizard(); return; }
+  const answers = svc.options.map((o) => `<div><span>${esc(o.label)}</span><strong>${esc(o.choices.find((c) => c.id === st.opts[o.id])?.label || '')}</strong></div>`).join('');
+  body.innerHTML = `
+    <div class="svc-head"><span class="tile-ico">${ICONS[svc.icon]}</span><h2 class="h-bebas">${esc(svc.label)}</h2><button type="button" class="link" data-testid="wiz-startover">Start over</button></div>
+    <div class="qty" data-testid="quantities">${answers}
+      ${q.length_ft ? `<div><span>Length</span><strong>${fmtNum(q.length_ft)} ft</strong></div>` : ''}
+      ${q.width_ft ? `<div><span>Width</span><strong>${fmtNum(q.width_ft)} ft</strong></div>` : ''}
+      ${q.area_sqft ? `<div><span>Area</span><strong>${fmtNum(q.area_sqft)} sq ft</strong></div>` : ''}
+      <details><summary>What's included</summary><ul class="small">${r.included.map((x) => `<li>${esc(x)}</li>`).join('')}</ul><p class="small"><strong>Not included:</strong> ${esc(r.excluded.join('; '))}.</p></details>
+    </div>
+    <div class="price" data-testid="price">
+      <span class="price-label">Your price range ${IS_TEST ? '<span class="test-pill">TEST</span>' : ''}</span>
+      <div class="price-range"><strong data-testid="price-low">${money(r.low)}</strong><span>to</span><strong data-testid="price-high">${money(r.high)}</strong></div>
+      <p>Most jobs like this land around <strong data-testid="price-typical">${money(r.typical)}</strong>. About ${money(r.unitPrice)} per ${esc(r.unitLabel)}.${r.minimumApplied ? ' Job minimum applied.' : ''} Ground slope is read on the site visit.</p>
+      <button type="button" class="btn btn-primary btn-block" data-testid="lock-in"><span>Lock in your price</span><small>Free site visit</small></button>
+      <p class="small">${esc(statusText())}</p>
+      <button type="button" class="link" data-testid="download-estimate">Download this estimate (JSON, stays on your device)</button>
+    </div>`;
+  $('[data-testid=wiz-startover]').addEventListener('click', () => { st.service = null; st.wiz = null; renderWizard(); });
+  $('[data-testid=lock-in]').addEventListener('click', () => renderLead(r, q));
+  $('[data-testid=download-estimate]').addEventListener('click', () => downloadJson(buildEstimate(r, q), `atlas-${IS_TEST ? 'TEST-' : ''}estimate-${st.service}-${Date.now()}.json`));
+}
+
 function renderEstimator() {
   document.body.classList.add('est-open');
   $('#app').innerHTML = `
@@ -190,7 +269,7 @@ function renderEstimator() {
       <div class="view-toggle" role="radiogroup" aria-label="Map view"><button type="button" role="radio" aria-checked="false" data-view="3d" data-testid="view-3d">3D</button><button type="button" role="radio" aria-checked="true" class="on" data-view="top" data-testid="view-top">Top</button></div></div>
   </div>`;
   $('[data-testid=est-close]').addEventListener('click', closeEstimator);
-  $('[data-testid=toggle-mode]').addEventListener('click', () => { st.mode = st.mode === 'map' ? 'describe' : 'map'; st.geometry = null; st.ground = { status: 'idle' }; renderEstimator(); });
+  $('[data-testid=toggle-mode]').addEventListener('click', () => { st.mode = st.mode === 'map' ? 'describe' : 'map'; st.geometry = null; st.ground = { status: 'idle' }; st.wiz = null; st.service = null; renderEstimator(); });
   if (st.mode === 'map') {
     const prevShape = st.map ? st.map.getShape() : null;
     st.map = createMap($('#map-root'), {
@@ -202,7 +281,7 @@ function renderEstimator() {
     if (st.service) armFor(st.service);
     $$('.view-toggle button').forEach((b) => b.addEventListener('click', () => { st.map.set3D(b.dataset.view === '3d'); $$('.view-toggle button').forEach((x) => { x.classList.toggle('on', x === b); x.setAttribute('aria-checked', x === b); }); }));
   }
-  renderBody();
+  if (st.mode === 'describe') renderWizard(); else renderBody();
 }
 
 function armFor(id) {
@@ -231,8 +310,8 @@ function renderBody() {
   if (!st.service) {
     body.innerHTML = `<h2 class="h-bebas">What are we building?</h2>
       <div class="tiles" data-testid="tiles">${SERVICE_ORDER.map((id) => { const s = SERVICES[id]; return `<button type="button" class="tile" data-service="${id}" data-testid="tile-${id}"><span class="tile-ico">${ICONS[s.icon]}</span><strong>${esc(s.label)}</strong><span>${esc(s.blurb)}</span></button>`; }).join('')}</div>
-      <ol class="steps small"><li><strong>Pick the job.</strong> Drainage, a driveway, a culvert or a gravel pad.</li><li><strong>${st.mode === 'map' ? 'Draw it on the aerial.' : 'Enter the size.'}</strong> We measure it in feet${st.mode === 'map' ? ' and read the ground from USGS lidar' : ''}.</li><li><strong>See your range.</strong> Lock it in with a free site visit. We confirm everything on site before you sign.</li></ol>`;
-    $$('.tile', body).forEach((t) => t.addEventListener('click', () => { st.service = t.dataset.service; st.opts = Object.fromEntries(SERVICES[st.service].options.map((o) => [o.id, o.default])); st.geometry = null; st.ground = { status: 'idle' }; if (st.map) { st.map.clear(); armFor(st.service); } renderBody(); }));
+      <ol class="steps small"><li><strong>Pick the job.</strong> Drainage, a driveway, a culvert or a gravel pad.</li><li><strong>${st.mode === 'map' ? 'Draw it on the aerial.' : 'Answer a few quick questions.'}</strong> ${st.mode === 'map' ? 'We measure it in feet and read the ground from USGS lidar.' : 'One at a time, about a minute.'}</li><li><strong>See your range.</strong> Lock it in with a free site visit. We confirm everything on site before you sign.</li></ol>`;
+    $$('.tile', body).forEach((t) => t.addEventListener('click', () => { st.service = t.dataset.service; st.opts = Object.fromEntries(SERVICES[st.service].options.map((o) => [o.id, o.default])); st.geometry = null; st.ground = { status: 'idle' }; st.wiz = { step: 0, done: false }; if (st.mode === 'describe') { st.custom = { width_ft: '', length_ft: '' }; renderWizard(); return; } if (st.map) { st.map.clear(); armFor(st.service); } renderBody(); }));
     return;
   }
   const svc = SERVICES[st.service];
@@ -402,7 +481,7 @@ function renderLead(r, q) {
     <div id="lead-out"></div>`;
   const picks = { contact: LEAD_FORM.contact[0].id, timing: LEAD_FORM.timing[0].id };
   $$('[data-lead]', body).forEach((b) => b.addEventListener('click', () => { picks[b.dataset.lead] = b.dataset.val; $$(`[data-lead=${b.dataset.lead}]`, body).forEach((x) => x.classList.toggle('on', x === b)); }));
-  $('[data-testid=back-to-price]').addEventListener('click', renderBody);
+  $('[data-testid=back-to-price]').addEventListener('click', () => (st.mode === 'describe' ? renderWizardResult() : renderBody()));
   $('[data-testid=lead-form]').addEventListener('submit', async (e) => {
     e.preventDefault();
     const f = e.target; const val = (n) => (f.querySelector(`[name=${n}]`)?.value || '').trim() || null;
