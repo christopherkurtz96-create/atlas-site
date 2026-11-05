@@ -67,8 +67,10 @@ Write the full blog post as an HTML file matching the exact template used by exi
 - Standard footer
 - Google Analytics tag (G-11MK2WQ0NC)
 
+**Tier 4 national pillar posts.** If the Notion row's Notes or Tier says "pillar" or "national", or the primary keyword has no geo modifier (e.g. "types of demolition", "barn demolition cost"), follow the "National pillar posts" section of the `atlas-seo` skill instead of the location-mention counts below: keyword-stacked title tag with no city, natural H1 that keeps Columbia or Mid-Missouri, chart + quick picks + one H3 per item with its own photo, primary phrase at most once per ~250 words. If a brief exists at `docs/seo/briefs/<slug>-brief.md`, it is the outline. Location mentions for a pillar: Columbia 2-3 times, Mid-Missouri 1-2 times, all in the hook, local section, and CTA.
+
 **Content requirements from keyword research**:
-- Primary keyword in: title, H1, meta description, first 100 words, at least one H2, conclusion
+- Primary keyword in: title, H1, meta description, first 100 words, at least one H2, conclusion. Never more than about once per 250 words in the body; use variants (teardown, demo, knock down) for the rest. Exact-phrase repetition 5+ times in the opening reads as engineered and is the one thing the audited 2026 posts got wrong.
 - Columbia mentioned 5-8 times naturally
 - Missouri/Mid-Missouri mentioned 3-5 times
 - Boone County mentioned 1-2 times
@@ -123,7 +125,7 @@ URL rules: canonical host is `https://deployatlas.com` (never `www.`), all URLs 
 
 Run the full optimization checklist against the post you just wrote:
 
-1. **Keyword density check**: Primary keyword 0.5-2.5%. If outside range, fix it.
+1. **Keyword density check**: Primary keyword 0.5-1.2%, and never more than once per ~250 words of body. If above, replace repeats with variants; do not add more.
 2. **Location mentions**: Columbia 5-8x, Missouri 3-5x, Mid-Missouri/Boone County 1-2x. If short, add natural mentions.
 3. **Phone number**: (573) 234-6641 appears 2-3x with tel: links. Fix if missing.
 4. **Internal links**: 5-7 total to service and location pages. Add if short.
@@ -142,7 +144,7 @@ Run the full optimization checklist against the post you just wrote:
 
 ### PHASE 4: Image, Sitemap, and Deploy
 
-1. **Find an image**: Check `/Volumes/T9_External/ATLAS Media/` for a relevant photo. Look in subfolders that match the topic. If the T9 drive is not mounted or no relevant image exists, use the best match from the existing `/images/` folder and note that a real photo should be swapped in later.
+1. **Find an image**: Check `/Volumes/T9_External/ATLAS/ATLAS Media/` for a relevant photo (one `test -d`, no retries; filenames are IMG_####.JPG so pick by viewing). Never reuse `/images/demolition-service.jpg` as a hero; pillars need one photo per item. Look in subfolders that match the topic. If the T9 drive is not mounted or no relevant image exists, use the best match from the existing `/images/` folder and note that a real photo should be swapped in later.
 
 2. **Copy/optimize image**: Copy the selected image to `/images/[slug].jpg` in the Atlas site folder.
 
