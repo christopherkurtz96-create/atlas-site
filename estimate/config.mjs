@@ -71,11 +71,12 @@ export const SERVICES = Object.freeze({
   drainage: {
     id: 'drainage', label: 'Drainage', blurb: 'Move water off the wet spot', geometry: 'line', icon: 'drain',
     prompt: 'Tap where the water sits, then follow the path it should take downhill to daylight.',
+    lengthQuestion: 'How long is the drain run, from the wet spot to where it can let out?',
     editPrompt: 'Drag any point to adjust. Keep tapping to extend the run.',
     options: [
-      { id: 'type', label: 'Drain type', choices: [{ id: 'daylight', label: 'Daylight line' }, { id: 'french', label: 'French drain' }], default: 'daylight' },
-      { id: 'basins', label: 'Catch basins', choices: [{ id: '0', label: 'None' }, { id: '1', label: '1' }, { id: '2', label: '2' }], default: '0' },
-      { id: 'crossing', label: 'Does the line cross a driveway?', choices: [{ id: 'none', label: 'No' }, { id: 'gravel', label: 'Yes, gravel drive' }, { id: 'concrete', label: 'Yes, concrete' }], default: 'none' },
+      { id: 'type', label: 'Drain type', question: 'What kind of drain do you need?', choices: [{ id: 'daylight', label: 'Daylight line' }, { id: 'french', label: 'French drain' }], default: 'daylight' },
+      { id: 'basins', label: 'Catch basins', question: 'How many catch basins (grates in the yard)?', choices: [{ id: '0', label: 'None' }, { id: '1', label: '1' }, { id: '2', label: '2' }], default: '0' },
+      { id: 'crossing', label: 'Crosses a driveway', question: 'Does the line have to cross a driveway?', choices: [{ id: 'none', label: 'No' }, { id: 'gravel', label: 'Yes, gravel drive' }, { id: 'concrete', label: 'Yes, concrete' }], default: 'none' },
     ],
     unitLabel: 'ft',
     minimum: 3000,
@@ -85,11 +86,12 @@ export const SERVICES = Object.freeze({
   driveway: {
     id: 'driveway', label: 'Driveway', blurb: 'New gravel or a resurface', geometry: 'line', icon: 'drive',
     prompt: 'Tap the edge of the road where the driveway starts, then follow the path to where it ends.',
+    lengthQuestion: 'How long is the driveway, from the road to where it ends?',
     editPrompt: 'Drag any point to adjust. Keep tapping to extend.',
     options: [
-      { id: 'job', label: 'Job', choices: [{ id: 'new', label: 'New' }, { id: 'resurface', label: 'Resurface' }], default: 'new' },
-      { id: 'width', label: 'Width', choices: [{ id: '12', label: '12 ft' }, { id: '16', label: '16 ft' }], default: '12' },
-      { id: 'ditch', label: 'Is there a ditch at the road?', choices: [{ id: 'culvert', label: 'Yes, add a culvert' }, { id: 'no', label: 'No' }, { id: 'unsure', label: 'Not sure' }], default: 'no' },
+      { id: 'job', label: 'Job', question: 'New gravel driveway, or resurface an existing one?', choices: [{ id: 'new', label: 'New driveway' }, { id: 'resurface', label: 'Resurface existing gravel' }], default: 'new' },
+      { id: 'width', label: 'Width', question: 'How wide should it be?', choices: [{ id: '12', label: '12 ft' }, { id: '16', label: '16 ft' }], default: '12' },
+      { id: 'ditch', label: 'Ditch at the road', question: 'Is there a ditch where the driveway meets the road?', choices: [{ id: 'culvert', label: 'Yes, add a culvert' }, { id: 'no', label: 'No' }, { id: 'unsure', label: 'Not sure' }], default: 'no' },
     ],
     unitLabel: 'ft',
     minimum: 3500,
@@ -99,10 +101,11 @@ export const SERVICES = Object.freeze({
   culvert: {
     id: 'culvert', label: 'Culvert', blurb: 'Pipe where the drive crosses a ditch', geometry: 'line', icon: 'culvert',
     prompt: 'Tap one side of the ditch crossing, then the other side.',
+    lengthQuestion: 'How long does the pipe need to be? (Ditch width plus a few feet each side.)',
     editPrompt: 'Drag either end to adjust the pipe length.',
     options: [
-      { id: 'job', label: 'Job', choices: [{ id: 'new', label: 'New' }, { id: 'replace', label: 'Replace' }], default: 'new' },
-      { id: 'pipe', label: 'Pipe size', choices: [{ id: '12', label: '12 in' }, { id: '15', label: '15 in' }, { id: '18', label: '18 in' }], default: '12' },
+      { id: 'job', label: 'Job', question: 'New culvert, or replacing an old pipe?', choices: [{ id: 'new', label: 'New culvert' }, { id: 'replace', label: 'Replace an existing pipe' }], default: 'new' },
+      { id: 'pipe', label: 'Pipe size', question: 'What pipe size? (Most driveways use 12 or 15 inch.)', choices: [{ id: '12', label: '12 in' }, { id: '15', label: '15 in' }, { id: '18', label: '18 in' }], default: '12' },
     ],
     unitLabel: 'ft',
     minimum: 3000,
@@ -115,7 +118,7 @@ export const SERVICES = Object.freeze({
     prompt: 'Tap where the pad goes. Then drag it into place and set the size.',
     editPrompt: 'Drag the pad to move it. Set width and length below.',
     options: [
-      { id: 'size', label: 'Size', choices: [{ id: '12x16', label: 'Shed 12×16' }, { id: '24x24', label: 'Garage 24×24' }, { id: '40x60', label: 'Pole barn 40×60' }, { id: 'custom', label: 'Custom' }], default: '12x16' },
+      { id: 'size', label: 'Size', question: 'What size pad?', choices: [{ id: '12x16', label: 'Shed 12×16' }, { id: '24x24', label: 'Garage 24×24' }, { id: '40x60', label: 'Pole barn 40×60' }, { id: 'custom', label: 'Custom' }], default: '12x16' },
     ],
     unitLabel: 'sq ft',
     minimum: 3500,
