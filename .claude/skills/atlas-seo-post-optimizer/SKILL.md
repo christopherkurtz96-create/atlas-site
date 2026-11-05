@@ -382,7 +382,7 @@ If only minor/low priority issues, can publish and monitor performance
 - **Don't over-optimize**: More than 8 Columbia mentions feels spammy
 
 ### Local Metadata Craft
-- **Titles**: Include location naturally, be compelling (clicks matter for rankings)
+- **Titles**: Include location naturally, be compelling (clicks matter for rankings). Exception: Tier 4 national pillar posts (see atlas-seo "National pillar posts") keep the city out of the title tag and in the H1 only.
 - **Descriptions**: Sell the local value, include phone number or strong CTA
 - **Slugs**: Short, keyword-focused with location, no fluff words
 

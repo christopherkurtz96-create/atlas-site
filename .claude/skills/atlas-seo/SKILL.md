@@ -40,6 +40,8 @@ Rewritten 24 Sep 2026 for the demolition-plus-concrete repositioning. The quarte
 
 **Tier 3, questions (blog):** how much does it cost to demolish a house in Missouri · cost to remove a concrete driveway · cost to tear down a garage · mobile home removal cost · parking lot removal cost · do I need a permit to demolish · what happens to demolition debris · asphalt vs concrete parking lot · how long does demolition take.
 
+**Tier 4, national pillars (no geo in the title tag):** types of demolition · barn demolition cost · foundation removal cost · mobile home demolition cost · grain bin removal · signs a concrete driveway needs replacing · demolition debris weight chart · pre-demolition checklist. These exist to pull links, image-search traffic and AI citations that lift the Tier 1–3 pages. Rules in "National pillar posts" below.
+
 ## Blog clusters
 
 - **Demolition cost and process** (hub `/demolition/`): cost guides, permits, disconnects, asbestos inspections, what to expect, choosing a contractor, winter work, case studies.
@@ -47,6 +49,24 @@ Rewritten 24 Sep 2026 for the demolition-plus-concrete repositioning. The quarte
 - **Site restoration** (`/site-work/`): backfill, grading, pad prep, what's left after a teardown. Framed as the finish, never as a standalone service.
 
 Cadence: two posts a week (Mon demolition, Thu concrete) from the Notion "Quarterly Atlas Blog Post" page, via the `atlas-weekly-blog` task. 1,500–2,000 words. Primary link to the money page in the row's Notes, one sibling link, FAQ with FAQPage schema, byline "By Chris Kurtz, Owner — ATLAS Demolition & Site Work," CTA "Request a Free Consultation" → `/consultation/`. After a post publishes run `python3 tools/site-build/site_pass.py --no-delete`.
+
+## National pillar posts (the LaBonne's play)
+
+Added 4 Nov 2026 after auditing why a 4-store CT grocer's "Types of Apples" post outranks Kroger nationwide: the incumbents were thin, the title tag stacked three query clusters, the page was structured as chart + quick picks + one section per item with its own photo, and `dateModified` was bumped right before peak season. Atlas's 31 posts are technically stronger than that page but every one is geo-locked to a query with a few searches a month. Roughly one post in six should be a Tier 4 pillar. Briefs live in `docs/seo/briefs/`.
+
+**Pick the term.** Before writing, search the head term and look at the top 5. Green light when they are aggregators' city pages, foreign contractors, PDFs, or anything under 1,000 words. Red light when Angi, HomeAdvisor, Bob Vila or Fixr hold the top 3 with a real guide (concrete removal cost, pool removal cost): keep those local only.
+
+**Title tag vs H1.** Title tag is keyword-stacked, ≤60 chars, no city: `[Head term]: [Chart/Cost/Sizes] & [second intent] | ATLAS` (e.g. `Barn Demolition Cost: Price by Barn Type & Process | ATLAS`). H1 reads naturally and keeps Columbia or Mid-Missouri. Meta description leads with the head term; the geo goes at the end.
+
+**Page shape.** Hook (Chris, first person) → Quick Answer → one comparison chart with anchor links to each item → "Quick picks: what are you tearing down?" mapping situations to items → one H3 per item with a one-word label line under it and a "Best for:" chip line → how to choose → local section → FAQ → CTA. Contextual CTAs between sections tied to what that section just said, not the generic box.
+
+**Images.** One real job photo per item (8–11 per pillar), descriptive alt. Never reuse `/images/demolition-service.jpg` as a hero. Image search is part of why these rank.
+
+**Keyword repetition.** Primary phrase at most once per ~250 words. Use variants (teardown, demo, knock down, demolition methods). The newer Atlas posts repeat the exact phrase 5× in the first 400 words; that reads as engineered and the pillars must not.
+
+**Freshness.** Every pillar and every Tier 3 cost post gets a real edit (new photo, updated cost band, added FAQ) plus a `dateModified` and sitemap `lastmod` bump in the last week of February and the last week of August. The 2025 posts still saying "2025 pricing guide" in the subtitle are the first fix.
+
+**Retitle before you rewrite.** An existing geo post that already has the content and a cost table can be retitled to the national term (title tag + metas + `dateModified`) without touching the body. Done 4 Nov 2026 for barn, foundation, mobile home cost and grain bin.
 
 ## GBP operating rules
 
