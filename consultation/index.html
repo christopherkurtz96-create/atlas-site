@@ -506,7 +506,8 @@
         <a href="/estimate/" class="site-action-bar-primary">Get my price</a>
     </nav>
 
-    <script src="/js/main.js?v=20261008a"></script>
+    <script src="/js/atlas-leads.js?v=20261110a"></script>
+    <script src="/js/main.js?v=20261110a"></script>
     <script>
     // Send a copy of the consultation request to the ATLAS lead engine on submit.
     // Native Netlify form submission continues in parallel as the backup.
@@ -522,6 +523,7 @@
             if (typeof value === 'string' && key !== 'form-name') payload[key] = value;
           });
           payload.photoCount = photos && photos.files ? String(photos.files.length) : '0';
+          if (window.atlasLeads) window.atlasLeads.send(payload);
           fetch('https://oihevxbiwggnnwsplkwx.supabase.co/functions/v1/web-intake', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

@@ -391,7 +391,8 @@
         <a href="/estimate/" class="site-action-bar-primary">Get my price</a>
     </nav>
 
-    <script src="/js/main.js?v=20261008a"></script>
+    <script src="/js/atlas-leads.js?v=20261110a"></script>
+    <script src="/js/main.js?v=20261110a"></script>
     <script>
     (function() {
       const params = new URLSearchParams(window.location.search);
@@ -427,6 +428,7 @@
             referrer: document.referrer || '',
             timestamp: new Date().toISOString()
           };
+          if (window.atlasLeads) window.atlasLeads.send(payload);
           fetch('https://oihevxbiwggnnwsplkwx.supabase.co/functions/v1/web-intake', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

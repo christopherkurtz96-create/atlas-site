@@ -1,3 +1,13 @@
+// ATLAS Leads hookup: first-touch ad tracking on every page, and a copy of
+// each form submission to the leads app. See /js/atlas-leads.js.
+(function () {
+    if (window.atlasLeads || document.querySelector('script[src^="/js/atlas-leads.js"]')) return;
+    var s = document.createElement('script');
+    s.src = '/js/atlas-leads.js?v=20261110a';
+    s.async = true;
+    document.head.appendChild(s);
+})();
+
 // ATLAS Demolition & Site Work - Main JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {

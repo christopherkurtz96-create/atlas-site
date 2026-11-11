@@ -28,6 +28,8 @@ const isProduction = () => DELIVERY.productionHosts.includes(location.hostname) 
 // Netlify Forms AJAX submit (production only). Returns { sent, status, error }.
 async function deliver(formName, fields) {
   if (!isProduction()) return { sent: false, status: STATUS.notSent, mode: 'local-only (not the production host)' };
+  // Copy to the ATLAS Leads app (never blocks the form; Netlify Forms is still the record).
+  try { if (window.atlasLeads) window.atlasLeads.send({ form_name: formName === DELIVERY.forms.lead ? 'estimate_tool' : 'estimate_consultation', name: fields.name, phone: fields.phone, email: fields.email, address: fields.address, service: fields.service || fields.what, message: fields.notes, est_low: fields.price_low, est_high: fields.price_high, timeline: fields.timing, contact_pref: fields.contact, property: fields.property }); } catch (e) {}
   const body = new URLSearchParams({ 'form-name': formName, ...Object.fromEntries(Object.entries(fields).filter(([, v]) => v !== null && v !== undefined).map(([k, v]) => [k, typeof v === 'string' ? v : JSON.stringify(v)])) });
   try {
     const r = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() });
