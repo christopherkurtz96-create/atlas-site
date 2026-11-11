@@ -274,7 +274,7 @@ def page(*, path, title, meta, h1, subtitle, crumbs, body, faqs=(), sidebar=None
 {header()}
 {main}
 {footer()}
-    <script src="/js/main.js?v=20261008a"></script>
+    <script src="/js/main.js?v=20261110a"></script>
 </body>
 </html>
 '''
