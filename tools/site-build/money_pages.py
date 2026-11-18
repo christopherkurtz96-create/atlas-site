@@ -74,7 +74,7 @@ concrete_removal = dict(
 
                     <div class="callout">
                         <h3>Request a free consultation</h3>
-                        <p>Square footage, thickness if you know it, and two photos. That's enough for us to schedule a look and send a fixed price. <a href="/consultation/">Request a free consultation</a> or call <a href="tel:5732346641">(573) 234-6641</a>.</p>
+                        <p>Square footage, thickness if you know it, and two photos. That's enough for us to schedule a look and send a fixed price. <a href="/estimate/">Get my price</a> or call <a href="tel:5732346641">(573) 234-6641</a>.</p>
                     </div>
 
                     <h2>Where we work</h2>
@@ -181,7 +181,7 @@ parking_lot = dict(
 
                     <div class="callout">
                         <h3>Request a Free Consultation</h3>
-                        <p>Address, approximate number of spaces, and whether it's asphalt or concrete. We'll schedule a walk and send a phased, fixed-price proposal. <a href="/consultation/">Request a free consultation</a> or call <a href="tel:5732346641">(573) 234-6641</a>.</p>
+                        <p>Address, approximate number of spaces, and whether it's asphalt or concrete. We'll schedule a walk and send a phased, fixed-price proposal. <a href="/estimate/">Get my price</a> or call <a href="tel:5732346641">(573) 234-6641</a>.</p>
                     </div>
 
                     <h2>Where we work</h2>

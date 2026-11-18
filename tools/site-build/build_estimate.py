@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 """Stamp the estimator's runtime files from .private-tools/instant-estimator-v2 into /estimate/ for deploy.
 Only the runtime allowlist is copied (no tests, no server scripts, no READMEs).
-Usage: python3 tools/site-build/build_estimate.py   (run from anywhere; paths are relative to the repo root)"""
-import os, shutil, hashlib, json
+Usage: python3 tools/site-build/build_estimate.py --force   (run from anywhere; paths are relative to the repo root)
+
+Since Nov 2026 the files in /estimate/ are edited in git (the one-question-at-a-time flow, address suggestions,
+the contact form) and are NEWER than the private source. Stamping from the private source would overwrite that
+work, so this script refuses to run without --force. Copy /estimate/ back into the private source first."""
+import os, shutil, hashlib, json, sys
+if "--force" not in sys.argv:
+    raise SystemExit("refusing to overwrite /estimate/: it is newer than the private source. Read the note at the top of this script, then rerun with --force.")
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SRC = os.path.join(ROOT, ".private-tools", "instant-estimator-v2")
 OUT = os.path.join(ROOT, "estimate")

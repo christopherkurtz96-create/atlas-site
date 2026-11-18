@@ -53,7 +53,7 @@ def header():
                         {PHONE_SVG}
                         {PHONE}
                     </a>
-                    <a href="/consultation/" class="btn btn-primary btn-sm">Free Consultation</a>
+                    <a href="/estimate/" class="btn btn-primary btn-sm">Get my price</a>
                 </div>
 
                 <div class="mobile-toggle" id="mobile-toggle">
@@ -72,7 +72,7 @@ def header():
         <a href="/concrete/">Site Work: Concrete & Paving</a>
         <a href="/service-areas">Service Areas</a>
         <a href="/about">About</a>
-        <a href="/consultation/">Request a Free Consultation</a>
+        <a href="/estimate/">Get my price</a>
         <a href="/contact">Contact</a>
         <a href="{PHONE_TEL}" class="btn btn-primary">Call {PHONE}</a>
     </nav>
@@ -225,7 +225,7 @@ def page(*, path, title, meta, h1, subtitle, crumbs, body, faqs=(), sidebar=None
             <h2>{cta_h2}</h2>
             <p>{cta_p}</p>
             <div class="hero-btns" style="justify-content:center">
-                <a href="/consultation/" class="btn btn-primary btn-lg">Request a Free Consultation</a>
+                <a href="/estimate/" class="btn btn-primary btn-lg">Get my price</a>
                 <a href="{PHONE_TEL}" class="btn btn-outline btn-lg">Call {PHONE}</a>
             </div>
         </div>
@@ -298,7 +298,7 @@ def default_sidebar(path):
                     <div class="sidebar-card sidebar-cta">
                         <h4>Free On-Site Consultation</h4>
                         <p>We walk the site with you, then put a fixed price in writing.</p>
-                        <a href="/consultation/" class="btn btn-primary">Request a Free Consultation</a>
+                        <a href="/estimate/" class="btn btn-primary">Get my price</a>
                         <a href="{PHONE_TEL}" class="btn btn-outline-orange" style="margin-top:10px">{PHONE}</a>
                     </div>
                 </div>'''

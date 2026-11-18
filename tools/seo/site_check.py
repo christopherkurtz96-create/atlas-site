@@ -53,7 +53,7 @@ def main():
         if dt > 1.5: issues.append(("LOW", p, f"slow, {int(dt*1000)} ms"))
     checks = []
     for u, want in [("https://www.deployatlas.com/", "redirect to apex"), ("http://deployatlas.com/", "redirect to https"),
-                    (f"{SITE}/services/demolition.html", "301 to /demolition/"), (f"{SITE}/instant-bid", "301 to /consultation/"),
+                    (f"{SITE}/services/demolition.html", "301 to /demolition/"), (f"{SITE}/instant-bid", "301 to /estimate/"),
                     (f"{SITE}/this-page-does-not-exist-xyz", "404"), (f"{SITE}/robots.txt", "200"), (f"{SITE}/llms.txt", "200")]:
         st, _, _, final = get(u)
         ok = (st == 404) if want == "404" else (st == 200 and (final.startswith(SITE) if "redirect" in want or "301" in want else True))
