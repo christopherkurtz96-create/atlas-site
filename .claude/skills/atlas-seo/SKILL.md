@@ -22,7 +22,7 @@ Rewritten 24 Sep 2026 for the demolition-plus-concrete repositioning. The quarte
 
 ## URL tree
 
-`/demolition/` (+ `/structural/`, `/mobile-home-removal/`, `/interior-selective/`, `/asbestos-abatement/`) · `/concrete/` (+ `/concrete-removal/`, `/parking-lot-removal/`, `/driveway-replacement/`) · `/site-work/` · `/consultation/` · `/services` · `/service-areas` · `/about` · `/contact` · `/locations/<town>-mo` · `/blog/<slug>` (file stays `blog/<slug>.html`). Old `/services/*.html` and land clearing URLs are 301'd; never link to them.
+`/demolition/` (+ `/structural/`, `/mobile-home-removal/`, `/interior-selective/`, `/asbestos-abatement/`) · `/concrete/` (+ `/concrete-removal/`, `/parking-lot-removal/`, `/driveway-replacement/`) · `/site-work/` · `/estimate/` · `/services` · `/service-areas` · `/about` · `/contact` · `/locations/<town>-mo` · `/blog/<slug>` (file stays `blog/<slug>.html`). Old `/services/*.html` and land clearing URLs are 301'd; never link to them.
 
 ## Keyword strategy
 
@@ -48,7 +48,7 @@ Rewritten 24 Sep 2026 for the demolition-plus-concrete repositioning. The quarte
 - **Concrete and parking lots** (hub `/concrete/`): removal cost, replacement cost, asphalt vs concrete, phasing, base failure, recycling, church/school/commercial lots, driveway base.
 - **Site restoration** (`/site-work/`): backfill, grading, pad prep, what's left after a teardown. Framed as the finish, never as a standalone service.
 
-Cadence: two posts a week (Mon demolition, Thu concrete) from the Notion "Quarterly Atlas Blog Post" page, via the `atlas-weekly-blog` task. 1,500–2,000 words. Primary link to the money page in the row's Notes, one sibling link, FAQ with FAQPage schema, byline "By Chris Kurtz, Owner — ATLAS Demolition & Site Work," CTA "Request a Free Consultation" → `/consultation/`. After a post publishes run `python3 tools/site-build/site_pass.py --no-delete`.
+Cadence: two posts a week (Mon demolition, Thu concrete) from the Notion "Quarterly Atlas Blog Post" page, via the `atlas-weekly-blog` task. 1,500–2,000 words. Primary link to the money page in the row's Notes, one sibling link, FAQ with FAQPage schema, byline "By Chris Kurtz, Owner — ATLAS Demolition & Site Work," CTA "Request a Free Consultation" → `/estimate/`. After a post publishes run `python3 tools/site-build/site_pass.py --no-delete`.
 
 ## National pillar posts (the LaBonne's play)
 

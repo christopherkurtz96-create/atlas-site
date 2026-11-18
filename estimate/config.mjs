@@ -29,7 +29,7 @@ export const DELIVERY = Object.freeze({
   productionHosts: ['deployatlas.com', 'www.deployatlas.com'],
   previewHostSuffix: '.netlify.app',
   notifyEmail: 'chris@deployatlas.com', // configured in Netlify → Forms → Notifications (not used by the code)
-  forms: { lead: 'site-visit-request', demo: 'demolition-consultation' },
+  forms: { lead: 'site-visit-request', contact: 'contact' }, // Get my price (both paths) + general contact
 });
 
 export const STATUS = Object.freeze({
@@ -40,12 +40,8 @@ export const STATUS = Object.freeze({
   sendFailed: 'Could not send. Call or text (573) 234-6641 and we will take it from there.',
 });
 
-// Public demonstration address (government building, non-sensitive).
-export const DEMO_ADDRESS = Object.freeze({
-  label: 'Boone County Courthouse, 705 E Walnut St, Columbia, MO 65201 (public demo address)',
-  query: '705 E Walnut St, Columbia, MO 65201',
-  lon: -92.3277, lat: 38.9512, zoom: 19,
-});
+// Region used to bias address suggestions and as the fallback map centre (downtown Columbia).
+export const REGION = Object.freeze({ lon: -92.3341, lat: 38.9517, addressZoom: 19, area: [-93.05, 38.3, -91.6, 39.6] }); // area: west, south, east, north (about an hour around Columbia)
 
 export const MAP = Object.freeze({
   minZoom: 12, maxZoom: 20, defaultZoom: 18.5,
@@ -73,11 +69,12 @@ export const SERVICES = Object.freeze({
     prompt: 'Tap where the water sits, then follow the path it should take downhill to daylight.',
     editPrompt: 'Drag any point to adjust. Keep tapping to extend the run.',
     options: [
-      { id: 'type', label: 'Drain type', choices: [{ id: 'daylight', label: 'Daylight line' }, { id: 'french', label: 'French drain' }], default: 'daylight' },
-      { id: 'basins', label: 'Catch basins', choices: [{ id: '0', label: 'None' }, { id: '1', label: '1' }, { id: '2', label: '2' }], default: '0' },
-      { id: 'crossing', label: 'Does the line cross a driveway?', choices: [{ id: 'none', label: 'No' }, { id: 'gravel', label: 'Yes, gravel drive' }, { id: 'concrete', label: 'Yes, concrete' }], default: 'none' },
+      { id: 'type', label: 'Drain type', ask: 'What kind of drain do you need?', choices: [{ id: 'daylight', label: 'Daylight line', hint: 'Solid pipe from a downspout or low spot to an open outlet' }, { id: 'french', label: 'French drain', hint: 'Perforated pipe in a gravel trench that picks up water along the run' }], default: 'daylight' },
+      { id: 'basins', label: 'Catch basins', ask: 'How many catch basins?', help: 'A catch basin is a grated box that takes in surface water.', choices: [{ id: '0', label: 'None' }, { id: '1', label: '1' }, { id: '2', label: '2' }], default: '0' },
+      { id: 'crossing', label: 'Does the line cross a driveway?', ask: 'Does the line cross a driveway?', choices: [{ id: 'none', label: 'No' }, { id: 'gravel', label: 'Yes, gravel drive' }, { id: 'concrete', label: 'Yes, concrete' }], default: 'none' },
     ],
     unitLabel: 'ft',
+    lengthAsk: 'About how long is the run?', lengthPresets: [50, 80, 130, 200],
     minimum: 3000,
     included: ['Trench dug along the drawn path', 'Perforated or solid pipe as drawn', 'Gravel bedding and backfill', 'Outlet to daylight with a pop-up or grate', 'Trench rough-graded and seeded (sod is extra)'],
     excluded: ['Rock excavation', 'Utility relocation', 'Sod or landscape restoration', 'Permits (passed through at cost)'],
@@ -87,11 +84,12 @@ export const SERVICES = Object.freeze({
     prompt: 'Tap the edge of the road where the driveway starts, then follow the path to where it ends.',
     editPrompt: 'Drag any point to adjust. Keep tapping to extend.',
     options: [
-      { id: 'job', label: 'Job', choices: [{ id: 'new', label: 'New' }, { id: 'resurface', label: 'Resurface' }], default: 'new' },
-      { id: 'width', label: 'Width', choices: [{ id: '12', label: '12 ft' }, { id: '16', label: '16 ft' }], default: '12' },
-      { id: 'ditch', label: 'Is there a ditch at the road?', choices: [{ id: 'culvert', label: 'Yes, add a culvert' }, { id: 'no', label: 'No' }, { id: 'unsure', label: 'Not sure' }], default: 'no' },
+      { id: 'job', label: 'Job', ask: 'New driveway or a resurface?', choices: [{ id: 'new', label: 'New', hint: 'No driveway there now' }, { id: 'resurface', label: 'Resurface', hint: 'Fresh stone over an existing gravel drive' }], default: 'new' },
+      { id: 'width', label: 'Width', ask: 'How wide?', choices: [{ id: '12', label: '12 ft', hint: 'One vehicle' }, { id: '16', label: '16 ft', hint: 'Room to pass or park' }], default: '12' },
+      { id: 'ditch', label: 'Is there a ditch at the road?', ask: 'Is there a ditch at the road?', choices: [{ id: 'culvert', label: 'Yes, add a culvert' }, { id: 'no', label: 'No' }, { id: 'unsure', label: 'Not sure' }], default: 'no' },
     ],
     unitLabel: 'ft',
+    lengthAsk: 'About how long is the driveway?', lengthPresets: [100, 150, 300, 500],
     minimum: 3500,
     included: ['Topsoil stripped along the path', 'Woven stabilization fabric (new only)', 'Compacted base stone', 'Top stone compacted into a driving surface', 'Crowned so water sheds both ways', 'Stone delivery included'],
     excluded: ['Tree or stump removal', 'Paving or concrete', 'Permits (passed through at cost)'],
@@ -101,10 +99,11 @@ export const SERVICES = Object.freeze({
     prompt: 'Tap one side of the ditch crossing, then the other side.',
     editPrompt: 'Drag either end to adjust the pipe length.',
     options: [
-      { id: 'job', label: 'Job', choices: [{ id: 'new', label: 'New' }, { id: 'replace', label: 'Replace' }], default: 'new' },
-      { id: 'pipe', label: 'Pipe size', choices: [{ id: '12', label: '12 in' }, { id: '15', label: '15 in' }, { id: '18', label: '18 in' }], default: '12' },
+      { id: 'job', label: 'Job', ask: 'New culvert or replacing one?', choices: [{ id: 'new', label: 'New', hint: 'No pipe there now' }, { id: 'replace', label: 'Replace', hint: 'Old pipe comes out and gets hauled off' }], default: 'new' },
+      { id: 'pipe', label: 'Pipe size', ask: 'What size pipe?', help: 'Not sure? Pick 12 in. We confirm the size on site.', choices: [{ id: '12', label: '12 in' }, { id: '15', label: '15 in' }, { id: '18', label: '18 in' }], default: '12' },
     ],
     unitLabel: 'ft',
+    lengthAsk: 'How long is the crossing?', lengthPresets: [20, 24, 30, 40],
     minimum: 3000,
     maxLengthFt: 40,
     included: ['Old pipe removed (replace)', 'Pipe set to grade', 'Bedding and compacted backfill', 'Stone over the crossing'],
@@ -115,7 +114,7 @@ export const SERVICES = Object.freeze({
     prompt: 'Tap where the pad goes. Then drag it into place and set the size.',
     editPrompt: 'Drag the pad to move it. Set width and length below.',
     options: [
-      { id: 'size', label: 'Size', choices: [{ id: '12x16', label: 'Shed 12×16' }, { id: '24x24', label: 'Garage 24×24' }, { id: '40x60', label: 'Pole barn 40×60' }, { id: 'custom', label: 'Custom' }], default: '12x16' },
+      { id: 'size', label: 'Size', ask: 'How big is the pad?', choices: [{ id: '12x16', label: 'Shed 12×16' }, { id: '24x24', label: 'Garage 24×24' }, { id: '40x60', label: 'Pole barn 40×60' }, { id: 'custom', label: 'Custom' }], default: '12x16' },
     ],
     unitLabel: 'sq ft',
     minimum: 3500,
@@ -164,4 +163,32 @@ export const TYPICAL_SCENARIOS = Object.freeze([
 export const LEAD_FORM = Object.freeze({
   timing: [{ id: 'asap', label: 'As soon as possible' }, { id: 'month', label: 'This month' }, { id: 'flexible', label: 'I am flexible' }],
   contact: [{ id: 'call', label: 'Call' }, { id: 'text', label: 'Text' }, { id: 'email', label: 'Email' }],
+});
+
+// ---- Demolition questions (asked one at a time). No online rate for demolition: the answers go with the
+// request and the fixed price comes in writing after a free site visit. `what` ids match the old dropdown. ----
+const NOT_SURE = { id: 'not_sure', label: 'Not sure' };
+export const DEMO_FLOW = Object.freeze({
+  what: [
+    { id: 'house', label: 'House', blurb: 'Whole house teardown' },
+    { id: 'mobile_home', label: 'Mobile home', blurb: 'Single or double wide' },
+    { id: 'garage_barn_shed', label: 'Garage, barn or shed', blurb: 'Outbuildings of any size' },
+    { id: 'deck', label: 'Deck', blurb: 'Tear off and haul away' },
+    { id: 'concrete', label: 'Concrete or asphalt', blurb: 'Driveway, slab, foundation or parking lot' },
+    { id: 'interior', label: 'Interior demo', blurb: 'Selective tear-out inside a building' },
+    { id: 'other', label: 'Something else', blurb: 'Tell us in a sentence' },
+  ],
+  size: {
+    house: { ask: 'About how big is the house?', choices: [{ id: 'under_1000', label: 'Under 1,000 sq ft' }, { id: '1000_2000', label: '1,000 to 2,000 sq ft' }, { id: '2000_3000', label: '2,000 to 3,000 sq ft' }, { id: 'over_3000', label: 'Over 3,000 sq ft' }, NOT_SURE] },
+    mobile_home: { ask: 'Single wide or double wide?', choices: [{ id: 'single', label: 'Single wide' }, { id: 'double', label: 'Double wide' }, NOT_SURE] },
+    garage_barn_shed: { ask: 'About how big is it?', choices: [{ id: 'small', label: 'Shed or 1-car garage' }, { id: 'medium', label: '2-car garage' }, { id: 'large', label: 'Barn or large shop' }, NOT_SURE] },
+    deck: { ask: 'About how big is the deck?', choices: [{ id: 'under_200', label: 'Under 200 sq ft' }, { id: '200_400', label: '200 to 400 sq ft' }, { id: 'over_400', label: 'Over 400 sq ft' }, NOT_SURE] },
+    concrete: { ask: 'What is coming out?', choices: [{ id: 'driveway', label: 'Driveway' }, { id: 'slab', label: 'Slab or patio' }, { id: 'foundation', label: 'Foundation' }, { id: 'parking_lot', label: 'Parking lot' }] },
+    interior: { ask: 'How much is coming out?', choices: [{ id: 'one_room', label: 'One room' }, { id: 'several_rooms', label: 'Several rooms' }, { id: 'whole', label: 'A whole floor or building' }, NOT_SURE] },
+  },
+  after: {
+    default: { ask: 'What do you want left when we are done?', choices: [{ id: 'graded', label: 'Backfilled and graded' }, { id: 'pad', label: 'A pad ready to build on' }, { id: 'haul_only', label: 'Just torn out and hauled off' }, { id: 'not_sure', label: 'Not sure yet' }] },
+    concrete: { ask: 'Remove only, or remove and replace?', choices: [{ id: 'remove_only', label: 'Remove and haul off only' }, { id: 'replace_concrete', label: 'Remove and pour new concrete' }, { id: 'replace_asphalt', label: 'Remove and repave in asphalt' }, { id: 'not_sure', label: 'Not sure yet' }] },
+    interior: { ask: 'How should we leave it?', choices: [{ id: 'studs', label: 'Stripped to the studs' }, { id: 'broom_clean', label: 'Broom clean for the next trade' }, { id: 'not_sure', label: 'Not sure yet' }] },
+  },
 });

@@ -53,7 +53,7 @@ hero = '''    <section class="hero">
                 <h1>Professional <span>Demolition</span> &amp; <span>Site Work</span> Services</h1>
                 <p class="hero-subtitle">Houses, mobile homes, garages, barns and commercial buildings down. Driveways and parking lots out and poured new. Free consultation, fixed price in writing. Columbia, MO.</p>
                 <div class="hero-btns">
-                    <a href="/consultation/" class="btn btn-primary btn-lg">Free Consultation</a>
+                    <a href="/estimate/" class="btn btn-primary btn-lg">Get my price</a>
                     <a href="tel:5732346641" class="btn btn-outline btn-lg">Call (573) 234-6641</a>
                 </div>
                 <div class="hero-stats">
@@ -164,7 +164,7 @@ cta = f'''    <section class="cta-section">
         <div class="container">
             <h2>Get a Number on It</h2>
             <p>Tell us what's coming out and what you want left behind. We walk the site and send a fixed price in writing.</p>
-            <a href="/consultation/" class="btn btn-outline btn-lg">Request a Free Consultation</a>
+            <a href="/estimate/" class="btn btn-outline btn-lg">Get my price</a>
             <div class="cta-phone">
                 {T.PHONE_SVG}
                 <a href="{T.PHONE_TEL}">{T.PHONE}</a>
@@ -211,100 +211,6 @@ home_html = re.sub(r'    <script type="application/ld\+json">\n\{\n    "@context
 open(f"{REPO}/index.html","w").write(home_html)
 print("index.html", len(home_html), "divs", home_html.count("<div"), home_html.count("</div>"))
 
-# ---------- instant bid: scoped intake form ----------
-bid_body = f'''    <section class="page-header">
-        <div class="container">
-            <div class="breadcrumb">
-                <a href="/">Home</a><span>/</span>
-                <span class="current">Free Consultation</span>
-            </div>
-            <h1>Free On-Site Consultation</h1>
-            <p>Four quick fields. We call you, walk the site with you, tell you what we'd do, and put a fixed price in writing.</p>
-        </div>
-    </section>
 
-    <section class="service-detail-section">
-        <div class="container">
-            <div class="service-detail-grid">
-                <div class="service-detail-content">
-                    <div class="callout" style="margin-top:0">
-                        <h3>Rather talk?</h3>
-                        <p><a href="tel:5732346641" class="btn btn-primary">Call (573) 234-6641</a></p>
-                    </div>
-                    <form id="bid-lead-form" name="instant-bid" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" class="bid-intake">
-                        <input type="hidden" name="form-name" value="instant-bid">
-                        <p class="hidden-field" hidden><label>Don't fill this out: <input name="bot-field"></label></p>
-                        <input type="hidden" name="source" value="instant-bid">
-                        <input type="hidden" name="utmSource" id="bid-h-utm-source">
-                        <input type="hidden" name="utmMedium" id="bid-h-utm-medium">
-                        <input type="hidden" name="utmCampaign" id="bid-h-utm-campaign">
-                        <input type="hidden" name="utmContent" id="bid-h-utm-content">
-
-                        <div class="form-group">
-                            <label for="bid-first-name">Name</label>
-                            <input type="text" id="bid-first-name" name="firstName" class="bid-input" required autocomplete="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="bid-phone">Phone</label>
-                            <input type="tel" id="bid-phone" name="phone" class="bid-input" required autocomplete="tel" inputmode="tel">
-                        </div>
-                        <div class="form-group">
-                            <label for="bid-address">Town the project is in</label>
-                            <input type="text" id="bid-address" name="propertyAddress" class="bid-input" required autocomplete="off" placeholder="e.g. Columbia, MO">
-                        </div>
-                        <div class="form-group">
-                            <label for="bid-details">Tell us a bit about the project</label>
-                            <textarea id="bid-details" name="details" class="bid-input" rows="4" required placeholder="What's coming out, roughly how big, and what you want left when we're done."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label class="consent">
-                                <input type="checkbox" name="smsConsent" value="yes" required>
-                                <span>I agree that ATLAS Demolition &amp; Site Work may contact me about my project by phone call and text message at the number I provided, including calls and texts placed with automated technology or an artificial or prerecorded voice. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of any purchase. Prefer not to agree? Call us at <a href="tel:5732346641">(573) 234-6641</a>. See our <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms" target="_blank" rel="noopener">Terms</a>. <span aria-hidden="true">*</span></span>
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Request a Free Consultation</button>
-                        <p class="bid-disclaimer" style="margin-top:14px">No obligation. We'll call to set up the site visit, then send a fixed price in writing. Disposal is billed at actual tonnage.</p>
-                    </form>
-                </div>
-
-                <div class="service-sidebar">
-                    <div class="sidebar-card">
-                        <h4>What happens next</h4>
-                        <ul class="sidebar-services">
-                            <li><span style="display:block;padding:8px 0">1. We call you to set up the visit.</span></li>
-                            <li><span style="display:block;padding:8px 0">2. Site visit. We measure, check access and the base or foundation.</span></li>
-                            <li><span style="display:block;padding:8px 0">3. Fixed price in writing, with the put-back option if you want it.</span></li>
-                        </ul>
-                    </div>
-                    <div class="sidebar-card">
-                        <h4>Rather talk?</h4>
-                        <a href="{T.PHONE_TEL}" class="btn btn-primary" style="width:100%">Call {T.PHONE}</a>
-                    </div>
-                    <div class="sidebar-card">
-                        <h4>Typical ranges</h4>
-                        <ul class="sidebar-services">
-                            <li><a href="/demolition/structural/">House teardown $8,000 to $30,000</a></li>
-                            <li><a href="/demolition/mobile-home-removal/">Mobile home $4,000 to $10,000</a></li>
-                            <li><a href="/concrete/driveway-replacement/">Driveway replaced $7,000 to $14,000</a></li>
-                            <li><a href="/concrete/parking-lot-removal/">Parking lot replaced $60,000+</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-'''
-bid_html = T.page(
-    path="/consultation/", layout="custom",
-    title="Free Consultation | ATLAS Demolition, Columbia MO",
-    meta="Free on-site consultation for demolition, concrete and parking lot work in Columbia and Mid-Missouri. We walk the site, then put a fixed price in writing.",
-    keywords="demolition estimate Columbia MO, demolition bid, concrete removal quote, parking lot replacement quote, get a demolition quote Missouri",
-    h1="", subtitle="", crumbs=[["/","Home"],["/consultation/","Free Consultation"]], body=bid_body, faqs=[],
-    og_image="/images/house-demolition-teardown-excavator.jpg",
-    extra_head='    <script>document.addEventListener("DOMContentLoaded",function(){var p=new URLSearchParams(location.search);[["utm_source","bid-h-utm-source"],["utm_medium","bid-h-utm-medium"],["utm_campaign","bid-h-utm-campaign"],["utm_content","bid-h-utm-content"]].forEach(function(x){var e=document.getElementById(x[1]);if(e&&p.get(x[0]))e.value=p.get(x[0]);});});</script>',
-)
-os.makedirs(f"{REPO}/consultation", exist_ok=True)
-LEAD_ENGINE_SCRIPT = '    <script>\n    // Send a copy of the consultation request to the ATLAS lead engine on submit.\n    // Native Netlify form submission continues in parallel as the backup.\n    (function() {\n      var form = document.getElementById(\'bid-lead-form\');\n      if (!form) return;\n      form.addEventListener(\'submit\', function() {\n        try {\n          var fd = new FormData(form);\n          var photos = form.querySelector(\'input[type="file"]\');\n          var payload = { form: \'instant-bid\', page: window.location.pathname, referrer: document.referrer || \'\', timestamp: new Date().toISOString() };\n          fd.forEach(function(value, key) {\n            if (typeof value === \'string\' && key !== \'form-name\') payload[key] = value;\n          });\n          payload.photoCount = photos && photos.files ? String(photos.files.length) : \'0\';\n          fetch(\'https://oihevxbiwggnnwsplkwx.supabase.co/functions/v1/web-intake\', {\n            method: \'POST\',\n            headers: { \'Content-Type\': \'application/json\' },\n            body: JSON.stringify(payload),\n            keepalive: true\n          }).catch(function() {});\n        } catch (e) {}\n      });\n    })();\n    </script>\n'
-bid_html = bid_html.replace("</body>", LEAD_ENGINE_SCRIPT + "</body>", 1)
-open(f"{REPO}/consultation/index.html","w").write(bid_html)
-print("consultation/index.html", len(bid_html), "divs", bid_html.count("<div"), bid_html.count("</div>"))
+# The /consultation/ page was retired in Nov 2026. Every lead CTA now points at /estimate/ (Get my price),
+# and /consultation/ 301s there (see netlify.toml), so this script only builds the home page.

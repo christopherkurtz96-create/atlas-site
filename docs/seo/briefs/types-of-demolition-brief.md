@@ -59,7 +59,7 @@ Informational, early-stage. Searcher is a property owner, investor, or GC trying
    - What is selective demolition?
    - How do I know which type of demolition I need?
    - What is the cheapest type of demolition?
-10. **Need Demolition Done?** soft pitch + CTA to `/consultation/` (primary) and `tel:5732346641`.
+10. **Need Demolition Done?** soft pitch + CTA to `/estimate/` (primary) and `tel:5732346641`.
 
 **Contextual mid-article CTAs** (2, not the generic box): after the Selective section ("Keeping part of the structure? That's the walkthrough call, and it's free"), and after Concrete demolition ("Driveway or lot coming out? See `/concrete/concrete-removal/`").
 
@@ -70,7 +70,7 @@ Informational, early-stage. Searcher is a property owner, investor, or GC trying
 ## Internal link map
 
 - Service pages: `/demolition/`, `/demolition/structural/`, `/demolition/interior-selective/`, `/demolition/mobile-home-removal/`, `/concrete/concrete-removal/`
-- Conversion: `/consultation/`
+- Conversion: `/estimate/`
 - Blog (related reading): `partial-demolition-columbia-mo`, `interior-demolition-mid-missouri`, `demolition-cost-columbia-missouri`, `house-demolition-cost-columbia-mo`, `pool-removal-columbia-mo`, `demolition-debris-disposal-columbia-mo`, `asbestos-inspection-before-demolition-missouri`
 - Max 6 in-body links; put the rest in a "Related reading" list.
 
