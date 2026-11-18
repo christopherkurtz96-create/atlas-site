@@ -578,19 +578,31 @@ function renderEstimator() {
       <footer class="est-foot small"><span>${esc(MAP.attribution)} ${esc(MAP.imageryNote)}</span><button type="button" class="link" data-testid="toggle-mode">Back to the questions</button></footer>
     </aside>
     <div class="est-map" data-testid="est-map"><div class="amap-root" id="map-root"></div>
-      <div class="view-toggle" role="radiogroup" aria-label="Map view"><button type="button" role="radio" aria-checked="false" data-view="3d" data-testid="view-3d">3D</button><button type="button" role="radio" aria-checked="true" class="on" data-view="top" data-testid="view-top">Top</button></div></div>
+      <div class="view-toggle" role="radiogroup" aria-label="Map view"><button type="button" role="radio" aria-checked="false" data-view="3d" data-testid="view-3d">3D</button><button type="button" role="radio" aria-checked="true" class="on" data-view="top" data-testid="view-top">Top</button></div>
+      <div class="draw-tools" data-testid="draw-tools" hidden><button type="button" data-testid="map-undo">Undo last tap</button><button type="button" data-testid="map-clear">Clear drawing</button></div></div>
   </div>`;
   $('[data-testid=est-close]').addEventListener('click', closeEstimator);
   $('[data-testid=toggle-mode]').addEventListener('click', closeEstimator);
   st.geometry = null; st.ground = { status: 'idle' };
   st.map = createMap($('#map-root'), {
     center: { lon: st.geocode.lon, lat: st.geocode.lat }, zoom: REGION.addressZoom,
-    onChange: (g) => { st.geometry = g; st.groundRev++; st.ground = { status: 'idle' }; renderBody(); if (g) scheduleGround(); },
+    onChange: (g) => { st.geometry = g; st.groundRev++; st.ground = { status: 'idle' }; syncDrawTools(); renderBody(); if (g) scheduleGround(); },
   });
+  // Tapped the wrong spot? These sit on the map itself, so they are in reach while drawing on a phone.
+  $('[data-testid=map-undo]').addEventListener('click', () => st.map && st.map.undo());
+  $('[data-testid=map-clear]').addEventListener('click', () => st.map && st.map.clear());
   st.map.load();
   if (st.service) armFor(st.service);
   $$('.view-toggle button').forEach((b) => b.addEventListener('click', () => { st.map.set3D(b.dataset.view === '3d'); $$('.view-toggle button').forEach((x) => { x.classList.toggle('on', x === b); x.setAttribute('aria-checked', x === b); }); }));
   renderBody();
+}
+
+function syncDrawTools() {
+  const tools = $('[data-testid=draw-tools]'); if (!tools) return;
+  const g = st.geometry;
+  tools.hidden = !g;
+  $('[data-testid=map-undo]', tools).hidden = !(g && g.kind === 'line');     // a pad is one tap: Clear is the undo
+  $('[data-testid=map-clear]', tools).textContent = g && g.kind === 'rect' ? 'Remove pad' : 'Clear drawing';
 }
 
 function armFor(id) {
