@@ -54,11 +54,41 @@ async function fetchJson(url, ms = 35000) {
 // ---------------- address: suggestions while typing + lookup ----------------
 const cleanAddress = (s) => String(s || '').replace(/[^A-Za-z0-9 ,.#'\-/]/g, ' ').replace(/\s+/g, ' ').trim();
 const hasCoords = () => Boolean(st.geocode && Number.isFinite(st.geocode.lon) && Number.isFinite(st.geocode.lat));
-// The Census lookup needs a state or ZIP. Everyone we serve is in Missouri, so add it when it is missing.
-const withState = (s) => (/\b(MO|Missouri)\b/i.test(s) || /\d{5}(-\d{4})?\s*$/.test(s) ? s : `${s}, MO`);
+// The Census lookup needs a town plus state, or a ZIP. Everyone we serve is in Missouri, so add the state when it
+// is missing, and when no town was typed either, try Columbia, where most of our jobs are.
+const TOWN_AT_END = /\b(columbia|ashland|hallsville|centralia|sturgeon|harrisburg|rocheport|hartsburg|fulton|jefferson city|holts summit|new bloomfield|auxvasse|kingdom city|millersburg|boonville|new franklin|fayette|glasgow|mexico|moberly|california|tipton)\s*$/i;
+function censusCandidates(text) {
+  const t = cleanAddress(text); if (!t) return [];
+  if (/\d{5}(-\d{4})?\s*$/.test(t) || /\b(MO|Missouri)\b/i.test(t)) return [t];
+  return t.includes(',') || TOWN_AT_END.test(t) ? [`${t}, MO`] : [`${t}, Columbia, MO`, `${t}, MO`];
+}
+// "7401 E HIGHWAY WW, COLUMBIA, MO, 65201" -> "7401 E Highway WW, Columbia, MO 65201"
+function tidyCensus(a) {
+  const parts = String(a || '').split(',').map((x) => x.trim()).filter(Boolean);
+  const title = (w) => (/^\d/.test(w) || (w.length <= 2 && !/^(ST|RD|DR|LN|CT|PL)$/.test(w)) ? w : w.charAt(0) + w.slice(1).toLowerCase());
+  const nice = parts.map((part, i) => (i >= 2 ? part : part.split(' ').map(title).join(' ')));
+  return nice.length >= 4 ? `${nice[0]}, ${nice[1]}, ${nice[2]} ${nice[3]}` : nice.join(', ');
+}
+// With only a state to go on, the Census geocoder will happily match the same street in a town across Missouri.
+const inArea = (m) => m.lon >= REGION.area[0] && m.lat >= REGION.area[1] && m.lon <= REGION.area[2] && m.lat <= REGION.area[3];
+// First Census match for any of the candidate address strings, or null. `areaOnly` keeps to the service area.
+async function censusLookup(candidates, signal, areaOnly = true) {
+  for (const c of candidates) {
+    const v = validateAddress(cleanAddress(c)); if (!v.ok) continue;
+    try {
+      const r = await fetch(`/api/geocode?address=${encodeURIComponent(v.address)}`, { signal, credentials: 'omit' });
+      const j = await r.json(); const m = ((j && j.matches) || []).find((x) => !areaOnly || inArea(x));
+      if (m) return { label: tidyCensus(m.address), lon: m.lon, lat: m.lat, exact: true };
+    } catch (e) { if (signal && signal.aborted) return null; }
+  }
+  return null;
+}
+// "1204 W Broadway, Columbia, MO 65203" and "1204 West Broadway, Columbia, MO" are the same address.
+const LONG = { n: 'north', s: 'south', e: 'east', w: 'west', st: 'street', rd: 'road', dr: 'drive', ln: 'lane', ct: 'court', ave: 'avenue', blvd: 'boulevard', hwy: 'highway', pkwy: 'parkway', pl: 'place', cir: 'circle', ter: 'terrace', trl: 'trail', rte: 'route' };
+const canon = (label) => String(label).toLowerCase().replace(/\b\d{5}\b\s*$/, '').split(/[^a-z0-9]+/).filter(Boolean).map((w) => LONG[w] || w).join(' ');
 
 function attachSuggest(input, list, onPick) {
-  let timer = null, ctl = null, items = [], active = -1, lastQ = '';
+  let timer = null, timer2 = null, ctl = null, items = [], active = -1, lastQ = '';
   const close = () => { items = []; active = -1; list.innerHTML = ''; list.hidden = true; input.setAttribute('aria-expanded', 'false'); input.removeAttribute('aria-activedescendant'); };
   const paint = () => {
     list.innerHTML = items.map((s, i) => `<li role="option" id="sg-${i}" data-i="${i}" class="${i === active ? 'on' : ''}" aria-selected="${i === active}" data-testid="suggestion">${esc(s.label)}</li>`).join('');
@@ -68,19 +98,32 @@ function attachSuggest(input, list, onPick) {
   const pick = (i) => { const s = items[i]; if (!s) return; input.value = s.label; close(); onPick(s); };
   input.addEventListener('input', () => {
     onPick(null);                                   // typed text no longer matches a picked address
-    clearTimeout(timer);
+    clearTimeout(timer); clearTimeout(timer2);
+    if (ctl) ctl.abort();
+    items.forEach((s) => { s.stale = true; });         // still shown until fresh results land, never kept past them
     const q = cleanAddress(input.value);
     if (q.replace(/^\d+[A-Za-z]?\s+/, '').length < 3 || q.length > 120) { close(); return; }
-    timer = setTimeout(async () => {
-      if (ctl) ctl.abort();
-      ctl = new AbortController(); lastQ = q;
+    const mine = new AbortController(); ctl = mine; lastQ = q;
+    const live = () => lastQ === q && !mine.signal.aborted && document.activeElement === input;
+    // Street names, fast.
+    const streets = async (again) => {
       try {
-        const r = await fetch(`/api/suggest?q=${encodeURIComponent(q)}`, { signal: ctl.signal, credentials: 'omit' });
+        const r = await fetch(`/api/suggest?q=${encodeURIComponent(q)}${again ? '&retry=1' : ''}`, { signal: mine.signal, credentials: 'omit' });
         const j = await r.json();
-        if (lastQ !== q || document.activeElement !== input) return;
-        items = Array.isArray(j.suggestions) ? j.suggestions : []; active = -1; paint();
+        if (!live()) return;
+        if (j.error) { if (!again) timer = setTimeout(() => streets(true), 800); return; }   // lookup hiccup: keep what is showing, try once more
+        const top = items.filter((s) => s.census && !s.stale);
+        items = [...top, ...(Array.isArray(j.suggestions) ? j.suggestions : []).filter((s) => !top.some((t) => canon(t.label) === canon(s.label)))].slice(0, 6); active = -1; paint();
       } catch (e) { /* aborted, offline or unavailable: typing still works */ }
-    }, 220);
+    };
+    timer = setTimeout(() => streets(false), 280);
+    // The exact address from the Census geocoder, once a house number and street are typed and the typing pauses.
+    if (/^\d+[A-Za-z]?\s+\S+\s+\S{2,}/.test(q)) timer2 = setTimeout(async () => {
+      const hit = await censusLookup(censusCandidates(q), mine.signal);
+      if (!live()) return;
+      if (!hit) { if (items.some((s) => s.census)) { items = items.filter((s) => !s.census); active = -1; paint(); } return; }
+      items = [{ ...hit, census: true }, ...items.filter((s) => !s.census && canon(s.label) !== canon(hit.label))].slice(0, 6); active = -1; paint();
+    }, 650);
   });
   input.addEventListener('keydown', (e) => {
     if (list.hidden || !items.length) return;
@@ -96,14 +139,9 @@ function attachSuggest(input, list, onPick) {
 // Exact coordinates for the map. Tries the Census geocoder; falls back to the street-level point from a suggestion.
 async function refineAddress() {
   if (hasCoords() && !st.geocode.approx) return true;
-  const v = validateAddress(withState(cleanAddress(st.address)));
-  if (v.ok) {
-    try {
-      const j = await fetchJson(`/api/geocode?address=${encodeURIComponent(v.address)}`, 20000);
-      const m = j && j.matches && j.matches[0];
-      if (m) { st.geocode = { label: (st.geocode && st.geocode.label) || m.address, lon: m.lon, lat: m.lat, source: 'U.S. Census Bureau geocoder', approx: false }; return true; }
-    } catch (e) { /* fall through to the street-level point */ }
-  }
+  const tries = st.geocode && st.geocode.lookups && st.geocode.lookups.length ? st.geocode.lookups : censusCandidates(st.address);
+  const hit = (await censusLookup(tries)) || (await censusLookup(tries, undefined, false));   // someone outside the area still gets their map
+  if (hit) { st.geocode = { label: (st.geocode && st.geocode.label) || hit.label, lon: hit.lon, lat: hit.lat, source: 'U.S. Census Bureau geocoder', approx: false }; return true; }
   return hasCoords();
 }
 
@@ -317,7 +355,7 @@ function bindCard(card) {
 
   if (st.mapAsk || id === 'address') {
     const input = $('#addr', card); let picked = hasCoords() && st.geocode.label === st.address ? st.geocode : null;
-    attachSuggest(input, $('#addr-list', card), (s) => { picked = s ? { label: s.label, lon: s.lon, lat: s.lat, source: 'address suggestion', approx: !s.exact } : null; });
+    attachSuggest(input, $('#addr-list', card), (s) => { picked = s ? { label: s.label, lon: s.lon, lat: s.lat, source: s.census ? 'U.S. Census Bureau geocoder' : 'address suggestion', approx: !s.exact, lookups: s.lookups || [] } : null; });
     $('[data-testid=address-form]', card).addEventListener('submit', async (e) => {
       e.preventDefault();
       const text = cleanAddress(input.value);

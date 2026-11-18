@@ -41,7 +41,7 @@ export const STATUS = Object.freeze({
 });
 
 // Region used to bias address suggestions and as the fallback map centre (downtown Columbia).
-export const REGION = Object.freeze({ lon: -92.3341, lat: 38.9517, addressZoom: 19 });
+export const REGION = Object.freeze({ lon: -92.3341, lat: 38.9517, addressZoom: 19, area: [-93.05, 38.3, -91.6, 39.6] }); // area: west, south, east, north (about an hour around Columbia)
 
 export const MAP = Object.freeze({
   minZoom: 12, maxZoom: 20, defaultZoom: 18.5,
