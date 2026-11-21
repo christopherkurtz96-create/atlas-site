@@ -20,6 +20,14 @@
   status = 301
   force = true
 
+# There is no /blog index page yet. Post breadcrumbs point here, so send it to the
+# page that lists every post until a real hub exists.
+[[redirects]]
+  from = "/blog"
+  to = "/sitemap"
+  status = 301
+  force = true
+
 # Estimator map tiles: plain proxy rewrites to public USGS / AWS Open Data tile feeds (no query strings, no secrets).
 [[redirects]]
   from = "/api/tile/usgs/:z/:x/:y"
