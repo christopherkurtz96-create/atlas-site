@@ -1,18 +1,6 @@
 {
   "orphanMoneyPages": [],
-  "linksToMissingPages": [
-    {
-      "target": "/blog",
-      "from": [
-        "/blog/concrete-removal-cost-columbia-mo",
-        "/blog/demolish-or-renovate-house-columbia-mo",
-        "/blog/demolition-debris-disposal-columbia-mo",
-        "/blog/demolition-permit-columbia-mo",
-        "/blog/garage-demolition-cost-columbia-mo",
-        "/blog/hire-demolition-contractor-columbia-mo"
-      ]
-    }
-  ],
+  "linksToMissingPages": [],
   "pages": [
     {
       "route": "/services",
@@ -35,8 +23,9 @@
     {
       "route": "/blog/asbestos-found-during-demolition-missouri",
       "file": "blog/asbestos-found-during-demolition-missouri.html",
-      "contextualInbound": 2,
+      "contextualInbound": 3,
       "linkedFrom": [
+        "/blog",
         "/blog/asbestos-inspection-before-demolition-missouri",
         "/blog/what-to-expect-during-demolition-columbia-mo"
       ],
@@ -46,8 +35,9 @@
     {
       "route": "/blog/concrete-driveway-replacement-cost-columbia-mo",
       "file": "blog/concrete-driveway-replacement-cost-columbia-mo.html",
-      "contextualInbound": 2,
+      "contextualInbound": 3,
       "linkedFrom": [
+        "/blog",
         "/blog/concrete-removal-cost-columbia-mo",
         "/blog/patio-removal-and-replacement-columbia-mo"
       ],
@@ -57,8 +47,9 @@
     {
       "route": "/blog/concrete-recycling-columbia-mo",
       "file": "blog/concrete-recycling-columbia-mo.html",
-      "contextualInbound": 2,
+      "contextualInbound": 3,
       "linkedFrom": [
+        "/blog",
         "/blog/concrete-removal-columbia-mo",
         "/blog/demolition-debris-disposal-columbia-mo"
       ],
@@ -68,8 +59,9 @@
     {
       "route": "/blog/parking-lot-replacement-phasing-columbia-mo",
       "file": "blog/parking-lot-replacement-phasing-columbia-mo.html",
-      "contextualInbound": 2,
+      "contextualInbound": 3,
       "linkedFrom": [
+        "/blog",
         "/blog/parking-lot-removal-cost-missouri",
         "/blog/parking-lot-replacement-vs-repair-columbia-mo"
       ],
@@ -79,8 +71,9 @@
     {
       "route": "/blog/patio-removal-and-replacement-columbia-mo",
       "file": "blog/patio-removal-and-replacement-columbia-mo.html",
-      "contextualInbound": 2,
+      "contextualInbound": 3,
       "linkedFrom": [
+        "/blog",
         "/blog/concrete-driveway-replacement-cost-columbia-mo",
         "/blog/concrete-removal-cost-columbia-mo"
       ],
@@ -90,8 +83,9 @@
     {
       "route": "/blog/pool-removal-columbia-mo",
       "file": "blog/pool-removal-columbia-mo.html",
-      "contextualInbound": 2,
+      "contextualInbound": 3,
       "linkedFrom": [
+        "/blog",
         "/blog/concrete-removal-columbia-mo",
         "/concrete/concrete-removal"
       ],
@@ -101,8 +95,9 @@
     {
       "route": "/blog/what-to-expect-during-demolition-columbia-mo",
       "file": "blog/what-to-expect-during-demolition-columbia-mo.html",
-      "contextualInbound": 2,
+      "contextualInbound": 3,
       "linkedFrom": [
+        "/blog",
         "/blog/demolition-columbia-mo-guide",
         "/blog/how-long-does-demolition-take-columbia-mo"
       ],
@@ -112,8 +107,9 @@
     {
       "route": "/blog/demolition-columbia-mo-guide",
       "file": "blog/demolition-columbia-mo-guide.html",
-      "contextualInbound": 3,
+      "contextualInbound": 4,
       "linkedFrom": [
+        "/blog",
         "/blog/asbestos-inspection-before-demolition-missouri",
         "/blog/foundation-removal-columbia-mo",
         "/blog/utility-disconnect-before-demolition-columbia-mo"
@@ -124,8 +120,9 @@
     {
       "route": "/blog/does-insurance-cover-demolition-columbia-mo",
       "file": "blog/does-insurance-cover-demolition-columbia-mo.html",
-      "contextualInbound": 3,
+      "contextualInbound": 4,
       "linkedFrom": [
+        "/blog",
         "/blog/demolition-cost-columbia-missouri",
         "/blog/fire-damage-demolition-columbia-mo",
         "/blog/mobile-home-removal-cost-mid-missouri"
@@ -136,8 +133,9 @@
     {
       "route": "/blog/grain-bin-removal-missouri",
       "file": "blog/grain-bin-removal-missouri.html",
-      "contextualInbound": 3,
+      "contextualInbound": 4,
       "linkedFrom": [
+        "/blog",
         "/blog/barn-demolition-mid-missouri",
         "/demolition",
         "/demolition/structural"
@@ -148,8 +146,9 @@
     {
       "route": "/blog/lot-grading-after-demolition-columbia-mo",
       "file": "blog/lot-grading-after-demolition-columbia-mo.html",
-      "contextualInbound": 3,
+      "contextualInbound": 4,
       "linkedFrom": [
+        "/blog",
         "/blog/foundation-removal-columbia-mo",
         "/blog/house-demolition-cost-columbia-mo",
         "/site-work"
@@ -160,8 +159,9 @@
     {
       "route": "/blog/partial-demolition-columbia-mo",
       "file": "blog/partial-demolition-columbia-mo.html",
-      "contextualInbound": 3,
+      "contextualInbound": 4,
       "linkedFrom": [
+        "/blog",
         "/blog/interior-demolition-mid-missouri",
         "/blog/shed-deck-removal-columbia-mo",
         "/demolition/interior-selective"
@@ -172,8 +172,9 @@
     {
       "route": "/blog/shed-deck-removal-columbia-mo",
       "file": "blog/shed-deck-removal-columbia-mo.html",
-      "contextualInbound": 3,
+      "contextualInbound": 4,
       "linkedFrom": [
+        "/blog",
         "/blog/garage-demolition-cost-columbia-mo",
         "/blog/partial-demolition-columbia-mo",
         "/demolition/structural"
@@ -184,8 +185,9 @@
     {
       "route": "/blog/asphalt-vs-concrete-parking-lot-mid-missouri",
       "file": "blog/asphalt-vs-concrete-parking-lot-mid-missouri.html",
-      "contextualInbound": 4,
+      "contextualInbound": 5,
       "linkedFrom": [
+        "/blog",
         "/blog/concrete-removal-cost-columbia-mo",
         "/blog/parking-lot-removal-cost-missouri",
         "/blog/parking-lot-replacement-phasing-columbia-mo",
@@ -197,8 +199,9 @@
     {
       "route": "/blog/commercial-strip-out-demolition-columbia-mo",
       "file": "blog/commercial-strip-out-demolition-columbia-mo.html",
-      "contextualInbound": 4,
+      "contextualInbound": 5,
       "linkedFrom": [
+        "/blog",
         "/blog/commercial-demolition-contractor-columbia-mo",
         "/blog/interior-demolition-mid-missouri",
         "/demolition/interior-selective",
@@ -210,8 +213,9 @@
     {
       "route": "/blog/fire-damage-demolition-columbia-mo",
       "file": "blog/fire-damage-demolition-columbia-mo.html",
-      "contextualInbound": 4,
+      "contextualInbound": 5,
       "linkedFrom": [
+        "/blog",
         "/blog/does-insurance-cover-demolition-columbia-mo",
         "/blog/mobile-home-removal-cost-mid-missouri",
         "/demolition/structural",
@@ -223,8 +227,9 @@
     {
       "route": "/blog/parking-lot-removal-cost-missouri",
       "file": "blog/parking-lot-removal-cost-missouri.html",
-      "contextualInbound": 4,
+      "contextualInbound": 5,
       "linkedFrom": [
+        "/blog",
         "/blog/asphalt-vs-concrete-parking-lot-mid-missouri",
         "/blog/concrete-removal-cost-columbia-mo",
         "/blog/parking-lot-replacement-phasing-columbia-mo",
@@ -236,8 +241,9 @@
     {
       "route": "/blog/parking-lot-replacement-vs-repair-columbia-mo",
       "file": "blog/parking-lot-replacement-vs-repair-columbia-mo.html",
-      "contextualInbound": 4,
+      "contextualInbound": 5,
       "linkedFrom": [
+        "/blog",
         "/blog/asphalt-vs-concrete-parking-lot-mid-missouri",
         "/blog/parking-lot-removal-cost-missouri",
         "/blog/parking-lot-replacement-phasing-columbia-mo",
@@ -249,8 +255,9 @@
     {
       "route": "/blog/asbestos-inspection-before-demolition-missouri",
       "file": "blog/asbestos-inspection-before-demolition-missouri.html",
-      "contextualInbound": 5,
+      "contextualInbound": 6,
       "linkedFrom": [
+        "/blog",
         "/blog/asbestos-found-during-demolition-missouri",
         "/blog/demolition-columbia-mo-guide",
         "/blog/demolition-permit-columbia-mo",
@@ -263,8 +270,9 @@
     {
       "route": "/blog/concrete-removal-columbia-mo",
       "file": "blog/concrete-removal-columbia-mo.html",
-      "contextualInbound": 5,
+      "contextualInbound": 6,
       "linkedFrom": [
+        "/blog",
         "/blog/concrete-removal-cost-columbia-mo",
         "/blog/demolition-cost-columbia-missouri",
         "/blog/shed-deck-removal-columbia-mo",
@@ -277,8 +285,9 @@
     {
       "route": "/blog/foundation-removal-columbia-mo",
       "file": "blog/foundation-removal-columbia-mo.html",
-      "contextualInbound": 5,
+      "contextualInbound": 6,
       "linkedFrom": [
+        "/blog",
         "/blog/barn-demolition-mid-missouri",
         "/blog/demolition-columbia-mo-guide",
         "/blog/garage-demolition-cost-columbia-mo",
@@ -291,8 +300,9 @@
     {
       "route": "/blog/mobile-home-removal-boone-county-mo",
       "file": "blog/mobile-home-removal-boone-county-mo.html",
-      "contextualInbound": 5,
+      "contextualInbound": 6,
       "linkedFrom": [
+        "/blog",
         "/blog/demolition-cost-columbia-missouri",
         "/blog/how-long-does-demolition-take-columbia-mo",
         "/blog/mobile-home-removal-cost-mid-missouri",
@@ -305,8 +315,9 @@
     {
       "route": "/blog/utility-disconnect-before-demolition-columbia-mo",
       "file": "blog/utility-disconnect-before-demolition-columbia-mo.html",
-      "contextualInbound": 5,
+      "contextualInbound": 6,
       "linkedFrom": [
+        "/blog",
         "/blog/demolition-columbia-mo-guide",
         "/blog/demolition-permit-columbia-mo",
         "/blog/mobile-home-removal-cost-mid-missouri",
@@ -319,8 +330,9 @@
     {
       "route": "/blog/commercial-demolition-contractor-columbia-mo",
       "file": "blog/commercial-demolition-contractor-columbia-mo.html",
-      "contextualInbound": 6,
+      "contextualInbound": 7,
       "linkedFrom": [
+        "/blog",
         "/blog/commercial-strip-out-demolition-columbia-mo",
         "/blog/demolition-cost-columbia-missouri",
         "/blog/hire-demolition-contractor-columbia-mo",
@@ -334,8 +346,9 @@
     {
       "route": "/blog/interior-demolition-mid-missouri",
       "file": "blog/interior-demolition-mid-missouri.html",
-      "contextualInbound": 6,
+      "contextualInbound": 7,
       "linkedFrom": [
+        "/blog",
         "/blog/commercial-demolition-contractor-columbia-mo",
         "/blog/commercial-strip-out-demolition-columbia-mo",
         "/blog/demolition-cost-columbia-missouri",
@@ -349,8 +362,9 @@
     {
       "route": "/blog/demolish-or-renovate-house-columbia-mo",
       "file": "blog/demolish-or-renovate-house-columbia-mo.html",
-      "contextualInbound": 7,
+      "contextualInbound": 8,
       "linkedFrom": [
+        "/blog",
         "/blog/demolition-cost-columbia-missouri",
         "/blog/demolition-permit-columbia-mo",
         "/blog/fire-damage-demolition-columbia-mo",
@@ -365,8 +379,9 @@
     {
       "route": "/blog/how-long-does-demolition-take-columbia-mo",
       "file": "blog/how-long-does-demolition-take-columbia-mo.html",
-      "contextualInbound": 7,
+      "contextualInbound": 8,
       "linkedFrom": [
+        "/blog",
         "/blog/asbestos-inspection-before-demolition-missouri",
         "/blog/barn-demolition-mid-missouri",
         "/blog/demolition-columbia-mo-guide",
@@ -374,60 +389,6 @@
         "/blog/utility-disconnect-before-demolition-columbia-mo",
         "/blog/what-to-expect-during-demolition-columbia-mo",
         "/demolition"
-      ],
-      "inNavOrFooter": false,
-      "money": false
-    },
-    {
-      "route": "/blog/barn-demolition-mid-missouri",
-      "file": "blog/barn-demolition-mid-missouri.html",
-      "contextualInbound": 9,
-      "linkedFrom": [
-        "/blog/demolition-cost-columbia-missouri",
-        "/blog/demolition-permit-columbia-mo",
-        "/blog/garage-demolition-cost-columbia-mo",
-        "/blog/grain-bin-removal-missouri",
-        "/blog/how-long-does-demolition-take-columbia-mo",
-        "/demolition/structural",
-        "/locations/ashland-mo",
-        "/locations/boonville-mo",
-        "/locations/fayette-mo"
-      ],
-      "inNavOrFooter": false,
-      "money": false
-    },
-    {
-      "route": "/blog/demolition-cost-columbia-missouri",
-      "file": "blog/demolition-cost-columbia-missouri.html",
-      "contextualInbound": 9,
-      "linkedFrom": [
-        "/blog/barn-demolition-mid-missouri",
-        "/blog/demolition-columbia-mo-guide",
-        "/blog/does-insurance-cover-demolition-columbia-mo",
-        "/blog/fire-damage-demolition-columbia-mo",
-        "/blog/how-long-does-demolition-take-columbia-mo",
-        "/blog/pool-removal-columbia-mo",
-        "/blog/shed-deck-removal-columbia-mo",
-        "/demolition",
-        "/services"
-      ],
-      "inNavOrFooter": false,
-      "money": false
-    },
-    {
-      "route": "/blog/hire-demolition-contractor-columbia-mo",
-      "file": "blog/hire-demolition-contractor-columbia-mo.html",
-      "contextualInbound": 9,
-      "linkedFrom": [
-        "/about",
-        "/blog/commercial-demolition-contractor-columbia-mo",
-        "/blog/demolish-or-renovate-house-columbia-mo",
-        "/blog/demolition-cost-columbia-missouri",
-        "/blog/demolition-permit-columbia-mo",
-        "/blog/garage-demolition-cost-columbia-mo",
-        "/blog/house-demolition-cost-columbia-mo",
-        "/demolition",
-        "/services"
       ],
       "inNavOrFooter": false,
       "money": false
@@ -451,20 +412,58 @@
       "money": false
     },
     {
-      "route": "/blog/garage-demolition-cost-columbia-mo",
-      "file": "blog/garage-demolition-cost-columbia-mo.html",
+      "route": "/blog/barn-demolition-mid-missouri",
+      "file": "blog/barn-demolition-mid-missouri.html",
       "contextualInbound": 10,
       "linkedFrom": [
-        "/blog/barn-demolition-mid-missouri",
-        "/blog/concrete-removal-columbia-mo",
+        "/blog",
         "/blog/demolition-cost-columbia-missouri",
-        "/blog/demolition-debris-disposal-columbia-mo",
         "/blog/demolition-permit-columbia-mo",
-        "/blog/hire-demolition-contractor-columbia-mo",
-        "/blog/house-demolition-cost-columbia-mo",
+        "/blog/garage-demolition-cost-columbia-mo",
+        "/blog/grain-bin-removal-missouri",
         "/blog/how-long-does-demolition-take-columbia-mo",
+        "/demolition/structural",
+        "/locations/ashland-mo",
+        "/locations/boonville-mo",
+        "/locations/fayette-mo"
+      ],
+      "inNavOrFooter": false,
+      "money": false
+    },
+    {
+      "route": "/blog/demolition-cost-columbia-missouri",
+      "file": "blog/demolition-cost-columbia-missouri.html",
+      "contextualInbound": 10,
+      "linkedFrom": [
+        "/blog",
+        "/blog/barn-demolition-mid-missouri",
+        "/blog/demolition-columbia-mo-guide",
+        "/blog/does-insurance-cover-demolition-columbia-mo",
+        "/blog/fire-damage-demolition-columbia-mo",
+        "/blog/how-long-does-demolition-take-columbia-mo",
+        "/blog/pool-removal-columbia-mo",
         "/blog/shed-deck-removal-columbia-mo",
-        "/demolition/structural"
+        "/demolition",
+        "/services"
+      ],
+      "inNavOrFooter": false,
+      "money": false
+    },
+    {
+      "route": "/blog/hire-demolition-contractor-columbia-mo",
+      "file": "blog/hire-demolition-contractor-columbia-mo.html",
+      "contextualInbound": 10,
+      "linkedFrom": [
+        "/about",
+        "/blog",
+        "/blog/commercial-demolition-contractor-columbia-mo",
+        "/blog/demolish-or-renovate-house-columbia-mo",
+        "/blog/demolition-cost-columbia-missouri",
+        "/blog/demolition-permit-columbia-mo",
+        "/blog/garage-demolition-cost-columbia-mo",
+        "/blog/house-demolition-cost-columbia-mo",
+        "/demolition",
+        "/services"
       ],
       "inNavOrFooter": false,
       "money": false
@@ -489,10 +488,31 @@
       "money": false
     },
     {
-      "route": "/blog/mobile-home-removal-cost-mid-missouri",
-      "file": "blog/mobile-home-removal-cost-mid-missouri.html",
+      "route": "/blog/garage-demolition-cost-columbia-mo",
+      "file": "blog/garage-demolition-cost-columbia-mo.html",
       "contextualInbound": 11,
       "linkedFrom": [
+        "/blog",
+        "/blog/barn-demolition-mid-missouri",
+        "/blog/concrete-removal-columbia-mo",
+        "/blog/demolition-cost-columbia-missouri",
+        "/blog/demolition-debris-disposal-columbia-mo",
+        "/blog/demolition-permit-columbia-mo",
+        "/blog/hire-demolition-contractor-columbia-mo",
+        "/blog/house-demolition-cost-columbia-mo",
+        "/blog/how-long-does-demolition-take-columbia-mo",
+        "/blog/shed-deck-removal-columbia-mo",
+        "/demolition/structural"
+      ],
+      "inNavOrFooter": false,
+      "money": false
+    },
+    {
+      "route": "/blog/mobile-home-removal-cost-mid-missouri",
+      "file": "blog/mobile-home-removal-cost-mid-missouri.html",
+      "contextualInbound": 12,
+      "linkedFrom": [
+        "/blog",
         "/blog/demolish-or-renovate-house-columbia-mo",
         "/blog/demolition-cost-columbia-missouri",
         "/blog/demolition-debris-disposal-columbia-mo",
@@ -504,29 +524,6 @@
         "/locations/fayette-mo",
         "/locations/fulton-mo",
         "/locations/moberly-mo"
-      ],
-      "inNavOrFooter": false,
-      "money": false
-    },
-    {
-      "route": "/blog/demolition-debris-disposal-columbia-mo",
-      "file": "blog/demolition-debris-disposal-columbia-mo.html",
-      "contextualInbound": 14,
-      "linkedFrom": [
-        "/blog/barn-demolition-mid-missouri",
-        "/blog/concrete-recycling-columbia-mo",
-        "/blog/concrete-removal-columbia-mo",
-        "/blog/concrete-removal-cost-columbia-mo",
-        "/blog/demolition-cost-columbia-missouri",
-        "/blog/does-insurance-cover-demolition-columbia-mo",
-        "/blog/fire-damage-demolition-columbia-mo",
-        "/blog/grain-bin-removal-missouri",
-        "/blog/how-long-does-demolition-take-columbia-mo",
-        "/blog/lot-grading-after-demolition-columbia-mo",
-        "/blog/shed-deck-removal-columbia-mo",
-        "/blog/what-to-expect-during-demolition-columbia-mo",
-        "/demolition/mobile-home-removal",
-        "/site-work"
       ],
       "inNavOrFooter": false,
       "money": false
@@ -555,10 +552,35 @@
       "money": false
     },
     {
+      "route": "/blog/demolition-debris-disposal-columbia-mo",
+      "file": "blog/demolition-debris-disposal-columbia-mo.html",
+      "contextualInbound": 15,
+      "linkedFrom": [
+        "/blog",
+        "/blog/barn-demolition-mid-missouri",
+        "/blog/concrete-recycling-columbia-mo",
+        "/blog/concrete-removal-columbia-mo",
+        "/blog/concrete-removal-cost-columbia-mo",
+        "/blog/demolition-cost-columbia-missouri",
+        "/blog/does-insurance-cover-demolition-columbia-mo",
+        "/blog/fire-damage-demolition-columbia-mo",
+        "/blog/grain-bin-removal-missouri",
+        "/blog/how-long-does-demolition-take-columbia-mo",
+        "/blog/lot-grading-after-demolition-columbia-mo",
+        "/blog/shed-deck-removal-columbia-mo",
+        "/blog/what-to-expect-during-demolition-columbia-mo",
+        "/demolition/mobile-home-removal",
+        "/site-work"
+      ],
+      "inNavOrFooter": false,
+      "money": false
+    },
+    {
       "route": "/blog/house-demolition-cost-columbia-mo",
       "file": "blog/house-demolition-cost-columbia-mo.html",
-      "contextualInbound": 16,
+      "contextualInbound": 17,
       "linkedFrom": [
+        "/blog",
         "/blog/barn-demolition-mid-missouri",
         "/blog/concrete-removal-cost-columbia-mo",
         "/blog/demolish-or-renovate-house-columbia-mo",
@@ -575,32 +597,6 @@
         "/blog/lot-grading-after-demolition-columbia-mo",
         "/demolition/structural",
         "/locations/columbia-mo"
-      ],
-      "inNavOrFooter": false,
-      "money": false
-    },
-    {
-      "route": "/blog/concrete-removal-cost-columbia-mo",
-      "file": "blog/concrete-removal-cost-columbia-mo.html",
-      "contextualInbound": 17,
-      "linkedFrom": [
-        "/blog/concrete-driveway-replacement-cost-columbia-mo",
-        "/blog/concrete-recycling-columbia-mo",
-        "/blog/concrete-removal-columbia-mo",
-        "/blog/demolish-or-renovate-house-columbia-mo",
-        "/blog/demolition-cost-columbia-missouri",
-        "/blog/demolition-permit-columbia-mo",
-        "/blog/garage-demolition-cost-columbia-mo",
-        "/blog/hire-demolition-contractor-columbia-mo",
-        "/blog/parking-lot-removal-cost-missouri",
-        "/blog/patio-removal-and-replacement-columbia-mo",
-        "/concrete",
-        "/concrete/concrete-removal",
-        "/concrete/driveway-replacement",
-        "/concrete/parking-lot-removal",
-        "/locations/fulton-mo",
-        "/locations/jefferson-city-mo",
-        "/services"
       ],
       "inNavOrFooter": false,
       "money": false
@@ -684,6 +680,33 @@
       "money": false
     },
     {
+      "route": "/blog/concrete-removal-cost-columbia-mo",
+      "file": "blog/concrete-removal-cost-columbia-mo.html",
+      "contextualInbound": 18,
+      "linkedFrom": [
+        "/blog",
+        "/blog/concrete-driveway-replacement-cost-columbia-mo",
+        "/blog/concrete-recycling-columbia-mo",
+        "/blog/concrete-removal-columbia-mo",
+        "/blog/demolish-or-renovate-house-columbia-mo",
+        "/blog/demolition-cost-columbia-missouri",
+        "/blog/demolition-permit-columbia-mo",
+        "/blog/garage-demolition-cost-columbia-mo",
+        "/blog/hire-demolition-contractor-columbia-mo",
+        "/blog/parking-lot-removal-cost-missouri",
+        "/blog/patio-removal-and-replacement-columbia-mo",
+        "/concrete",
+        "/concrete/concrete-removal",
+        "/concrete/driveway-replacement",
+        "/concrete/parking-lot-removal",
+        "/locations/fulton-mo",
+        "/locations/jefferson-city-mo",
+        "/services"
+      ],
+      "inNavOrFooter": false,
+      "money": false
+    },
+    {
       "route": "/locations/boonville-mo",
       "file": "locations/boonville-mo.html",
       "contextualInbound": 19,
@@ -714,10 +737,11 @@
     {
       "route": "/demolition/interior-selective",
       "file": "demolition/interior-selective/index.html",
-      "contextualInbound": 20,
+      "contextualInbound": 21,
       "linkedFrom": [
         "/",
         "/about",
+        "/blog",
         "/concrete",
         "/concrete/concrete-removal",
         "/concrete/driveway-replacement",
@@ -743,9 +767,10 @@
     {
       "route": "/demolition/asbestos-abatement",
       "file": "demolition/asbestos-abatement/index.html",
-      "contextualInbound": 22,
+      "contextualInbound": 23,
       "linkedFrom": [
         "/about",
+        "/blog",
         "/blog/asbestos-found-during-demolition-missouri",
         "/blog/grain-bin-removal-missouri",
         "/blog/mobile-home-removal-cost-mid-missouri",
@@ -754,38 +779,6 @@
         "/concrete/driveway-replacement",
         "/concrete/parking-lot-removal",
         "/demolition",
-        "/demolition/interior-selective",
-        "/demolition/mobile-home-removal",
-        "/demolition/structural",
-        "/locations/ashland-mo",
-        "/locations/boonville-mo",
-        "/locations/columbia-mo",
-        "/locations/fayette-mo",
-        "/locations/fulton-mo",
-        "/locations/jefferson-city-mo",
-        "/locations/moberly-mo",
-        "/service-areas",
-        "/services",
-        "/site-work"
-      ],
-      "inNavOrFooter": true,
-      "money": true
-    },
-    {
-      "route": "/concrete/driveway-replacement",
-      "file": "concrete/driveway-replacement/index.html",
-      "contextualInbound": 23,
-      "linkedFrom": [
-        "/about",
-        "/blog/concrete-driveway-replacement-cost-columbia-mo",
-        "/blog/concrete-recycling-columbia-mo",
-        "/blog/concrete-removal-cost-columbia-mo",
-        "/blog/patio-removal-and-replacement-columbia-mo",
-        "/concrete",
-        "/concrete/concrete-removal",
-        "/concrete/parking-lot-removal",
-        "/demolition",
-        "/demolition/asbestos-abatement",
         "/demolition/interior-selective",
         "/demolition/mobile-home-removal",
         "/demolition/structural",
@@ -868,12 +861,46 @@
       "money": false
     },
     {
+      "route": "/concrete/driveway-replacement",
+      "file": "concrete/driveway-replacement/index.html",
+      "contextualInbound": 24,
+      "linkedFrom": [
+        "/about",
+        "/blog",
+        "/blog/concrete-driveway-replacement-cost-columbia-mo",
+        "/blog/concrete-recycling-columbia-mo",
+        "/blog/concrete-removal-cost-columbia-mo",
+        "/blog/patio-removal-and-replacement-columbia-mo",
+        "/concrete",
+        "/concrete/concrete-removal",
+        "/concrete/parking-lot-removal",
+        "/demolition",
+        "/demolition/asbestos-abatement",
+        "/demolition/interior-selective",
+        "/demolition/mobile-home-removal",
+        "/demolition/structural",
+        "/locations/ashland-mo",
+        "/locations/boonville-mo",
+        "/locations/columbia-mo",
+        "/locations/fayette-mo",
+        "/locations/fulton-mo",
+        "/locations/jefferson-city-mo",
+        "/locations/moberly-mo",
+        "/service-areas",
+        "/services",
+        "/site-work"
+      ],
+      "inNavOrFooter": true,
+      "money": true
+    },
+    {
       "route": "/demolition/structural",
       "file": "demolition/structural/index.html",
-      "contextualInbound": 25,
+      "contextualInbound": 26,
       "linkedFrom": [
         "/",
         "/about",
+        "/blog",
         "/blog/asbestos-inspection-before-demolition-missouri",
         "/blog/demolition-columbia-mo-guide",
         "/blog/foundation-removal-columbia-mo",
@@ -904,8 +931,9 @@
     {
       "route": "/blog/demolition-permit-columbia-mo",
       "file": "blog/demolition-permit-columbia-mo.html",
-      "contextualInbound": 26,
+      "contextualInbound": 27,
       "linkedFrom": [
+        "/blog",
         "/blog/asbestos-found-during-demolition-missouri",
         "/blog/asbestos-inspection-before-demolition-missouri",
         "/blog/barn-demolition-mid-missouri",
@@ -939,10 +967,11 @@
     {
       "route": "/concrete",
       "file": "concrete/index.html",
-      "contextualInbound": 26,
+      "contextualInbound": 27,
       "linkedFrom": [
         "/",
         "/about",
+        "/blog",
         "/blog/concrete-driveway-replacement-cost-columbia-mo",
         "/blog/concrete-recycling-columbia-mo",
         "/blog/concrete-removal-cost-columbia-mo",
@@ -974,10 +1003,11 @@
     {
       "route": "/concrete/parking-lot-removal",
       "file": "concrete/parking-lot-removal/index.html",
-      "contextualInbound": 26,
+      "contextualInbound": 27,
       "linkedFrom": [
         "/",
         "/about",
+        "/blog",
         "/blog/asphalt-vs-concrete-parking-lot-mid-missouri",
         "/blog/concrete-recycling-columbia-mo",
         "/blog/concrete-removal-cost-columbia-mo",
@@ -1009,10 +1039,11 @@
     {
       "route": "/demolition/mobile-home-removal",
       "file": "demolition/mobile-home-removal/index.html",
-      "contextualInbound": 26,
+      "contextualInbound": 27,
       "linkedFrom": [
         "/",
         "/about",
+        "/blog",
         "/blog/demolition-permit-columbia-mo",
         "/blog/fire-damage-demolition-columbia-mo",
         "/blog/house-demolition-cost-columbia-mo",
@@ -1042,12 +1073,58 @@
       "money": true
     },
     {
+      "route": "/blog",
+      "file": "blog/index.html",
+      "contextualInbound": 36,
+      "linkedFrom": [
+        "/blog/asbestos-found-during-demolition-missouri",
+        "/blog/asbestos-inspection-before-demolition-missouri",
+        "/blog/asphalt-vs-concrete-parking-lot-mid-missouri",
+        "/blog/barn-demolition-mid-missouri",
+        "/blog/commercial-demolition-contractor-columbia-mo",
+        "/blog/commercial-strip-out-demolition-columbia-mo",
+        "/blog/concrete-driveway-replacement-cost-columbia-mo",
+        "/blog/concrete-recycling-columbia-mo",
+        "/blog/concrete-removal-columbia-mo",
+        "/blog/concrete-removal-cost-columbia-mo",
+        "/blog/demolish-or-renovate-house-columbia-mo",
+        "/blog/demolition-columbia-mo-guide",
+        "/blog/demolition-cost-columbia-missouri",
+        "/blog/demolition-debris-disposal-columbia-mo",
+        "/blog/demolition-permit-columbia-mo",
+        "/blog/does-insurance-cover-demolition-columbia-mo",
+        "/blog/fire-damage-demolition-columbia-mo",
+        "/blog/foundation-removal-columbia-mo",
+        "/blog/garage-demolition-cost-columbia-mo",
+        "/blog/grain-bin-removal-missouri",
+        "/blog/hire-demolition-contractor-columbia-mo",
+        "/blog/house-demolition-cost-columbia-mo",
+        "/blog/how-long-does-demolition-take-columbia-mo",
+        "/blog/interior-demolition-mid-missouri",
+        "/blog/lot-grading-after-demolition-columbia-mo",
+        "/blog/mobile-home-removal-boone-county-mo",
+        "/blog/mobile-home-removal-cost-mid-missouri",
+        "/blog/parking-lot-removal-cost-missouri",
+        "/blog/parking-lot-replacement-phasing-columbia-mo",
+        "/blog/parking-lot-replacement-vs-repair-columbia-mo",
+        "/blog/partial-demolition-columbia-mo",
+        "/blog/patio-removal-and-replacement-columbia-mo",
+        "/blog/pool-removal-columbia-mo",
+        "/blog/shed-deck-removal-columbia-mo",
+        "/blog/utility-disconnect-before-demolition-columbia-mo",
+        "/blog/what-to-expect-during-demolition-columbia-mo"
+      ],
+      "inNavOrFooter": true,
+      "money": false
+    },
+    {
       "route": "/concrete/concrete-removal",
       "file": "concrete/concrete-removal/index.html",
-      "contextualInbound": 42,
+      "contextualInbound": 43,
       "linkedFrom": [
         "/",
         "/about",
+        "/blog",
         "/blog/asphalt-vs-concrete-parking-lot-mid-missouri",
         "/blog/commercial-demolition-contractor-columbia-mo",
         "/blog/commercial-strip-out-demolition-columbia-mo",
@@ -1095,10 +1172,11 @@
     {
       "route": "/site-work",
       "file": "site-work/index.html",
-      "contextualInbound": 43,
+      "contextualInbound": 44,
       "linkedFrom": [
         "/",
         "/about",
+        "/blog",
         "/blog/asphalt-vs-concrete-parking-lot-mid-missouri",
         "/blog/barn-demolition-mid-missouri",
         "/blog/concrete-removal-cost-columbia-mo",
@@ -1147,10 +1225,11 @@
     {
       "route": "/demolition",
       "file": "demolition/index.html",
-      "contextualInbound": 47,
+      "contextualInbound": 48,
       "linkedFrom": [
         "/",
         "/about",
+        "/blog",
         "/blog/asbestos-found-during-demolition-missouri",
         "/blog/asbestos-inspection-before-demolition-missouri",
         "/blog/barn-demolition-mid-missouri",
@@ -1203,10 +1282,11 @@
     {
       "route": "/estimate",
       "file": "estimate/index.html",
-      "contextualInbound": 47,
+      "contextualInbound": 48,
       "linkedFrom": [
         "/",
         "/about",
+        "/blog",
         "/blog/asbestos-found-during-demolition-missouri",
         "/blog/asbestos-inspection-before-demolition-missouri",
         "/blog/asphalt-vs-concrete-parking-lot-mid-missouri",
@@ -1259,9 +1339,10 @@
     {
       "route": "/",
       "file": "index.html",
-      "contextualInbound": 57,
+      "contextualInbound": 58,
       "linkedFrom": [
         "/about",
+        "/blog",
         "/blog/asbestos-found-during-demolition-missouri",
         "/blog/asbestos-inspection-before-demolition-missouri",
         "/blog/asphalt-vs-concrete-parking-lot-mid-missouri",

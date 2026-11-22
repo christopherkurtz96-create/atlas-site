@@ -33,4 +33,4 @@ What we do not do: land clearing, forestry mulching, tree work, standalone excav
 
 ## Optional
 - [About](https://deployatlas.com/about)
-- [Blog index](https://deployatlas.com/sitemap)
+- [Blog index](https://deployatlas.com/blog/)
