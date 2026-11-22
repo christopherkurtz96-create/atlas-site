@@ -8,6 +8,7 @@ Static HTML is what ships. These scripts generate it so every page shares one he
 - `money_pages.py` — the two concrete money pages, written as Python dicts; run it to regenerate their JSON.
 - `build_home_bid.py` — home page. (The /consultation/ intake form was retired; every CTA points at /estimate/.)
 - `site_pass.py` — swaps header/footer onto any page that still has the old ones (e.g. a new blog post from the automation), rewrites internal links to root-absolute extensionless paths, regenerates the netlify.toml redirect table and sitemap.xml. Run with `--no-delete` after adding pages. Run from the repo root.
+- `build_blog_index.py` — rebuilds `/blog/` (blog/index.html) from every post's H1 and meta description, grouped by topic. Run it after adding or retitling a post.
 - `CONTENT-SPEC.md` — the writing brief handed to page-writing agents. Voice, pricing model, allowed claims, photos, links.
 
 URL rules: canonical host is https://deployatlas.com (apex, no www). Hubs are directories (`/demolition/`), flat pages are extensionless (`/about`, `/blog/<slug>`) and stay as `.html` files on disk; netlify.toml 301s the `.html` form. Never link to `/services/*.html`.
