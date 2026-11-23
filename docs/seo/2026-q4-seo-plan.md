@@ -428,3 +428,77 @@ Not done in this run: the AI-search check and the review count (both need a sess
 - Send Claude one Fulton job: one line on what it was and one photo (5 min).
 
 Still open from September: submit the consultation form once from your phone and say where the lead landed.
+
+---
+
+## Monthly update — 2026-11-23
+
+Run by hand; the 1 Nov routine left no update. Windows: 24 Oct – 20 Nov vs 26 Sep – 23 Oct. This is the first clean post-restructure read.
+
+### Numbers (28 days vs prior 28)
+
+| Metric | Current | Prior | Change |
+|---|---|---|---|
+| Clicks | 32 | 33 | flat |
+| Impressions | 2,755 | 2,496 | +10% |
+| Avg position | 9.6 | 11.8 | 2.2 better |
+| Home page via the GBP link (impressions / position) | 822 / 3.5 | 289 / 7.7 | nearly 3x |
+| Asbestos-cluster impressions | 78 | 15 | 5x |
+| Concrete-cluster impressions | 118 | 53 | +123% |
+| Mobile home impressions | 132 | 177 | −25% |
+| Google reviews | 18 (5.0) | 11 at the Sept baseline | +7, target 25 |
+
+Cluster rows count visible queries only, and the prior window was capped at 300 queries, so treat them as direction, not exact.
+
+**Map pack (checked 23 Nov, from Columbia):** "demolition contractor columbia mo" shows ATLAS first in the map pack and the home page first in organic.
+
+**Tracked queries:** 10 of the 12 do not appear in the query data (too little volume for Google to report). The two that do: "mobile home demolition cost" at 14.3 (was 12.5), "mobile home removal cost" at 11.8 (was 11.7).
+
+**Pages gaining**
+
+| Page | Impressions | Clicks | Position |
+|---|---|---|---|
+| /blog/asbestos-inspection-before-demolition-missouri | 416 (was 72) | 5 | 8.8 |
+| /blog/mobile-home-removal-cost-mid-missouri | 492 (was 654) | 7 (was 0) | 7.4 |
+| /blog/concrete-removal-cost-columbia-mo | 185 (was 16) | 1 | 15.8 |
+| /blog/house-demolition-cost-columbia-mo | 114 | 2 | 4.9 (was 7.7) |
+| Location pages, all seven | 245 total | 0 | every one moved up: Fulton 9.5, Moberly 11.5, Boonville 8.8, Fayette 11.8, Ashland 11.3, Jefferson City 3.5, Columbia 4.1 |
+
+**Pages losing**
+
+| Page or query | Now | Was |
+|---|---|---|
+| Home page, plain URL | position 26.2 | 15.3 |
+| Query "atlas demolition" | position 15.7 | 2.4 |
+| /demolition/structural/ | 27 impressions, position 19.3 | 58, position 8.7 |
+| /demolition/ | position 24.0 | 27.6 (title changed 23 Nov; read it in December) |
+
+Noise: 77 impressions come from St. Joseph demolition queries at position 50. Out of area; ignore.
+
+### Off-site (measured for the first time)
+
+- **Citations:** searching the business name and the phone number turns up the site itself and the Facebook page. No Yelp, BBB, Bing Places, Apple, Angi or Yellow Pages listing was found. The October citation work has not happened.
+- **Backlinks:** no third-party site linking to deployatlas.com was found. Checked by web search, not a backlink tool, so this is a floor, not a count.
+- **Old name:** "Atlas Excavation & Demolition" now only shows in stale search snippets of our own pages. The Facebook page carries the new name.
+
+### Site check
+
+Clean. This month shipped the /blog/ index, the estimate-page fallback, 60 new internal links to town pages and two posts, the /services footer link and the /demolition/ title change (seo/roast-roadmap.md).
+
+### Location proof
+
+Jobber holds 10 jobs since June: five finished in Columbia, one in New Franklin, plus open jobs in Rocheport and Clark. None are in Fulton, Jefferson City, Moberly, Ashland, or inside Boonville or Fayette. Job notes went onto the Columbia page (two jobs) and the Boonville and Fayette pages (the New Franklin job). The other four town pages stay as they are until there is a real job to cite. No photos were added: the photo library ends in January 2026.
+
+### Suggestions (ranked by expected impact)
+
+1. Close the review gap from 18 to 25. The map pack is where the impressions are, and reviews are what holds first place.
+2. Create the free listings in section 9 (Bing Places, Apple Business Connect, Yelp first). There are none today, so each one is a new citation and a link.
+3. Rework the concrete removal cost post for the head term "concrete removal cost". It has 185 impressions at position 15.8, the largest concrete opening on the site.
+4. Find out why the plain home page and the brand query fell. Likely cause is the map-pack listing absorbing those searches, but confirm in Search Console before changing the home page title, which ranks first for the head term.
+5. Join the Columbia Chamber for the directory link. It would be the first real backlink.
+
+### For Chris this month
+
+- Text the review link to the two November Columbia customers and ask them to name the work.
+- Say what the New Franklin job was (house, building, slab) so the note can name it, and send any photos.
+- Drop phone photos from the 2026 jobs onto the T9 drive so the town pages and GBP can use them.
