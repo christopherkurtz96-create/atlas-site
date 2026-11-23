@@ -150,8 +150,10 @@ Run the full optimization checklist against the post you just wrote:
 
 3. **Update sitemap**: Add the new blog post URL to `sitemap.xml` with today's date.
 
+3b. **Rebuild the blog index**: From the repo root run `python3 tools/site-build/build_blog_index.py`. It rewrites `blog/index.html` (the `/blog/` page) from every post's H1 and meta description. Check the printed post count went up by one.
+
 4. **Git commit and push**:
-   - Stage the new blog post HTML, image, and sitemap
+   - Stage the new blog post HTML, image, sitemap, and `blog/index.html`
    - Commit with a clear message describing the new post
    - Push to `origin main`
    - Netlify auto-deploys from the push
